@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Сборка Markup</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
+                aria-expanded="false">
+                <span></span>
+            </button>
+            <a class="logo" href="#top" aria-label="VIN Check home">
+                <img src="./assets/img/vin-check-logo.svg" alt="VIN Check" />
+            </a>
+            <div class="header-menu" id="header-menu" aria-hidden="true">
+                <nav class="primary-nav" aria-label="Primary navigation">
+                    <a class="active" href="#check">Check VIN</a>
+                    <a href="#brands">Car Brands</a>
+                    <a href="#report">Sample Reports</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact Us</a>
+                </nav>
+                <div class="menu-contact">
+                    <b>Contact</b>
+                    <div class="menu-language language-switcher"></div>
+                    <a href="tel:18004884428">1-800-488-4428</a>
+                    <a href="mailto:support@yoursite.com">support@yoursite.com</a>
+                </div>
+            </div>
+            <div class="language-bar">
+                <div class="language-title">English</div>
+                <ul class="language-list">
+                    <li class="menu-item active">
+                        <a href="#">English</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Deutsch</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Poland</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Romania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="top" class="wrapper home">
+        <section class="hero" id="check" style="background-image: url(./assets/img/hero-background.png);">
+            <div class="container hero-inner">
+                <!-- <img class="hero-background" src="./assets/img/hero-background.png" alt="" aria-hidden="true" /> -->
+                <div class="hero-copy">
+                    <h1>Free VIN Check &amp; Car Data Report</h1>
+                    <p>Get instant access to accident, mileage and auction data</p>
+                    <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
+                    <form class="vin-form">
+                        <input id="vin" maxlength="17" placeholder="17 digits of your VIN" autocomplete="off" />
+                        <button>Get Free VIN Report</button>
+                    </form>
+                    <small>Example: wBCM82c633A123456</small>
+                </div>
+                <div class="trust">
+                    <div class="trust-item">
+                        <img src="assets/img/icon_official.svg" alt="">
+                        Official Data Sources
+                    </div>
+                    <div class="trust-item">
+                        <img src="assets/img/icon_safty.svg" alt="">
+                        100% Privacy Protected
+                    </div>
+                    <div class="trust-item">
+                        <img src="assets/img/icon_card.svg" alt="">
+                        No Credit Card Required
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ad container">
+            <span>Ad-slot 1</span>
+            <b>728×90 desktop</b>
+            <em>min-height: fit;
+                <br>background: #ECECF;
+            </em>
+        </section>
+        <section class="recent container">
+            <h2>Recent VIN Searches</h2>
+            <div class="vin-table">
+                <div class="tr th">
+                    <b>Vehicle (Model &amp; Trim)</b>
+                    <b>VIN &amp; Specifications</b>
+                </div>
+                <div class="tr">
+                    <a>BMW X5 xDrive40i</a>
+                    <span>2022 — 3.0L Turbo — WBAJU7C50N******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW 530i</a>
+                    <span>2021 — 2.0L Turbo — WBA53BH0M******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW X3 sDrive30i</a>
+                    <span>2020 — 2.0L — WBX57DP0L******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW M8 Competition</a>
+                    <span>2023 — 3.0L Twin — WBS3Y0P9******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW 320i</a>
+                    <span>2019 — 2.0L — WBA8E9G59******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW 750i</a>
+                    <span>2022 — 3.0L — SLCX2C03N******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW X5 xDrive40i</a>
+                    <span>2018 — 4.4L V8 — WBA7FC25J******</span>
+                </div>
+                <div class="tr">
+                    <a>BMW X1 sDrive28i</a>
+                    <span>2020 — 2.0L — WBXHZ7C50******</span>
+                </div>
+            </div>
+        </section>
+        <section class="popular container" id="brands">
+            <h2>Popular BMW VIN checks</h2>
+            <div class="brand-grid">
+                <a>BMW X5 — Check VIN</a>
+                <a>BMW 7 Series — Check VIN</a>
+                <a>BMW M3 — Check VIN</a>
+                <a>BMW 3 Series — Check VIN</a>
+                <a>BMW X6 — Check VIN</a>
+                <a>BMW M5 — Check VIN</a>
+                <a>BMW X3 — Check VIN</a>
+                <a>BMW Z4 — Check VIN</a>
+                <a>BMW 5 Series — Check VIN</a>
+            </div>
+        </section>
+        <section class="seo container">
+            <h3>SEO-текст для блока_H3</h3>
+            <p>If you're planning to buy a used BMW, run a free BMW VIN check before making any decision. A vehicle may
+                look
+                perfect on the outside, but its history tells the real story. Hidden accident damage, mileage rollback,
+                salvage status, theft records, or auction history can significantly affect the car's value and safety.
+                That's why checking a VIN number is one of the most important steps when purchasing a BMW.</p>
+            <p>Our system allows you to check BMW VIN number free and instantly across basic vehicle data. You can
+                verify
+                manufacturing year, model, engine type, transmission, factory specifications, and country of origin.
+                This
+                helps confirm that the seller's description matches the original factory configuration.</p>
+            <a href="#">Read more</a>
+        </section>
+        <section class="insights container">
+            <h2>Reliable Vehicle History Insights</h2>
+            <div class="feature-grid">
+                <article>
+                    <img class="feature-icon" src="./assets/img/insight-essential.svg" alt="" aria-hidden="true" />
+                    <h3>Essential Data in Seconds</h3>
+                    <p>Get immediate visibility into critical vehicle history details.</p>
+                </article>
+                <article>
+                    <img class="feature-icon" src="./assets/img/insight-privacy.svg" alt="" aria-hidden="true" />
+                    <h3>Privacy First Approach</h3>
+                    <p>No registration required. No credit card needed.</p>
+                </article>
+                <article>
+                    <img class="feature-icon" src="./assets/img/insight-records.svg" alt="" aria-hidden="true" />
+                    <h3>Comprehensive Record Scanning</h3>
+                    <p>We analyze multiple data points to surface relevant findings.</p>
+                </article>
+                <article>
+                    <img class="feature-icon" src="./assets/img/insight-more.svg" alt="" aria-hidden="true" />
+                    <h3>More Records May Be Available</h3>
+                    <p>Additional official vehicle data can be accessed if further details are required.</p>
+                </article>
+            </div>
+            <div class="partners">
+                <a href="https://www.carfax.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/partner-carfax.svg" alt="CARFAX" />
+                </a>
+                <a href="https://www.nhtsa.gov/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/partner-nhtsa.svg" alt="NHTSA" />
+                </a>
+                <a href="https://www.fmcsa.dot.gov/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/partner-fmcsa.svg" alt="FMCSA" />
+                </a>
+                <a href="https://www.vinaudit.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/partner-vinaudit.svg" alt="VinAudit" />
+                </a>
+            </div>
+        </section>
+        <section class="behind">
+            <div class="container behind-inner">
+                <div class="steps">
+                    <h2>Behind Your VIN Check</h2>
+                    <article>
+                        <b>01 Smart Data Matching</b>
+                        <p>Your VIN is cross-referenced across multiple data points.</p>
+                    </article>
+                    <article>
+                        <b>02 Pattern Recognition</b>
+                        <p>Your VIN is cross-referenced across multiple data points.</p>
+                    </article>
+                    <article>
+                        <b>03 Instant Report Generation</b>
+                        <p>Key vehicle insights delivered in seconds.</p>
+                    </article>
+                </div>
+                <div class="vin-diagram">
+                    <img src="./assets/img/vin-diagram.png" alt="VIN data matching process" />
+                </div>
+            </div>
+        </section>
+        <section class="report container" id="report">
+            <div class="phones">
+                <img src="./assets/img/report-preview-figma.png" alt="VIN report and accident records preview" />
+            </div>
+            <div>
+                <h2>What You’ll See in the Free Report</h2>
+                <ul>
+                    <li>Full VIN Decode</li>
+                    <li>Verified Factory Specifications</li>
+                    <li>Battery &amp; Range Details (for EV models)</li>
+                    <li>Manufacturing Information</li>
+                    <li>Model &amp; Trim Identification</li>
+                    <li>Vehicle Identity Confirmation</li>
+                </ul>
+            </div>
+        </section>
+        <section class="faq-section" id="faq">
+            <div class="container faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <article class="accordion-item open">
+                        <button aria-expanded="true">What is a VIN?</button>
+                        <div class="accordion-panel">
+                            <p>Our system detects anomalies and risk indicators. A VIN is the unique 17-character
+                                identifier
+                                assigned to a vehicle.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>Where can I find the VIN?</button>
+                        <div class="accordion-panel">
+                            <p>It is commonly visible on the dashboard by the windshield, driver-side door frame,
+                                registration and insurance documents.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>What is a VIN check? </button>
+                        <div class="accordion-panel">
+                            <p>A VIN check matches the identifier against available vehicle-history data sources.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>Why does it say "Invalid VIN"?</button>
+                        <div class="accordion-panel">
+                            <p>Check that the number has 17 characters and does not contain the letters I, O or Q.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>What are the limitations of free VIN lookup services?</button>
+                        <div class="accordion-panel">
+                            <p>Free reports show core data; some detailed records may require an extended report.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>Is it legal to perform a VIN check?</button>
+                        <div class="accordion-panel">
+                            <p>Yes. VINs are intended to identify vehicles and can be checked before a purchase.</p>
+                        </div>
+                    </article>
+                    <article class="accordion-item">
+                        <button>What can a free vehicle history report tell me?</button>
+                        <div class="accordion-panel">
+                            <p>It can show decoded specifications and available history signals.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="ad container ad-bottom">
+            <span>Ad-slot 2-footer</span>
+            <b>desktop: 970×90</b>
+            <em>position: fixed;
+                <br>width: 100%;
+            </em>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="logo footer-logo" href="#top">
+                    <img src="./assets/img/vin-check-logo-footer.svg" alt="VIN Check" />
+                </a>
+                <p>Free VIN Check service.
+                    <br>Get instant access to vehicle history, auctions, mileage and more.
+                </p>
+            </div>
+            <div class="footer-column footer-navigation">
+                <h3>Navigation</h3>
+                <a href="#check">Check VIN</a>
+                <a href="#brands">Car Brands</a>
+                <a href="#report">Sample Reports</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="footer-column footer-brands">
+                <h3>Popular Brands</h3>
+                <a>BMW VIN Check</a>
+                <a>Audi VIN Check</a>
+                <a>Toyota VIN Check</a>
+                <a>Mercedes VIN Check</a>
+                <a>Ford VIN Check</a>
+            </div>
+            <div class="footer-column footer-legal">
+                <h3>Legal</h3>
+                <a>Privacy Policy</a>
+                <a>Terms of Use</a>
+                <a>Disclaimer</a>
+                <a>Affiliate Disclosure</a>
+                <a>Cookie Policy</a>
+            </div>
+            <div class="footer-column footer-contact">
+                <h3>Contact</h3>
+                <a>1-800-488-4428</a>
+                <a>Email: support@yoursite.com</a>
+                <div class="footer-language language-switcher"></div>
+            </div>
+        </div>
+        <div class="container footer-meta">
+            <div class="copyright">© 2026 VIN Check service. All rights reserved.</div>
+            <p class="footer-disclaimer">This website provides vehicle information for informational purposes only. Some
+                links on this site are affiliate links, and we may earn a commission at no additional cost to you.</p>
+        </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script async src="./assets/js/custom.js"></script>
+</body>
+
+</html>
