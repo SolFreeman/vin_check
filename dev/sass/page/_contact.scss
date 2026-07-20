@@ -1,0 +1,273 @@
+.contact-page {
+	padding-top: 30px;
+	background-color: #F5F5F5;
+
+	@include media('>=tablet') {
+		padding-top: 50px;
+	}
+
+	.form-preholder {
+		position: relative;
+		background-color: #1F232B;
+		padding: 60px 20px;
+		margin: 0 -20px;
+
+		@include media('>=tablet') {
+			padding: 70px 60px;
+			margin: 0;
+		}
+	}
+
+	.form-holder {
+		position: relative;
+		z-index: 1;
+		max-width: 944px;
+		margin: 0 auto;
+
+		.form {
+			color: #fff;
+		}
+	}
+
+	.input {
+		background-color: #1A1E26;
+		border: 1px solid #B09762;
+		color: #FFF;
+
+		&::placeholder {
+			color: #9C9C9C;
+		}
+	}
+
+	h2 {
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 40px;
+		text-align: center;
+		letter-spacing: -0.01em;
+		color: #FFFFFF;
+		margin-bottom: 30px;
+
+		@include media('>=tablet') {
+			font-size: 50px;
+			line-height: 164%;
+			margin-bottom: 40px;
+		}
+	}
+
+	.text-holder {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 32px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 32px;
+
+		@include media('>=tablet') {
+			margin-bottom: 42px;
+		}
+	}
+}
+
+.row-tel {
+	background-color: #B09762;
+	padding: 50px 0;
+	margin: 0 -20px;
+
+	@include media('>=tablet') {
+		padding: 60px 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		position: relative;
+		padding: 0 20px 40px;
+		display: flex;
+		justify-content: center;
+
+		@include media('>=tablet') {
+			width: 50%;
+			padding-bottom: 0;
+		}
+
+		&:first-of-type {
+			&:after {
+				position: absolute;
+				content: '';
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-right: 1px solid #897243;
+			}
+		}
+	}
+
+	.for-col {
+		max-width: 400px;
+		flex-direction: column;
+		align-items: center;
+		display: flex;
+		text-align: center;
+
+		strong {
+			display: block;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 170%;
+			color: #FFFFFF;
+			margin: 0 0 35px;
+		}
+
+		a {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 22px;
+			text-decoration-line: underline;
+			color: #FFF;
+			display: block;
+			margin: 0 0 50px;
+
+			@include media('>=tablet') {
+				font-size: 40px;
+			}
+		}
+
+		.social-holder {
+			display: flex;
+			align-items: center;
+
+			span {
+				display: block;
+				margin-right: 50px;
+				color: #fff;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 170%;
+			}
+		}
+
+		.contact-socials {
+			a {
+				color: #fff;
+				text-decoration: none;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.contact-socials {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+
+	@include media('>=tablet') {
+		margin: 0 -25px;
+	}
+
+	li {
+		padding: 0 15px;
+
+		@include media('>=tablet') {
+			padding: 0 25px;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.address {
+	padding: 80px 0 0;
+
+	@include media('>=tablet') {
+		display: flex;
+		align-items: flex-start;
+		padding: 165px 0 0;
+	}
+
+	.title-holder {
+		display: flex;
+		justify-content: center;
+
+		@include media('>=tablet') {
+			width: 50%;
+		}
+
+		.title-holder {
+			font-family: $font-secondary;
+			margin: 0;
+		}
+	}
+
+	.address-holder {
+		@include media('>=tablet') {
+			width: 50%;
+		}
+
+		address {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 170%;
+			color: #212121;
+
+			@include media('<768px') {
+				text-align: center;
+			}
+		}
+	}
+
+	.contact-socials {
+		padding-top: 30px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		font-size: 38px;
+		margin: 0 0 30px;
+
+		@include media('>=tablet') {
+			padding-top: 61px;
+			justify-content: flex-start;
+			margin: 0;
+		}
+
+		li {
+			a {
+				color: #212121;
+				text-decoration: none;
+
+				&:hover {
+					color: #BF0F0D;
+				}
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	background: #fff;
+    text-align: center;
+    padding: 15px;
+    border: none;
+	margin: 25px 0 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+	background: rgba(204, 0, 4, .5);
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #c00;
+	margin: 25px 0 0;
+	color: #fff;
+}

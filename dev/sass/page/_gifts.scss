@@ -1,0 +1,94 @@
+.ladies-btn-list {
+	justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-top: 20px;
+	margin: 0 -10px;
+
+	@include media('>=600px') {
+		position: absolute;
+		right: 20px;
+		bottom: -130px;
+	}
+
+	@include media('>=tablet') {
+		padding-top: 40px;
+	}
+
+	li {
+		padding: 0 10px;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.btn {
+		width: 100%;
+		max-width: 250px;
+		text-align: center;
+		color: #fff;
+		background-color: #C40401;
+		border: 1px solid #C40401;
+		padding-right: 10px;
+		padding-left: 10px;
+		min-width: 236px;
+
+		&:hover {
+			background-color: transparent;
+			color: #C40401;
+		}
+
+		&:first-child {
+			margin-bottom: 10px;
+		}
+
+		@include media('>=tablet') {
+			margin: 0;
+		}
+
+		i {
+			margin-right: 12px;
+		}
+	}
+}
+
+.select-gifts-holder {
+	@include media('>=1024px') {
+		width: calc(100% - 540px);
+	}
+
+	.select-holder {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.ui-selectmenu-button.ui-button {
+			border: 1px solid #9D9EA8;
+			border-radius: 0;
+			height: 60px;
+			margin-right: 20px;
+			padding-top: 20px;
+		}
+
+		.btn {
+			padding-top: 13px;
+			padding-bottom: 14px;
+		}
+	}
+
+	.text-holder {
+		text-align: left;
+	}
+
+	.gifts-price {
+		font-family: $font-secondary;
+		display: inline-block;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 164%;
+		color: #212121;
+		margin-bottom: 40px;
+	}
+}

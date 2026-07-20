@@ -1,0 +1,1870 @@
+﻿:root {
+    --ink: #333;
+    --muted: #bdbab7;
+    --navy: #2c3e50;
+    --blue: #2094ff;
+    --orange: #ff8a00;
+    --pale: #f5f6f7
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.header-language {
+    font-size: 11px
+}
+
+.header-language:after {
+    content: "⌄";
+    color: var(--blue);
+    margin-left: 5px
+}
+
+.header-language button:not(.active) {
+    display: none
+}
+
+.hero {
+    // background: linear-gradient(90deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .54) 45%, rgba(213, 226, 223, .45)), linear-gradient(110deg, #d8e2dc, #f8f6ed 50%, #ccd9d6);
+    overflow: hidden
+}
+
+.hero-inner {
+    position: relative;
+    height: 100%;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy {
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 25px;
+    margin: 0 0 17px;
+    line-height: 1;
+    font-weight: 700
+}
+
+.hero-copy>p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.vin-label {
+    display: block;
+    font-size: 9px;
+    margin-bottom: 5px
+}
+
+.vin-form {
+    display: flex;
+    gap: 9px
+}
+
+.vin-form input {
+    width: 180px;
+    height: 30px;
+    border: 1px solid #b7c4d2;
+    border-radius: 6px;
+    padding: 0 10px;
+    color: #188bf5;
+    font: 14px Roboto;
+    box-shadow: 0 2px 4px #9995
+}
+
+.vin-form input::placeholder {
+    color: #168df6
+}
+
+.vin-form button {
+    border: 0;
+    border-radius: 7px;
+    background: var(--orange);
+    color: white;
+    padding: 0 11px;
+    font: 12px Roboto;
+    box-shadow: 0 2px 4px #777;
+    cursor: pointer
+}
+
+.hero small {
+    font-size: 8px;
+    display: block;
+    margin: 6px 0 0 20px
+}
+
+.car-art {
+    position: absolute;
+    right: 10px;
+    bottom: 41px;
+    width: 290px;
+    height: 115px;
+    z-index: 1;
+    filter: drop-shadow(0 12px 5px #7884)
+}
+
+.car-body {
+    position: absolute;
+    inset: 37px 0 6px;
+    background: linear-gradient(#fff, #bec8cf 50%, #63717b 55%, #eee 61%, #a9b5ba);
+    border-radius: 38% 48% 16% 17%/54% 65% 26% 28%;
+    border: 2px solid #89979d
+}
+
+.car-roof {
+    position: absolute;
+    top: 4px;
+    left: 82px;
+    width: 156px;
+    height: 58px;
+    background: linear-gradient(110deg, #9eabb1, #f7f7f5 35%, #bbc6c9);
+    border: 3px solid #89979d;
+    border-bottom: 0;
+    border-radius: 58% 58% 6% 4%;
+    transform: skewX(-12deg)
+}
+
+.wheel {
+    position: absolute;
+    bottom: 0;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #a0a7ab 0 19%, #353a3b 21% 39%, #101517 41% 62%, #d7dee1 64% 69%, #171a1b 71%);
+    z-index: 3
+}
+
+.wheel-one {
+    left: 45px
+}
+
+.wheel-two {
+    right: 34px
+}
+
+.light {
+    position: absolute;
+    right: 6px;
+    top: 52px;
+    width: 28px;
+    height: 13px;
+    border-radius: 50% 60% 60% 30%;
+    background: #e6f9ff;
+    z-index: 4
+}
+
+.trust {
+    display: flex;
+    gap: 45px;
+    color: #53606a;
+    font-size: 14px;
+    line-height: 1.3;
+    max-width: 730px;
+    margin: 55px auto 0;
+    justify-content: space-between;
+}
+
+.trust-item {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+
+}
+
+.ad {
+    height: 55px;
+    margin-top: 57px;
+    background: #eceff1;
+    border-radius: 6px;
+    color: #777;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px
+}
+
+.ad em {
+    font-style: normal
+}
+
+.recent {
+    padding-top: 54px;
+    width: 510px
+}
+
+.recent h2,
+.popular h2,
+.insights h2,
+.report h2,
+.faq h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 0 17px
+}
+
+.vin-table {
+    font-size: 9px
+}
+
+.tr {
+    height: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1.42fr;
+    align-items: center;
+    padding: 0 8px;
+    background: #fafafa
+}
+
+.tr:nth-child(odd) {
+    background: #f3f5f6
+}
+
+.tr.th {
+    height: 22px;
+    background: #d9eaff;
+    font-size: 8px
+}
+
+.tr a {
+    color: #238ee4;
+    text-decoration: underline
+}
+
+.popular {
+    padding-top: 50px
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 76px
+}
+
+.brand-grid a {
+    height: 24px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 9px
+}
+
+.seo {
+    max-width: 560px;
+    padding-top: 63px;
+    font-size: 9px;
+    line-height: 1.15
+}
+
+.seo h3 {
+    font-size: 11px;
+    margin: 0 0 16px
+}
+
+.seo p {
+    margin: 0 0 3px
+}
+
+.seo a {
+    display: none;
+    color: #198cf1
+}
+
+.insights {
+    padding: 52px 45px 50px
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 95px
+}
+
+.feature-grid article {
+    position: relative;
+    padding-left: 55px;
+    min-height: 45px
+}
+
+.feature-grid i {
+    position: absolute;
+    left: 0;
+    color: #4ca9f9;
+    font-size: 28px;
+    font-style: normal
+}
+
+.feature-grid h3 {
+    font-size: 12px;
+    margin: 0 0 5px
+}
+
+.feature-grid p {
+    font-size: 9px;
+    margin: 0
+}
+
+.partners {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    font-size: 17px;
+    color: #1471b7
+}
+
+.partners a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners b:first-child {
+    background: #161616;
+    color: #fff;
+    letter-spacing: 2px;
+    height: 18px;
+    font-size: 13px;
+    padding: 1px 4px
+}
+
+.partners .green {
+    color: #73bc33
+}
+
+.behind {
+    background: #f4f5f5;
+    padding: 52px 0
+}
+
+.behind-inner {
+    display: flex;
+    gap: 23px
+}
+
+.steps {
+    width: 310px
+}
+
+.steps h2 {
+    font-size: 21px;
+    margin: 0 0 23px
+}
+
+.steps article {
+    border-top: 1px solid #d7d7d7;
+    padding: 15px 15px
+}
+
+.steps article:last-child {
+    border-bottom: 1px solid #d7d7d7
+}
+
+.steps b {
+    font-size: 11px
+}
+
+.steps p {
+    font-size: 9px;
+    margin: 5px 0 0
+}
+
+.vin-diagram {
+    width: 530px;
+    height: 190px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden
+}
+
+.vin-diagram strong {
+    position: absolute;
+    left: 165px;
+    top: 88px;
+    background: white;
+    border: 2px solid #168df6;
+    border-radius: 5px;
+    padding: 5px 7px;
+    color: #63727c;
+    font-size: 12px;
+    z-index: 3
+}
+
+.vin-diagram strong b {
+    background: #168df6;
+    color: #fff;
+    padding: 5px;
+    margin-right: -7px
+}
+
+.circle {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 2px solid #d5efff;
+    background: white;
+    box-shadow: 0 2px 8px #bcd;
+    display: grid;
+    place-items: center;
+    color: #5d99bd;
+    font-size: 24px;
+    z-index: 2
+}
+
+.database {
+    top: 14px;
+    left: 77px
+}
+
+.car {
+    top: 38px;
+    left: 217px
+}
+
+.gavel {
+    top: 14px;
+    right: 77px
+}
+
+.shield {
+    bottom: 10px;
+    left: 78px
+}
+
+.report .circle {}
+
+.report {
+    display: flex;
+    gap: 85px;
+    padding: 63px 0 55px;
+    align-items: center
+}
+
+.phones {
+    width: 330px;
+    height: 220px;
+    background: linear-gradient(90deg, #fff, #f0f3f4, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 13px
+}
+
+.phone {
+    height: 185px;
+    width: 70px;
+    background: #333;
+    border-radius: 10px 10px 3px 3px;
+    padding: 7px 4px
+}
+
+.phone div {
+    height: 100%;
+    background: linear-gradient(#e4eff6 12%, #fff 12% 22%, #aac3d0 22% 35%, #fff 35% 55%, #e4eff6 55% 65%, #fff 65%);
+    border-radius: 5px
+}
+
+.report>div:last-child {
+    width: 360px
+}
+
+.report h2 {
+    text-align: left
+}
+
+.report ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.report li {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    font-size: 22px;
+    line-height: 1.5;
+    gap: 16px;
+}
+
+.report li:nth-of-type(odd) {
+    background: #F8F9FA;
+}
+
+.report li:before {
+    position: static;
+    content: "";
+    color: #2094ff;
+    width: auto;
+    min-width: 0;
+    border-radius: 0;
+    background: none;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21.0698 5.22873C21.2743 5.44597 21.384 5.73551 21.375 6.03367C21.366 6.33184 21.239 6.61423 21.0218 6.81873L9.12682 18.0297C8.88434 18.2581 8.56212 18.3825 8.2291 18.3763C7.89607 18.3702 7.57868 18.2339 7.34482 17.9967L3.32482 13.9167C3.21837 13.8121 3.13379 13.6874 3.07601 13.5498C3.01823 13.4122 2.98841 13.2645 2.98828 13.1152C2.98815 12.966 3.01772 12.8182 3.07526 12.6805C3.1328 12.5428 3.21716 12.4179 3.32343 12.3132C3.4297 12.2084 3.55576 12.1258 3.69426 12.0702C3.83277 12.0146 3.98094 11.9872 4.13017 11.9894C4.27939 11.9916 4.42668 12.0235 4.56345 12.0833C4.70022 12.143 4.82374 12.2293 4.92682 12.3372L8.27782 15.7377L19.4798 5.18073C19.6971 4.9763 19.9866 4.86651 20.2848 4.87551C20.5829 4.88451 20.8653 5.01157 21.0698 5.22873Z' fill='%23007BFF'/%3e%3c/svg%3e ");
+}
+
+.faq-section {
+    background: #f4f5f5;
+    padding: 51px 0
+}
+
+.faq {
+    width: 600px
+}
+
+.accordion {
+    border-bottom: 1px solid #c8c8c8
+}
+
+.accordion-item {
+    border-top: 1px solid #c8c8c8
+}
+
+.accordion-item button {
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-item button:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    transition: all .2s ease-in-out;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 10L12 15L17 10' stroke='%232C3E50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+
+.accordion-item.open button:after {
+    transform: rotate(180deg);
+}
+
+.accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .34s ease
+}
+
+.accordion-panel p {
+    overflow: hidden;
+    margin: 0 12px;
+    font-size: 9px;
+    line-height: 1.2
+}
+
+.accordion-item.open .accordion-panel {
+    grid-template-rows: 1fr
+}
+
+.accordion-item.open .accordion-panel p {
+    padding: 0 0 12px
+}
+
+.ad-bottom {
+    margin-top: 58px;
+    margin-bottom: 58px;
+    width: 370px
+}
+
+.ad-bottom span {
+    font-size: 7px
+}
+
+.toast {
+    position: fixed;
+    z-index: 5;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    background: #253a4c;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: .25s
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0)
+}
+
+@media(max-width:767px) {
+    body {
+        font-size: 14px
+    }
+
+    .container {
+        width: 100%;
+        max-width: none
+    }
+
+    .hero {
+        height: 271px;
+        background: linear-gradient(#fff9, #fff7), linear-gradient(135deg, #d4e0df, #eff1ec)
+    }
+
+    .hero-inner {
+        padding: 8px 0
+    }
+
+    .hero-copy {
+        width: 200px
+    }
+
+    .hero h1 {
+        font-size: 17px;
+        line-height: 1.03;
+        width: 170px;
+        margin-bottom: 11px
+    }
+
+    .hero-copy>p {
+        font-size: 11px;
+        line-height: 1.12;
+        width: 170px;
+        margin-bottom: 11px
+    }
+
+    .vin-label {
+        font-size: 7px;
+        white-space: nowrap
+    }
+
+    .vin-form {
+        flex-direction: column;
+        gap: 27px
+    }
+
+    .vin-form input {
+        width: 144px;
+        height: 24px;
+        border-radius: 5px;
+        font-size: 10px
+    }
+
+    .vin-form button {
+        position: absolute;
+        top: 130px;
+        left: 8px;
+        width: 146px;
+        height: 22px;
+        font-size: 8px
+    }
+
+    .hero small {
+        font-size: 6px;
+        margin: 4px 0 0 13px
+    }
+
+    .car-art {
+        transform: scale(.62);
+        transform-origin: bottom right;
+        right: -11px;
+        bottom: 29px
+    }
+
+
+    .ad {
+        margin-top: 18px;
+        width: 144px;
+        height: 37px;
+        font-size: 5px;
+        line-height: 1.2;
+        gap: 5px;
+        flex-wrap: wrap;
+        padding: 6px
+    }
+
+    .recent {
+        padding: 21px 7px 0;
+        width: 100%
+    }
+
+    .recent h2,
+    .popular h2,
+    .insights h2,
+    .report h2,
+    .faq h2 {
+        font-size: 11px;
+        margin-bottom: 10px
+    }
+
+    .vin-table {
+        font-size: 6px
+    }
+
+    .tr {
+        height: 19px;
+        padding: 0 3px;
+        grid-template-columns: 1fr 1.22fr
+    }
+
+    .tr.th {
+        height: 19px;
+        font-size: 5px
+    }
+
+    .popular {
+        padding: 20px 7px 0;
+        overflow: hidden
+    }
+
+    .brand-grid {
+        width: 520px;
+        gap: 8px 29px
+    }
+
+    .brand-grid a {
+        width: 110px;
+        height: 18px;
+        font-size: 6px;
+        padding-top: 5px
+    }
+
+    .seo {
+        padding: 25px 8px 0;
+        font-size: 6px;
+        line-height: 1.1;
+        width: 100%
+    }
+
+    .seo h3 {
+        font-size: 8px;
+        margin-bottom: 9px
+    }
+
+    .seo a {
+        display: block;
+        font-size: 6px;
+        margin-top: 5px
+    }
+
+    .insights {
+        padding: 34px 8px 25px
+    }
+
+    .feature-grid {
+        gap: 17px 17px
+    }
+
+    .feature-grid article {
+        padding-left: 25px;
+        min-height: 38px
+    }
+
+    .feature-grid i {
+        font-size: 18px
+    }
+
+    .feature-grid h3 {
+        font-size: 8px;
+        margin-bottom: 3px
+    }
+
+    .feature-grid p {
+        font-size: 6px;
+        line-height: 1.1
+    }
+
+    .partners {
+        margin-top: 26px;
+        justify-content: flex-start;
+        gap: 22px;
+        font-size: 0
+    }
+
+    .partners b {
+        font-size: 12px
+    }
+
+    .partners b:nth-child(n+3) {
+        display: none
+    }
+
+    .partners b:first-child {
+        font-size: 9px;
+        height: 13px
+    }
+
+    .behind {
+        padding: 23px 0
+    }
+
+    .behind-inner {
+        display: block
+    }
+
+    .steps {
+        width: 100%
+    }
+
+    .steps h2 {
+        font-size: 10px;
+        text-align: center;
+        margin: 0 0 12px
+    }
+
+    .steps article {
+        padding: 9px 14px
+    }
+
+    .steps article b {
+        font-size: 7px
+    }
+
+    .steps article p {
+        font-size: 6px
+    }
+
+    .steps article:nth-of-type(2),
+    .steps article:nth-of-type(3) {
+        display: none
+    }
+
+    .vin-diagram {
+        width: 100%;
+        height: 171px;
+        border-radius: 0;
+        margin-top: 0;
+        transform: none
+    }
+
+    .vin-diagram strong {
+        left: 92px;
+        top: 77px;
+        font-size: 8px
+    }
+
+    .circle {
+        transform: scale(.65)
+    }
+
+    .database {
+        top: 13px;
+        left: 24px
+    }
+
+    .car {
+        top: 40px;
+        left: 122px
+    }
+
+    .gavel {
+        top: 13px;
+        right: 24px
+    }
+
+    .shield {
+        bottom: 16px;
+        left: 22px
+    }
+
+    .report {
+        padding: 34px 8px 26px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px
+    }
+
+    .report>div:last-child {
+        width: 100%
+    }
+
+    .report h2 {
+        text-align: center;
+        font-size: 11px
+    }
+
+
+    .report li:before {
+        
+    }
+
+    .phones {
+        width: 170px;
+        height: 138px
+    }
+
+    .phone {
+        height: 124px;
+        width: 47px;
+        border-radius: 7px 7px 2px 2px;
+        padding: 5px 3px
+    }
+
+    .faq-section {
+        padding: 22px 7px
+    }
+
+    .faq {
+        width: 100%
+    }
+
+    .accordion-item button {
+        font-size: 7px;
+        padding: 7px 4px
+    }
+
+    .accordion-item button span {
+        font-size: 10px
+    }
+
+    .accordion-panel p {
+        font-size: 6px;
+        margin: 0 4px;
+        line-height: 1.2
+    }
+
+    .accordion-item.open .accordion-panel p {
+        padding-bottom: 7px
+    }
+
+    .ad-bottom {
+        margin: 22px auto;
+        width: 130px;
+        height: 22px
+    }
+
+    .ad-bottom * {
+        font-size: 4px
+    }
+
+    .menu-language {
+        font-size: 16px;
+        margin-top: 4px
+    }
+
+    .toast {
+        font-size: 11px;
+        max-width: 90%;
+        text-align: center
+    }
+}
+
+/* Exact desktop measurements and Figma image crops. */
+.container {
+    max-width: 1200px
+}
+
+.header-language {
+    font-size: 16px
+}
+
+.hero {
+    padding:  20px 0;
+    background: #fff url('./assets/img/hero-background.png') center/cover no-repeat;
+    
+    @include media('>=tablet') {
+        padding: 107px 0 106px;
+    }
+}
+
+
+// .hero-copy {
+//     margin-left: 203px
+// }
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 20px
+}
+
+.hero-copy>p {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 27px
+}
+
+.vin-label {
+    font-size: 16px;
+    margin-bottom: 16px
+}
+
+.vin-form input {
+    width: 360px;
+    height: 56px;
+    border: 1px solid #2c3e50;
+    border-radius: 12px;
+    font-size: 22px
+}
+
+.vin-form button {
+    height: 56px;
+    padding: 0 16px;
+    border: 1px solid #2c3e50;
+    border-radius: 12px;
+    font-size: 22px;
+    box-shadow: none
+}
+
+.hero small {
+    font-size: 16px;
+    margin: 8px 0 0 64px
+}
+
+
+.car-art,
+.car-body,
+.car-roof,
+.wheel,
+.light,
+.hero-photo {
+    display: none !important
+}
+
+.ad {
+    height: 90px;
+    margin-top: 100px;
+    width: 728px;
+    font-size: 16px
+}
+
+.recent {
+    padding-top: 100px;
+    width: 793px
+}
+
+.recent h2,
+.popular h2,
+.insights h2,
+.report h2,
+.faq h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 32px
+}
+
+.vin-table {
+    font-size: 16px
+}
+
+.tr,
+.tr.th {
+    height: 45px;
+    font-size: 16px;
+    padding: 0 12px
+}
+
+.popular {
+    padding-top: 100px
+}
+
+.brand-grid {
+    gap: 24px 159px
+}
+
+.brand-grid a {
+    height: 45px;
+    font-size: 16px;
+    padding-top: 12px
+}
+
+.seo {
+    max-width: 860px;
+    padding-top: 100px;
+    font-size: 16px;
+    line-height: 1.3
+}
+
+.seo h3 {
+    font-size: 22px
+}
+
+.insights {
+    padding: 100px 91px
+}
+
+.feature-grid {
+    gap: 56px 146px
+}
+
+.feature-grid article {
+    padding-left: 88px;
+    min-height: 93px
+}
+
+.feature-grid i {
+    font-size: 48px
+}
+
+.feature-grid h3 {
+    font-size: 22px
+}
+
+.feature-grid p {
+    font-size: 16px
+}
+
+.partners {
+    margin-top: 80px
+}
+
+.partners img {
+    max-height: 38px;
+    max-width: 194px;
+    object-fit: contain
+}
+
+.behind {
+    padding: 60px 0
+}
+
+.behind-inner {
+    gap: 20px
+}
+
+.steps {
+    width: 387px
+}
+
+.steps h2 {
+    font-size: 32px
+}
+
+.steps b {
+    font-size: 16px
+}
+
+.steps p {
+    font-size: 16px
+}
+
+.vin-diagram {
+    width: 793px;
+    height: 383px;
+    border-radius: 12px
+}
+
+.vin-diagram img {
+    width: 103.72%;
+    height: 143.17%;
+    margin: -40.13% 0 0 -1.07%;
+    display: block
+}
+
+.report {
+    padding: 100px 0;
+    gap: 20px
+}
+
+.phones {
+    width: 590px;
+    height: 358px;
+    background: none;
+    display: block
+}
+
+.phones img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.report>div:last-child {
+    width: 508px
+}
+
+.report h2 {
+    text-align: left
+}
+
+.faq-section {
+    padding: 60px 0
+}
+
+.faq {
+    width: 793px
+}
+
+.accordion-item button {
+    font-size: 22px;
+    padding: 16px 24px
+}
+
+.accordion-panel p {
+    font-size: 16px;
+    margin: 0 24px
+}
+
+.ad-bottom {
+    width: 970px
+}
+
+@media(max-width:767px) {
+    .hero {
+        height: 402px;
+        background-position: center;
+        background-size: auto 402px
+    }
+
+    .hero-inner {
+        padding-top: 23px
+    }
+
+
+    .hero h1 {
+        font-size: 24px;
+        width: 230px;
+        margin-bottom: 11px
+    }
+
+    .hero-copy>p {
+        font-size: 16px;
+        width: 230px;
+        margin-bottom: 18px
+    }
+
+    .vin-label {
+        font-size: 10px;
+        margin-bottom: 6px
+    }
+
+    .vin-form input {
+        width: 230px;
+        height: 36px;
+        font-size: 14px;
+        border-radius: 8px
+    }
+
+    .vin-form button {
+        top: 184px;
+        left: 16px;
+        width: 230px;
+        height: 36px;
+        font-size: 14px;
+        border-radius: 8px
+    }
+
+    .hero small {
+        font-size: 9px;
+        margin: 6px 0 0 13px
+    }
+
+    .partners img {
+        max-width: 75px;
+        max-height: 18px
+    }
+
+    .vin-diagram img {
+        width: 103.72%;
+        height: 143.17%;
+        margin: -40.13% 0 0 -1.07%
+    }
+
+    .phones {
+        background: none
+    }
+
+    .phones img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain
+    }
+}
+
+/* Mobile layout: one complete 375 px design grid (no inherited desktop widths). */
+@media (max-width:767px) {
+    body {
+        min-width: 320px;
+        overflow-x: hidden;
+        font-size: 14px
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px
+    }
+
+    .header-language:before {
+        content: "";
+        display: inline-block;
+        height: 24px;
+        border-left: 1px solid #bdbab7;
+        margin-right: 14px;
+        vertical-align: middle
+    }
+
+    .header-language:after {
+        display: none
+    }
+
+    .hero {
+        height: 402px;
+        width: 100%;
+        background-position: 48% center;
+        background-size: auto 402px
+    }
+
+    .hero-inner {
+        padding: 25px 16px
+    }
+
+    .hero-copy {
+        margin: 0;
+        // width: 245px
+    }
+
+    .hero h1 {
+        width: 230px;
+        font-size: 24px;
+        line-height: 1.08;
+        margin: 0 0 12px
+    }
+
+    .hero-copy>p {
+        width: 230px;
+        font-size: 14px;
+        line-height: 1.25;
+        margin: 0 0 18px
+    }
+
+    .vin-label {
+        font-size: 10px;
+        margin: 0 0 6px
+    }
+
+    .vin-form {
+        position: relative;
+        display: block
+    }
+
+    .vin-form input {
+        display: block;
+        width: 230px;
+        height: 38px;
+        border-radius: 8px;
+        font-size: 14px
+    }
+
+    .vin-form button {
+        position: static;
+        display: block;
+        width: 230px;
+        height: 38px;
+        margin-top: 34px;
+        border-radius: 8px;
+        font-size: 13px
+    }
+
+    .hero small {
+        font-size: 9px;
+        margin: 5px 0 0 13px
+    }
+
+    .trust span {
+        white-space: nowrap
+    }
+
+    .ad {
+        width: calc(100% - 32px);
+        height: 50px;
+        margin: 28px 16px 0;
+        padding: 7px 10px;
+        gap: 8px;
+        font-size: 8px
+    }
+
+    .recent {
+        width: 100%;
+        padding: 46px 16px 0
+    }
+
+    .recent h2,
+    .popular h2,
+    .insights h2,
+    .report h2,
+    .faq h2 {
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 18px
+    }
+
+    .vin-table {
+        width: 100%;
+        font-size: 8px
+    }
+
+    .tr,
+    .tr.th {
+        height: 29px;
+        font-size: 8px;
+        padding: 0 5px;
+        grid-template-columns: 43% 57%;
+        overflow: hidden
+    }
+
+    .tr span,
+    .tr a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+
+    .tr.th {
+        font-size: 7px
+    }
+
+    .popular {
+        width: 100%;
+        padding: 42px 16px 0;
+        overflow: visible
+    }
+
+    .brand-grid {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 14px
+    }
+
+    .brand-grid a {
+        width: 100%;
+        height: 31px;
+        padding-top: 8px;
+        font-size: 8px
+    }
+
+    .seo {
+        width: 100%;
+        max-width: none;
+        padding: 42px 16px 0;
+        font-size: 10px;
+        line-height: 1.25
+    }
+
+    .seo h3 {
+        font-size: 13px;
+        margin-bottom: 11px
+    }
+
+    .seo a {
+        font-size: 10px
+    }
+
+    .insights {
+        width: 100%;
+        padding: 48px 16px 38px
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 12px
+    }
+
+    .feature-grid article {
+        padding-left: 31px;
+        min-height: 66px
+    }
+
+    .feature-grid i {
+        font-size: 23px
+    }
+
+    .feature-grid h3 {
+        font-size: 11px;
+        line-height: 1.1;
+        margin-bottom: 5px
+    }
+
+    .feature-grid p {
+        font-size: 9px;
+        line-height: 1.15
+    }
+
+    .partners {
+        margin-top: 28px;
+        gap: 12px;
+        justify-content: space-between
+    }
+
+    .partners img {
+        display: block;
+        max-width: 22%;
+        max-height: 20px;
+        object-fit: contain
+    }
+
+    .behind {
+        padding: 40px 0
+    }
+
+    .behind-inner {
+        display: block
+    }
+
+    .steps {
+        width: 100%;
+        padding: 0 16px
+    }
+
+    .steps h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 18px
+    }
+
+    .steps article {
+        padding: 12px 8px
+    }
+
+    .steps article b {
+        font-size: 11px
+    }
+
+    .steps article p {
+        font-size: 9px
+    }
+
+    .steps article:nth-of-type(2),
+    .steps article:nth-of-type(3) {
+        display: block
+    }
+
+    .vin-diagram {
+        width: calc(100% - 32px);
+        height: 162px;
+        margin: 20px 16px 0;
+        border-radius: 8px
+    }
+
+    .vin-diagram img {
+        width: 103.72%;
+        height: 143.17%;
+        margin: -40.13% 0 0 -1.07%
+    }
+
+    .report {
+        width: 100%;
+        padding: 48px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px
+    }
+
+    .report>div:last-child {
+        width: 100%
+    }
+
+    .report h2 {
+        text-align: center
+    }
+
+    .phones {
+        width: 100%;
+        height: 205px;
+        background: none
+    }
+
+    .phones img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain
+    }
+
+    .report li {
+        height: auto;
+        min-height: 35px;
+        padding: 9px 8px 8px 27px;
+        font-size: 11px
+    }
+
+    .faq-section {
+        padding: 45px 16px
+    }
+
+    .faq {
+        width: 100%;
+        padding: 0
+    }
+
+    .accordion-item button {
+        font-size: 12px;
+        padding: 12px 4px
+    }
+
+    .accordion-panel p {
+        font-size: 10px;
+        margin: 0 4px
+    }
+
+    .ad-bottom {
+        width: calc(100% - 32px);
+        height: 36px;
+        margin: 30px 16px
+    }
+
+    .menu-language {
+        font-size: 16px
+    }
+
+    .toast {
+        font-size: 12px
+    }
+}
+
+/* Shared Figma language-menu state. The same component is used in the header at every breakpoint. */
+.header-language {
+    position: relative;
+    display: block !important;
+    z-index: 30
+}
+
+.header-language:before {
+    content: "";
+    display: inline-block;
+    height: 24px;
+    border-left: 1px solid #bdbab7;
+    margin-right: 14px;
+    vertical-align: middle
+}
+
+.header-language:after {
+    display: none
+}
+
+.header-language.open {
+    z-index: 50
+}
+
+/* Stable FAQ transition: only one predictable dimension animates. */
+.accordion-panel {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s cubic-bezier(.2, .75, .25, 1)
+}
+
+.accordion-panel p {
+    margin: 0 24px;
+    padding: 0;
+    overflow: visible
+}
+
+.accordion-item.open .accordion-panel {
+    max-height: 128px
+}
+
+.accordion-item.open .accordion-panel p {
+    padding: 0 0 16px
+}
+
+.accordion-item button span {
+    display: inline-block;
+    transition: transform .24s ease
+}
+
+.accordion-item.open button span {
+    transform: rotate(180deg)
+}
+
+/* Separate Figma images rather than section-sized image crops. */
+.hero {
+    position: relative
+}
+
+.hero-inner {
+    overflow: visible
+}
+
+
+.hero-copy,
+.trust {
+    z-index: 2
+}
+
+.phones {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 18px;
+    overflow: hidden
+}
+
+.phones img {
+    display: block;
+    max-width: 48%;
+    height: 100%;
+    width: auto;
+    object-fit: contain
+}
+
+.phones .phone-one {
+    height: 94%
+}
+
+.phones .phone-two {
+    height: 94%
+}
+
+@media(min-width: 768px) {
+     
+}
+
+@media(max-width:767px) {
+    .accordion-panel p {
+        margin: 0 4px
+    }
+
+    .accordion-item.open .accordion-panel p {
+        padding-bottom: 10px
+    }
+
+    .hero {
+        background: #f3f5f4
+    }
+
+    .hero-background {
+        height: 402px;
+        width: 100%;
+        left: 0;
+        transform: none;
+        object-position: 48% center
+    }
+
+    .hero-copy,
+    .trust {
+        z-index: 3
+    }
+
+    .phones {
+        height: 205px;
+        gap: 8px
+    }
+
+    .phones img {
+        max-width: 47%;
+        height: 100%;
+        object-fit: contain
+    }
+}
+
+/* Requested HTML language-bar structure. */
+
+/* Report preview: dimensions and alignment from Figma node 1057:9813. */
+@media (min-width: 768px) {
+    .report {
+        align-items: flex-end;
+    }
+
+    .phones {
+        width: 590px;
+        height: 342px;
+        gap: 0;
+        border-radius: 12px;
+        background: #f8f9fa;
+    }
+
+    .phones img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+/* Static VIN diagram exported from Figma node 1057:9908. */
+.vin-diagram img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    animation: none;
+    transform: none;
+}
+
+@media (max-width: 767px) {
+    .phones img {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Scrollable SEO copy, mobile-first. */
+.seo.container {
+    max-height: 220px;
+    margin-top: 42px;
+    padding-top: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-color: #b8d8fa #f4f7fa;
+    scrollbar-width: thin;
+}
+
+.seo.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.seo.container::-webkit-scrollbar-track {
+    background: #f4f7fa;
+    border-radius: 999px;
+}
+
+.seo.container::-webkit-scrollbar-thumb {
+    background: #b8d8fa;
+    border-radius: 999px;
+}
+
+.feature-grid .feature-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .seo.container {
+        max-height: 267px;
+        margin-top: 100px;
+    }
+
+    .feature-grid .feature-icon {
+        width: 72px;
+        height: 72px;
+    }
+}

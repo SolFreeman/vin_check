@@ -1,0 +1,39 @@
+ /*404*/
+
+ .page-404 {
+   background-position: 0 100%;
+   background-repeat: no-repeat;
+   padding-bottom: 60px;
+
+   .container {
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+   }
+
+   .text-holder {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 display: flex;
+	 flex-direction: column;
+
+	 strong {
+	   display: block;
+	   margin: 0 0 30px;
+	   font-family: $font-secondary;
+	   font-size: 120px;
+	   line-height: 154px;
+	 }
+
+	 span {
+	   display: block;
+	   margin: 0 0 70px;
+	   font-family: $font-secondary;
+	   font-size: 50px;
+	   font-weight: 500;
+	   line-height: 24px;
+	 }
+   }
+ }

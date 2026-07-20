@@ -1,0 +1,43 @@
+/*
+Theme Name: MarkupAssembly
+Theme URI: https://kofelatte.studio/portfolio/
+Author: Sol ITech
+Author URI: Sol ITech
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ProjectName
+*/
+
+@import "sass/mixins";
+@import "sass/variables";
+@import "sass/general";
+@import "sass/z-index";
+@import "sass/other/simplebar";
+@import "sass/fonts";
+@import "sass/icon";
+@import "sass/modal";
+@import "sass/header";
+@import "sass/other/_pagination.scss";
+@import "sass/other/templatePageBlock";
+@import "sass/wp-style";
+@import "sass/footer";
+@import "sass/media/media";
+@import "sass/page/markup";
+@import "sass/page/404";
+@import "sass/page/article";
+@import "sass/page/home";
+@import "sass/page/for-men";
+@import "sass/page/services";
+@import "sass/page/about";
+@import "sass/page/blog";
+@import "sass/page/contact";
+@import "sass/page/dashboard";
+@import "sass/page/gallery";
+@import "sass/page/documents";
+@import "sass/page/gifts";
+@import "sass/page/payments";
+@import "sass/page/extra-services";
+@import "sass/page/favorites";
+@import "sass/page/public-profile";

@@ -1,0 +1,162 @@
+.hero-section {
+  background-color: #1F232B;
+  min-height: 240px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @include media('>=tablet') {
+	min-height: 430px;
+  }
+
+  .breadcrumbs {
+	position: absolute;
+	top: 0;
+	background-color: transparent;
+
+	&__list {
+	  li {
+		&:after {
+		  background-color: #fff;
+		}
+	  }
+	}
+
+	a,
+	span {
+	  color: #fff;
+	}
+  }
+
+  .title-holder {
+	margin-bottom: 0;
+  }
+
+  .title {
+	color: #fff;
+  }
+}
+
+.services {
+
+  &__item {
+	position: relative;
+	padding: 50px 0;
+
+	@include media('>=tablet') {
+	  padding: 130px 0 0px;
+	  display: flex;
+	  justify-content: space-between;
+	}
+
+	&:nth-child(odd) {
+	  @include media('>=tablet') {
+		flex-direction: row-reverse;
+	  }
+
+	  .description-col {
+		@include media('>=tablet') {
+		  padding-left: 0;
+		  padding-right: 60px;
+		}
+
+		@include media('>=1280px') {
+		  padding-right: 160px;
+		}
+	  }
+	}
+
+	&:after {
+	  position: absolute;
+	  content: '';
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  border-bottom: 1px solid #DFDCDA;
+
+	  @include media('>=tablet') {
+		right: -90px;
+		left: -90px;
+	  }
+	}
+  }
+
+  .img-col {
+	margin-bottom: 40px;
+
+	@include media('>=tablet') {
+	  width: 335px;
+	  position: relative;
+	  top: -230px;
+	}
+
+	@include media('>=1280px') {
+	  width: 470px;
+	}
+  }
+
+  .description-col {
+	@include media('>=tablet') {
+	  padding-left: 60px;
+	  width: calc(100%  - 396px);
+	}
+
+	@include media('>=1280px') {
+	  padding-left: 160px;
+	  width: calc(100%  - 630px);
+	}
+  }
+
+  h2 {
+	margin-bottom: 20px;
+
+  }
+}
+
+.plan-description-block {
+  .plan-description-holder {
+	margin: 0 0 10px;
+
+	@include media('>=tablet') {
+	  display: flex;
+	}
+  }
+
+  .description-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #21242B;
+	min-height: 243px;
+
+	@include media('>=tablet') {
+	  width: 300px;
+	}
+
+	h3 {
+	  font-weight: 600;
+	  font-size: 20px;
+	  line-height: 34px;
+	  color: #FFFFFF;
+	}
+  }
+
+  .plan-description {
+	background-color: #fff;
+	padding: 70px 30px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 170%;
+	color: #000;
+
+	@include media('>=tablet') {
+	  font-size: 18px;
+	  width: calc(100% - 300px);
+	  padding: 70px;
+	}
+  }
+}
