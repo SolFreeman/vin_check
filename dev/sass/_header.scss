@@ -1,7 +1,7 @@
 .site-header {
     position: relative;
     z-index: 100;
-    height: 98px;
+    height: 74px;
     background: #fff;
 }
 
@@ -236,7 +236,7 @@
     background: #DBEAFE;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .site-header {
         height: 109px;
     }
@@ -254,6 +254,7 @@
 
     .language-bar {
         display: flex;
+        min-width: 104px;
     }
 
     .nav-opener {

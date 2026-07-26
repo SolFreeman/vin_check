@@ -3,7 +3,7 @@
     --muted: #bdbab7;
     --navy: #2c3e50;
     --blue: #2094ff;
-    --orange: #ff8a00;
+    --orange: #FF8C00;
     --pale: #f5f6f7
 }
 
@@ -19,7 +19,7 @@ body {
     margin: 0;
     color: var(--ink);
     font-family: Roboto, Arial, sans-serif;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .container {
@@ -43,11 +43,23 @@ body {
 
 .hero {
     // background: linear-gradient(90deg, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .54) 45%, rgba(213, 226, 223, .45)), linear-gradient(110deg, #d8e2dc, #f8f6ed 50%, #ccd9d6);
-    overflow: hidden
+    overflow: hidden;
+    position: relative;
+}
+
+.hero .bg-holder {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+
+.hero-background {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
 }
 
 .hero-inner {
-    position: relative;
     height: 100%;
 }
 
@@ -62,16 +74,19 @@ body {
 }
 
 .hero h1 {
-    font-size: 25px;
-    margin: 0 0 17px;
-    line-height: 1;
-    font-weight: 700
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 32px;
+    color: #333;
 }
 
 .hero-copy>p {
-    margin: 0 0 14px;
-    font-size: 14px;
-    font-weight: 500
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    font-weight: 500;
+    color: #333;
 }
 
 .vin-label {
@@ -85,19 +100,10 @@ body {
     gap: 9px
 }
 
-.vin-form input {
-    width: 180px;
-    height: 30px;
-    border: 1px solid #b7c4d2;
-    border-radius: 6px;
-    padding: 0 10px;
-    color: #188bf5;
-    font: 14px Roboto;
-    box-shadow: 0 2px 4px #9995
-}
+
 
 .vin-form input::placeholder {
-    color: #168df6
+    color: #007BFF
 }
 
 .vin-form button {
@@ -109,12 +115,6 @@ body {
     font: 12px Roboto;
     box-shadow: 0 2px 4px #777;
     cursor: pointer
-}
-
-.hero small {
-    font-size: 8px;
-    display: block;
-    margin: 6px 0 0 20px
 }
 
 .car-art {
@@ -184,8 +184,9 @@ body {
     font-size: 14px;
     line-height: 1.3;
     max-width: 730px;
-    margin: 55px auto 0;
+    margin: 20px auto 0;
     justify-content: space-between;
+    position: relative;
 }
 
 .trust-item {
@@ -196,17 +197,48 @@ body {
 }
 
 .ad {
-    height: 55px;
-    margin-top: 57px;
-    background: #eceff1;
-    border-radius: 6px;
-    color: #777;
-    font-size: 8px;
+    background: #E9ECEF;
+    border-radius: 12px;
+    color: #333;
+    min-height: 90px;
+    margin-top: 48px !important;
+    margin: 48px auto 0 !important;
+    max-width: 728px;
+    width: 100%;
+    font-size: 14px; 
+    line-height: 1.5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 28px
+    padding: 9px;
+
+    &.container {
+        max-width: 728px;
+    }
+
+    .box {
+        max-width: 150px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+
+    }
+
+    @include media('>768px') {
+        .box {
+            flex-direction: row;
+            max-width: 100%;
+            gap: 28px;
+        }
+
+        margin-top: 100px !important;
+    }
 }
+
+
+
 
 .ad em {
     font-style: normal
@@ -241,13 +273,14 @@ body {
 }
 
 .tr:nth-child(odd) {
-    background: #f3f5f6
+    background: #F8F9FA;
 }
 
 .tr.th {
     height: 22px;
-    background: #d9eaff;
-    font-size: 8px
+    background: #DBEAFE;
+    font-size: 8px;
+    border-radius: 8px 8px 0 0;
 }
 
 .tr a {
@@ -266,12 +299,22 @@ body {
 }
 
 .brand-grid a {
-    height: 24px;
-    border: 1px solid #d9d9d9;
+    height: 45px;
+    border: 1px solid #BDBAB7;
     border-radius: 6px;
     text-align: center;
-    padding-top: 6px;
-    font-size: 9px
+    padding: 12px;
+    font-size: 9px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.3;
+    width: 295px;
+}
+
+
+.brand-grid a:hover {
+    text-decoration: underline;
 }
 
 .seo {
@@ -307,8 +350,9 @@ body {
 
 .feature-grid article {
     position: relative;
-    padding-left: 55px;
-    min-height: 45px
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .feature-grid i {
@@ -624,358 +668,6 @@ body {
     transform: translate(-50%, 0)
 }
 
-@media(max-width:767px) {
-    body {
-        font-size: 14px
-    }
-
-    .container {
-        width: 100%;
-        max-width: none
-    }
-
-    .hero {
-        height: 271px;
-        background: linear-gradient(#fff9, #fff7), linear-gradient(135deg, #d4e0df, #eff1ec)
-    }
-
-    .hero-inner {
-        padding: 8px 0
-    }
-
-    .hero-copy {
-        width: 200px
-    }
-
-    .hero h1 {
-        font-size: 17px;
-        line-height: 1.03;
-        width: 170px;
-        margin-bottom: 11px
-    }
-
-    .hero-copy>p {
-        font-size: 11px;
-        line-height: 1.12;
-        width: 170px;
-        margin-bottom: 11px
-    }
-
-    .vin-label {
-        font-size: 7px;
-        white-space: nowrap
-    }
-
-    .vin-form {
-        flex-direction: column;
-        gap: 27px
-    }
-
-    .vin-form input {
-        width: 144px;
-        height: 24px;
-        border-radius: 5px;
-        font-size: 10px
-    }
-
-    .vin-form button {
-        position: absolute;
-        top: 130px;
-        left: 8px;
-        width: 146px;
-        height: 22px;
-        font-size: 8px
-    }
-
-    .hero small {
-        font-size: 6px;
-        margin: 4px 0 0 13px
-    }
-
-    .car-art {
-        transform: scale(.62);
-        transform-origin: bottom right;
-        right: -11px;
-        bottom: 29px
-    }
-
-
-    .ad {
-        margin-top: 18px;
-        width: 144px;
-        height: 37px;
-        font-size: 5px;
-        line-height: 1.2;
-        gap: 5px;
-        flex-wrap: wrap;
-        padding: 6px
-    }
-
-    .recent {
-        padding: 21px 7px 0;
-        width: 100%
-    }
-
-    .recent h2,
-    .popular h2,
-    .insights h2,
-    .report h2,
-    .faq h2 {
-        font-size: 11px;
-        margin-bottom: 10px
-    }
-
-    .vin-table {
-        font-size: 6px
-    }
-
-    .tr {
-        height: 19px;
-        padding: 0 3px;
-        grid-template-columns: 1fr 1.22fr
-    }
-
-    .tr.th {
-        height: 19px;
-        font-size: 5px
-    }
-
-    .popular {
-        padding: 20px 7px 0;
-        overflow: hidden
-    }
-
-    .brand-grid {
-        width: 520px;
-        gap: 8px 29px
-    }
-
-    .brand-grid a {
-        width: 110px;
-        height: 18px;
-        font-size: 6px;
-        padding-top: 5px
-    }
-
-    .seo {
-        padding: 25px 8px 0;
-        font-size: 6px;
-        line-height: 1.1;
-        width: 100%
-    }
-
-    .seo h3 {
-        font-size: 8px;
-        margin-bottom: 9px
-    }
-
-    .seo a {
-        display: block;
-        font-size: 6px;
-        margin-top: 5px
-    }
-
-    .insights {
-        padding: 34px 8px 25px
-    }
-
-    .feature-grid {
-        gap: 17px 17px
-    }
-
-    .feature-grid article {
-        padding-left: 25px;
-        min-height: 38px
-    }
-
-    .feature-grid i {
-        font-size: 18px
-    }
-
-    .feature-grid h3 {
-        font-size: 8px;
-        margin-bottom: 3px
-    }
-
-    .feature-grid p {
-        font-size: 6px;
-        line-height: 1.1
-    }
-
-    .partners {
-        margin-top: 26px;
-        justify-content: flex-start;
-        gap: 22px;
-        font-size: 0
-    }
-
-    .partners b {
-        font-size: 12px
-    }
-
-    .partners b:nth-child(n+3) {
-        display: none
-    }
-
-    .partners b:first-child {
-        font-size: 9px;
-        height: 13px
-    }
-
-    .behind {
-        padding: 23px 0
-    }
-
-    .behind-inner {
-        display: block
-    }
-
-    .steps {
-        width: 100%
-    }
-
-    .steps h2 {
-        font-size: 10px;
-        text-align: center;
-        margin: 0 0 12px
-    }
-
-    .steps article {
-        padding: 9px 14px
-    }
-
-    .steps article b {
-        font-size: 7px
-    }
-
-    .steps article p {
-        font-size: 6px
-    }
-
-    .steps article:nth-of-type(2),
-    .steps article:nth-of-type(3) {
-        display: none
-    }
-
-    .vin-diagram {
-        width: 100%;
-        height: 171px;
-        border-radius: 0;
-        margin-top: 0;
-        transform: none
-    }
-
-    .vin-diagram strong {
-        left: 92px;
-        top: 77px;
-        font-size: 8px
-    }
-
-    .circle {
-        transform: scale(.65)
-    }
-
-    .database {
-        top: 13px;
-        left: 24px
-    }
-
-    .car {
-        top: 40px;
-        left: 122px
-    }
-
-    .gavel {
-        top: 13px;
-        right: 24px
-    }
-
-    .shield {
-        bottom: 16px;
-        left: 22px
-    }
-
-    .report {
-        padding: 34px 8px 26px;
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 15px
-    }
-
-    .report>div:last-child {
-        width: 100%
-    }
-
-    .report h2 {
-        text-align: center;
-        font-size: 11px
-    }
-
-
-    .report li:before {
-        
-    }
-
-    .phones {
-        width: 170px;
-        height: 138px
-    }
-
-    .phone {
-        height: 124px;
-        width: 47px;
-        border-radius: 7px 7px 2px 2px;
-        padding: 5px 3px
-    }
-
-    .faq-section {
-        padding: 22px 7px
-    }
-
-    .faq {
-        width: 100%
-    }
-
-    .accordion-item button {
-        font-size: 7px;
-        padding: 7px 4px
-    }
-
-    .accordion-item button span {
-        font-size: 10px
-    }
-
-    .accordion-panel p {
-        font-size: 6px;
-        margin: 0 4px;
-        line-height: 1.2
-    }
-
-    .accordion-item.open .accordion-panel p {
-        padding-bottom: 7px
-    }
-
-    .ad-bottom {
-        margin: 22px auto;
-        width: 130px;
-        height: 22px
-    }
-
-    .ad-bottom * {
-        font-size: 4px
-    }
-
-    .menu-language {
-        font-size: 16px;
-        margin-top: 4px
-    }
-
-    .toast {
-        font-size: 11px;
-        max-width: 90%;
-        text-align: center
-    }
-}
 
 /* Exact desktop measurements and Figma image crops. */
 .container {
@@ -988,7 +680,7 @@ body {
 
 .hero {
     padding:  20px 0;
-    background: #fff url('./assets/img/hero-background.png') center/cover no-repeat;
+    position: relative;
     
     @include media('>=tablet') {
         padding: 107px 0 106px;
@@ -996,34 +688,28 @@ body {
 }
 
 
-// .hero-copy {
-//     margin-left: 203px
-// }
 
-.hero h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    font-weight: 500;
-    margin-bottom: 20px
-}
 
-.hero-copy>p {
-    font-size: 24px;
-    line-height: 1.3;
-    margin-bottom: 27px
-}
 
 .vin-label {
     font-size: 16px;
     margin-bottom: 16px
 }
 
+.input-wrapper {
+    max-width: 360px;
+    width: 100%;
+}
+
 .vin-form input {
-    width: 360px;
-    height: 56px;
+    width: 100%;
     border: 1px solid #2c3e50;
     border-radius: 12px;
-    font-size: 22px
+    padding: 0 10px;
+    color: #007BFF;
+    height: 56px;
+    font-size: 22px;
+    line-height: 1.5;
 }
 
 .vin-form button {
@@ -1037,9 +723,14 @@ body {
 
 .hero small {
     font-size: 16px;
-    margin: 8px 0 0 64px
+    margin: 8px 0 0 64px;
+    display: block;
 }
 
+.error-message {
+    display: block;
+    font-size: 12px;
+}
 
 .car-art,
 .car-body,
@@ -1048,13 +739,6 @@ body {
 .light,
 .hero-photo {
     display: none !important
-}
-
-.ad {
-    height: 90px;
-    margin-top: 100px;
-    width: 728px;
-    font-size: 16px
 }
 
 .recent {
@@ -1087,15 +771,6 @@ body {
     padding-top: 100px
 }
 
-.brand-grid {
-    gap: 24px 159px
-}
-
-.brand-grid a {
-    height: 45px;
-    font-size: 16px;
-    padding-top: 12px
-}
 
 .seo {
     max-width: 860px;
@@ -1109,28 +784,22 @@ body {
 }
 
 .insights {
-    padding: 100px 91px
+    padding: 100px 16px
 }
 
 .feature-grid {
-    gap: 56px 146px
-}
-
-.feature-grid article {
-    padding-left: 88px;
-    min-height: 93px
-}
-
-.feature-grid i {
-    font-size: 48px
+    gap: 40px;
 }
 
 .feature-grid h3 {
-    font-size: 22px
+    font-size: 22px;
+    color: #333;
+    margin: 0 0 20px;
 }
 
 .feature-grid p {
-    font-size: 16px
+    font-size: 16px;
+    color: #333;
 }
 
 .partners {
@@ -1228,59 +897,29 @@ body {
     width: 970px
 }
 
-@media(max-width:767px) {
-    .hero {
-        height: 402px;
-        background-position: center;
-        background-size: auto 402px
+.mobile_car {
+    display: none;
+}
+
+@media(max-width: 1200px) {
+    .brand-grid {
+        
+        overflow-x: auto;
+        gap: 10px;
+
+        scrollbar-width: none; 
+
+        -ms-overflow-style: none;
     }
 
+    .brand-grid::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media(max-width:767px) {
     .hero-inner {
         padding-top: 23px
-    }
-
-
-    .hero h1 {
-        font-size: 24px;
-        width: 230px;
-        margin-bottom: 11px
-    }
-
-    .hero-copy>p {
-        font-size: 16px;
-        width: 230px;
-        margin-bottom: 18px
-    }
-
-    .vin-label {
-        font-size: 10px;
-        margin-bottom: 6px
-    }
-
-    .vin-form input {
-        width: 230px;
-        height: 36px;
-        font-size: 14px;
-        border-radius: 8px
-    }
-
-    .vin-form button {
-        top: 184px;
-        left: 16px;
-        width: 230px;
-        height: 36px;
-        font-size: 14px;
-        border-radius: 8px
-    }
-
-    .hero small {
-        font-size: 9px;
-        margin: 6px 0 0 13px
-    }
-
-    .partners img {
-        max-width: 75px;
-        max-height: 18px
     }
 
     .vin-diagram img {
@@ -1297,6 +936,12 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain
+    }
+
+    .mobile_car {
+        display: block;
+        position: relative;
+        margin-top: 20px;
     }
 }
 
@@ -1329,38 +974,31 @@ body {
         display: none
     }
 
-    .hero {
-        height: 402px;
-        width: 100%;
-        background-position: 48% center;
-        background-size: auto 402px
-    }
 
     .hero-inner {
-        padding: 25px 16px
+        padding: 0 16px
     }
 
     .hero-copy {
         margin: 0;
-        // width: 245px
     }
 
     .hero h1 {
-        width: 230px;
-        font-size: 24px;
-        line-height: 1.08;
-        margin: 0 0 12px
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0 0 20px;
+        text-align: center;
     }
 
     .hero-copy>p {
-        width: 230px;
-        font-size: 14px;
-        line-height: 1.25;
-        margin: 0 0 18px
+        font-size: 20px;
+        margin: 0 0 20px;
+        font-weight: 400;
+        text-align: center;
     }
 
     .vin-label {
-        font-size: 10px;
+        font-size: 14px;
         margin: 0 0 6px
     }
 
@@ -1371,38 +1009,22 @@ body {
 
     .vin-form input {
         display: block;
-        width: 230px;
-        height: 38px;
-        border-radius: 8px;
-        font-size: 14px
     }
 
     .vin-form button {
         position: static;
         display: block;
-        width: 230px;
-        height: 38px;
-        margin-top: 34px;
-        border-radius: 8px;
-        font-size: 13px
+        margin-top: 32px;
+        width: 100%;
     }
 
     .hero small {
-        font-size: 9px;
-        margin: 5px 0 0 13px
+        font-size: 14px;
+        margin: 16px 0 0 13px
     }
 
     .trust span {
         white-space: nowrap
-    }
-
-    .ad {
-        width: calc(100% - 32px);
-        height: 50px;
-        margin: 28px 16px 0;
-        padding: 7px 10px;
-        gap: 8px;
-        font-size: 8px
     }
 
     .recent {
@@ -1453,28 +1075,21 @@ body {
 
     .brand-grid {
         width: 100%;
-        grid-template-columns: 1fr 1fr;
+        overflow-x: auto;
         gap: 10px 14px
-    }
-
-    .brand-grid a {
-        width: 100%;
-        height: 31px;
-        padding-top: 8px;
-        font-size: 8px
     }
 
     .seo {
         width: 100%;
         max-width: none;
         padding: 42px 16px 0;
-        font-size: 10px;
-        line-height: 1.25
+        font-size: 16px;
+        line-height: 1.3
     }
 
     .seo h3 {
-        font-size: 13px;
-        margin-bottom: 11px
+        font-size: 24px;
+        margin-bottom: 20px
     }
 
     .seo a {
@@ -1487,41 +1102,41 @@ body {
     }
 
     .feature-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 22px 12px
+        grid-template-columns: 1fr;
+        gap: 22px 12px;
     }
 
     .feature-grid article {
-        padding-left: 31px;
-        min-height: 66px
-    }
-
-    .feature-grid i {
-        font-size: 23px
+        padding-left: 0;
     }
 
     .feature-grid h3 {
-        font-size: 11px;
-        line-height: 1.1;
-        margin-bottom: 5px
+        font-size: 22px;
+        line-height: 1.5;
+        margin-bottom: 8px
     }
 
     .feature-grid p {
-        font-size: 9px;
+        font-size: 16px;
         line-height: 1.15
     }
 
     .partners {
         margin-top: 28px;
-        gap: 12px;
-        justify-content: space-between
+        gap: 40px;
+        justify-content: space-between;
+        overflow: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+
+    .partners::-webkit-scrollbar {
+        display: none;
     }
 
     .partners img {
         display: block;
-        max-width: 22%;
-        max-height: 20px;
-        object-fit: contain
+        object-fit: contain;
     }
 
     .behind {
@@ -1630,7 +1245,7 @@ body {
     .ad-bottom {
         width: calc(100% - 32px);
         height: 36px;
-        margin: 30px 16px
+        margin: 30px 16px;
     }
 
     .menu-language {
@@ -1706,12 +1321,6 @@ body {
     overflow: visible
 }
 
-
-.hero-copy,
-.trust {
-    z-index: 2
-}
-
 .phones {
     position: relative;
     display: flex;
@@ -1750,21 +1359,16 @@ body {
         padding-bottom: 10px
     }
 
-    .hero {
-        background: #f3f5f4
-    }
-
     .hero-background {
-        height: 402px;
         width: 100%;
         left: 0;
         transform: none;
-        object-position: 48% center
     }
 
-    .hero-copy,
     .trust {
-        z-index: 3
+        z-index: 3;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .phones {
@@ -1848,10 +1452,6 @@ body {
 }
 
 .feature-grid .feature-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 56px;
     height: 56px;
     object-fit: contain;

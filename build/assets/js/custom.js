@@ -122,6 +122,53 @@ window.addEventListener('resize', () => {
 
 closeMenu();
 
+function vinValidate() {
+    const vinInput = document.getElementById('vin');
+    const vinForm = document.getElementById('vinForm');
+    const vinError = document.getElementById('vinError');
+
+    // 1. Форматирование на лету (авто-upcase и очистка от невалидных знаков)
+    vinInput.addEventListener('input', (e) => {
+        e.target.value = e.target.value
+            .toUpperCase()
+            .replace(/[^A-HJ-NPR-Z0-9]/g, '');
+
+        // Сбрасываем ошибку при редактировании
+        clearError();
+    });
+
+    // 2. Проверка при отправке формы
+    vinForm.addEventListener('submit', (e) => {
+        // Проверяем валидность элемента средствами браузера на основе pattern и required
+        if (!vinInput.checkValidity()) {
+            e.preventDefault(); // Останавливаем отправку
+
+            // Определяем, какой именно текст из data-атрибутов HTML нужно показать
+            let errorMessage = '';
+
+            if (vinInput.validity.valueMissing) {
+                errorMessage = vinInput.dataset.msgRequired;
+            } else if (vinInput.validity.patternMismatch) {
+                errorMessage = vinInput.dataset.msgPattern;
+            }
+
+            showError(errorMessage);
+        }
+    });
+
+    function showError(message) {
+        vinError.textContent = message;
+        vinInput.classList.add('invalid');
+    }
+
+    function clearError() {
+        vinError.textContent = '';
+        vinInput.classList.remove('invalid');
+    }
+}
+
+vinValidate();
+
 document.querySelector('.vin-form').addEventListener('submit', (event) => {
     event.preventDefault();
     const vin = document.querySelector('#vin').value.trim();

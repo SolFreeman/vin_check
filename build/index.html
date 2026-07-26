@@ -64,19 +64,31 @@
     </header>
 
     <main id="top" class="wrapper home">
-        <section class="hero" id="check" style="background-image: url(./assets/img/hero-background.png);">
+        <section class="hero">
+            <div class="bg-holder">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/bg-mobile-vin2.png">
+                    <img class="hero-background" src="./assets/img/hero-background.png" alt="" aria-hidden="true" />
+                </picture>
+            </div>
             <div class="container hero-inner">
-                <!-- <img class="hero-background" src="./assets/img/hero-background.png" alt="" aria-hidden="true" /> -->
                 <div class="hero-copy">
                     <h1>Free VIN Check &amp; Car Data Report</h1>
                     <p>Get instant access to accident, mileage and auction data</p>
                     <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
-                    <form class="vin-form">
-                        <input id="vin" maxlength="17" placeholder="17 digits of your VIN" autocomplete="off" />
-                        <button>Get Free VIN Report</button>
+                    <form class="vin-form" id="vinForm" novalidate>
+                        <div class="input-wrapper">
+                            <input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN"
+                                autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
+                                data-msg-required="Please enter your VIN code."
+                                data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)" />
+                            <span class="error-message" id="vinError"></span>
+                            <small>Example: wBCM82c633A123456</small>
+                        </div>
+                        <button type="submit">Get Free VIN Report</button>
                     </form>
-                    <small>Example: wBCM82c633A123456</small>
                 </div>
+                <img class="mobile_car" src="./assets/img/hero_mobile_car.png" alt="" aria-hidden="true" />
                 <div class="trust">
                     <div class="trust-item">
                         <img src="assets/img/icon_official.svg" alt="">
@@ -95,11 +107,13 @@
         </section>
 
         <section class="ad container">
-            <span>Ad-slot 1</span>
-            <b>728×90 desktop</b>
-            <em>min-height: fit;
-                <br>background: #ECECF;
-            </em>
+            <div class="box">
+                <span>Ad-slot 1</span>
+                <b>728×90 desktop</b>
+                <em>min-height: fit;
+                    <br>background: #ECECF;
+                </em>
+            </div>
         </section>
         <section class="recent container">
             <h2>Recent VIN Searches</h2>
@@ -109,35 +123,35 @@
                     <b>VIN &amp; Specifications</b>
                 </div>
                 <div class="tr">
-                    <a>BMW X5 xDrive40i</a>
+                    <a href="#">BMW X5 xDrive40i</a>
                     <span>2022 — 3.0L Turbo — WBAJU7C50N******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW 530i</a>
+                    <a href="#">BMW 530i</a>
                     <span>2021 — 2.0L Turbo — WBA53BH0M******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW X3 sDrive30i</a>
+                    <a href="#">BMW X3 sDrive30i</a>
                     <span>2020 — 2.0L — WBX57DP0L******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW M8 Competition</a>
+                    <a href="#">BMW M8 Competition</a>
                     <span>2023 — 3.0L Twin — WBS3Y0P9******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW 320i</a>
+                    <a href="#">BMW 320i</a>
                     <span>2019 — 2.0L — WBA8E9G59******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW 750i</a>
+                    <a href="#">BMW 750i</a>
                     <span>2022 — 3.0L — SLCX2C03N******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW X5 xDrive40i</a>
+                    <a href="#">BMW X5 xDrive40i</a>
                     <span>2018 — 4.4L V8 — WBA7FC25J******</span>
                 </div>
                 <div class="tr">
-                    <a>BMW X1 sDrive28i</a>
+                    <a href="#">BMW X1 sDrive28i</a>
                     <span>2020 — 2.0L — WBXHZ7C50******</span>
                 </div>
             </div>
@@ -145,15 +159,15 @@
         <section class="popular container" id="brands">
             <h2>Popular BMW VIN checks</h2>
             <div class="brand-grid">
-                <a>BMW X5 — Check VIN</a>
-                <a>BMW 7 Series — Check VIN</a>
-                <a>BMW M3 — Check VIN</a>
-                <a>BMW 3 Series — Check VIN</a>
-                <a>BMW X6 — Check VIN</a>
-                <a>BMW M5 — Check VIN</a>
-                <a>BMW X3 — Check VIN</a>
-                <a>BMW Z4 — Check VIN</a>
-                <a>BMW 5 Series — Check VIN</a>
+                <a href="#">BMW X5 — Check VIN</a>
+                <a href="#">BMW 7 Series — Check VIN</a>
+                <a href="#">BMW M3 — Check VIN</a>
+                <a href="#">BMW 3 Series — Check VIN</a>
+                <a href="#">BMW X6 — Check VIN</a>
+                <a href="#">BMW M5 — Check VIN</a>
+                <a href="#">BMW X3 — Check VIN</a>
+                <a href="#">BMW Z4 — Check VIN</a>
+                <a href="#">BMW 5 Series — Check VIN</a>
             </div>
         </section>
         <section class="seo container">
@@ -175,23 +189,31 @@
             <div class="feature-grid">
                 <article>
                     <img class="feature-icon" src="./assets/img/insight-essential.svg" alt="" aria-hidden="true" />
-                    <h3>Essential Data in Seconds</h3>
-                    <p>Get immediate visibility into critical vehicle history details.</p>
+                    <div class="text">
+                        <h3>Essential Data in Seconds</h3>
+                        <p>Get immediate visibility into critical vehicle history details.</p>
+                    </div>
                 </article>
                 <article>
                     <img class="feature-icon" src="./assets/img/insight-privacy.svg" alt="" aria-hidden="true" />
-                    <h3>Privacy First Approach</h3>
-                    <p>No registration required. No credit card needed.</p>
+                    <div class="text">
+                        <h3>Privacy First Approach</h3>
+                        <p>No registration required. No credit card needed.</p>
+                    </div>
                 </article>
                 <article>
                     <img class="feature-icon" src="./assets/img/insight-records.svg" alt="" aria-hidden="true" />
-                    <h3>Comprehensive Record Scanning</h3>
-                    <p>We analyze multiple data points to surface relevant findings.</p>
+                    <div class="text">
+                        <h3>Comprehensive Record Scanning</h3>
+                        <p>We analyze multiple data points to surface relevant findings.</p>
+                    </div>
                 </article>
                 <article>
                     <img class="feature-icon" src="./assets/img/insight-more.svg" alt="" aria-hidden="true" />
-                    <h3>More Records May Be Available</h3>
-                    <p>Additional official vehicle data can be accessed if further details are required.</p>
+                    <div class="text">
+                        <h3>More Records May Be Available</h3>
+                        <p>Additional official vehicle data can be accessed if further details are required.</p>
+                    </div>
                 </article>
             </div>
             <div class="partners">
