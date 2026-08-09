@@ -1,0 +1,35 @@
+@@include('templates/head.html')
+@@include('templates/header-loading.html')
+<main class="loading-report loading-report--error">
+    <section class="loading-error" aria-labelledby="loading-error-title">
+        <div class="loading-error__inner">
+            <h1 id="loading-error-title">VIN Search Completed</h1>
+            <p class="loading-error__lead">We couldn’t locate detailed public records for this VIN in the free database.</p>
+
+            <form class="vin-form loading-error__form" id="vinForm" novalidate>
+                <label for="vin">Enter your VIN to check vehicle history instantly and please try again..</label>
+                <div class="loading-error__controls">
+                    <div class="loading-error__input">
+                        <input id="vin" name="vin" maxlength="17" placeholder="17 digits of your VIN"
+                            autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
+                            data-msg-required="Please enter your VIN code."
+                            data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)" />
+                        <span class="error-message" id="vinError"></span>
+                    </div>
+                    <button type="submit">Get Free VIN Report</button>
+                </div>
+                <div class="loading-error__links">
+                    <a href="./index.html#vin-help">Where to find VIN</a>
+                    <a href="./index.html#report">View report sample</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    @@include('templates/loading-ad.html')
+    @@include('templates/loading-partners.html')
+</main>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="./assets/js/custom.js"></script>
+</body>
+</html>

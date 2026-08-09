@@ -127,6 +127,8 @@ function vinValidate() {
     const vinForm = document.getElementById('vinForm');
     const vinError = document.getElementById('vinError');
 
+    if (!vinInput || !vinForm || !vinError) return;
+
     // 1. Форматирование на лету (авто-upcase и очистка от невалидных знаков)
     vinInput.addEventListener('input', (e) => {
         e.target.value = e.target.value
@@ -169,11 +171,145 @@ function vinValidate() {
 
 vinValidate();
 
-document.querySelector('.vin-form').addEventListener('submit', (event) => {
-    event.preventDefault();
-    const vin = document.querySelector('#vin').value.trim();
-    showToast(vin.length === 17 ? `VIN ${vin} is ready to check.` : 'Enter a valid 17-character VIN.');
-});
+const vinForm = document.querySelector('.vin-form');
+if (vinForm) {
+    vinForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const vin = document.querySelector('#vin').value.trim();
+        showToast(vin.length === 17 ? `VIN ${vin} is ready to check.` : 'Enter a valid 17-character VIN.');
+    });
+}
 document.addEventListener('click', () => document.querySelectorAll('.language-bar').forEach((item) => item.classList.remove('open')));
 renderLanguages();
 syncLanguageBar();
+
+const vinProcessTabs = document.querySelectorAll('.steps[role="tablist"] .steps-item');
+const vinDiagramPanel = document.querySelector('#vin-diagram-panel');
+
+if (vinProcessTabs.length && vinDiagramPanel) {
+    const vinDiagramImage = vinDiagramPanel.querySelector('img');
+
+    const selectVinProcessTab = (selectedTab) => {
+        vinProcessTabs.forEach((tab) => {
+            const isSelected = tab === selectedTab;
+            tab.classList.toggle('active', isSelected);
+            tab.setAttribute('aria-selected', String(isSelected));
+            tab.tabIndex = isSelected ? 0 : -1;
+        });
+
+        vinDiagramPanel.setAttribute('aria-labelledby', selectedTab.id);
+        vinDiagramImage.classList.add('is-changing');
+
+        const nextImage = new Image();
+        nextImage.onload = () => {
+            vinDiagramImage.src = selectedTab.dataset.image;
+            vinDiagramImage.alt = selectedTab.dataset.alt;
+            requestAnimationFrame(() => vinDiagramImage.classList.remove('is-changing'));
+        };
+        nextImage.onerror = () => vinDiagramImage.classList.remove('is-changing');
+        nextImage.src = selectedTab.dataset.image;
+    };
+
+    vinProcessTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectVinProcessTab(tab));
+        tab.addEventListener('keydown', (event) => {
+            if (!['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+            event.preventDefault();
+
+            let nextIndex = index;
+            if (event.key === 'Home') nextIndex = 0;
+            if (event.key === 'End') nextIndex = vinProcessTabs.length - 1;
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') nextIndex = (index + 1) % vinProcessTabs.length;
+            if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') nextIndex = (index - 1 + vinProcessTabs.length) % vinProcessTabs.length;
+
+            vinProcessTabs[nextIndex].focus();
+            selectVinProcessTab(vinProcessTabs[nextIndex]);
+        });
+    });
+}
+
+document.querySelectorAll('[data-sticker-tabs]').forEach((tabsBlock) => {
+    const tabs = Array.from(tabsBlock.querySelectorAll('[role="tab"]'));
+    const image = tabsBlock.querySelector('.window-sticker__preview img');
+    if (!tabs.length || !image) return;
+
+    tabs.forEach((tab) => tab.addEventListener('click', () => {
+        tabs.forEach((item) => {
+            const active = item === tab;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-selected', String(active));
+        });
+        const preview = tabsBlock.querySelector('.window-sticker__preview');
+        image.classList.add('is-changing');
+        preview.dataset.view = tab.dataset.view;
+        window.setTimeout(() => image.classList.remove('is-changing'), 180);
+    }));
+});
+
+const mobileSwiperElements = document.querySelectorAll('.vin-help .swiper');
+let mobileSwipers = [];
+
+function syncVinHelpSwipers() {
+    if (typeof Swiper === 'undefined' || !mobileSwiperElements.length) return;
+    if (window.innerWidth < 768 && !mobileSwipers.length) {
+        mobileSwipers = Array.from(mobileSwiperElements, (element) => new Swiper(element, {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            speed: 420,
+            resistanceRatio: .75,
+            grabCursor: true,
+            watchOverflow: true
+        }));
+    } else if (window.innerWidth >= 768 && mobileSwipers.length) {
+        mobileSwipers.forEach((swiper) => swiper.destroy(true, true));
+        mobileSwipers = [];
+    }
+}
+
+syncVinHelpSwipers();
+window.addEventListener('resize', syncVinHelpSwipers);
+
+const specTable = document.querySelector('.sample-report .spec-table');
+const specSlider = document.querySelector('.spec-mobile-slider');
+let specSwiper = null;
+
+if (specTable && specSlider) {
+    const sourceRows = Array.from(specTable.querySelectorAll('.spec-row'));
+    const sliderWrapper = specSlider.querySelector('.swiper-wrapper');
+    const pages = [sourceRows.slice(0, 11), sourceRows.slice(11)];
+
+    pages.forEach((rows) => {
+        const page = document.createElement('div');
+        page.className = 'swiper-slide spec-mobile-page';
+        rows.forEach((row, index) => {
+            page.appendChild(row.cloneNode(true));
+            if (index === 4) {
+                const ad = specTable.querySelector('.report-ad--square').cloneNode(true);
+                page.appendChild(ad);
+            }
+        });
+        sliderWrapper.appendChild(page);
+    });
+
+    const syncSpecSwiper = () => {
+        if (typeof Swiper === 'undefined') return;
+        if (window.innerWidth < 768 && !specSwiper) {
+            specSwiper = new Swiper(specSlider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 420,
+                autoHeight: true,
+                pagination: {
+                    el: specSlider.querySelector('.swiper-pagination'),
+                    clickable: true
+                }
+            });
+        } else if (window.innerWidth >= 768 && specSwiper) {
+            specSwiper.destroy(true, true);
+            specSwiper = null;
+        }
+    };
+
+    syncSpecSwiper();
+    window.addEventListener('resize', syncSpecSwiper);
+}

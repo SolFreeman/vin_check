@@ -231,6 +231,7 @@ body {
             flex-direction: row;
             max-width: 100%;
             gap: 28px;
+            align-items: center;
         }
 
         margin-top: 100px !important;
@@ -405,36 +406,51 @@ body {
     padding: 52px 0
 }
 
-.behind-inner {
+.tabs-area {
     display: flex;
     gap: 23px
+}
+
+@media(max-width: 768px) {
+    .tabs-area {
+        flex-direction: column;
+    }
 }
 
 .steps {
     width: 310px
 }
 
-.steps h2 {
-    font-size: 21px;
-    margin: 0 0 23px
-}
-
-.steps article {
+.steps .steps-item {
     border-top: 1px solid #d7d7d7;
-    padding: 15px 15px
+    border-width: 1px 0 0;
+    padding: 15px 24px;
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    transition: background-color .2s ease, border-color .2s ease;
 }
 
-.steps article:last-child {
+.steps .steps-item:last-child {
     border-bottom: 1px solid #d7d7d7
 }
 
-.steps b {
-    font-size: 11px
+.steps .steps-item:hover,
+.steps .steps-item.active {
+    background-color: #fff;
 }
 
-.steps p {
-    font-size: 9px;
-    margin: 5px 0 0
+.steps .steps-item:focus-visible {
+    outline: 2px solid #168df6;
+    outline-offset: -2px;
+}
+
+.steps .steps-item.active .title:before {
+    background-color: #168df6;
 }
 
 .vin-diagram {
@@ -500,8 +516,6 @@ body {
     bottom: 10px;
     left: 78px
 }
-
-.report .circle {}
 
 .report {
     display: flex;
@@ -641,12 +655,11 @@ body {
 .ad-bottom {
     margin-top: 58px;
     margin-bottom: 58px;
-    width: 370px
+    width: 370px;
+    justify-content: center;
+    gap: 30px;
 }
 
-.ad-bottom span {
-    font-size: 7px
-}
 
 .toast {
     position: fixed;
@@ -799,6 +812,7 @@ body {
 
 .feature-grid p {
     font-size: 16px;
+    line-height: 1.3;
     color: #333;
 }
 
@@ -821,19 +835,40 @@ body {
 }
 
 .steps {
-    width: 387px
+    max-width: 387px;
+    width: 100%;
 }
 
-.steps h2 {
-    font-size: 32px
+.behind h2 {
+    font-size: 36px;
+    margin: 0 0 51px;
 }
 
-.steps b {
-    font-size: 16px
+.steps .title {
+    font-size: 22px;
+    line-height: 1.3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+}
+
+.steps .title:before {
+    content: '';
+    left: 0;
+    top: 0;
+    background-color: #BDBAB7;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
 }
 
 .steps p {
-    font-size: 16px
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 0;
+    padding-left: 16px;
 }
 
 .vin-diagram {
@@ -893,8 +928,10 @@ body {
     margin: 0 24px
 }
 
-.ad-bottom {
-    width: 970px
+.ad.ad-bottom {
+    max-width: 970px;
+    width: 100%;
+    margin-bottom: 100px !important;
 }
 
 .mobile_car {
@@ -1158,16 +1195,12 @@ body {
         margin: 0 0 18px
     }
 
-    .steps article {
+    .steps .steps-item {
         padding: 12px 8px
     }
 
-    .steps article b {
-        font-size: 11px
-    }
-
-    .steps article p {
-        font-size: 9px
+    .steps .steps-item p {
+        font-size: 12px
     }
 
     .steps article:nth-of-type(2),
@@ -1417,6 +1450,12 @@ body {
     object-fit: cover;
     animation: none;
     transform: none;
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+
+.vin-diagram img.is-changing {
+    opacity: 0;
 }
 
 @media (max-width: 767px) {

@@ -174,23 +174,31 @@
     </section>
     <section class="behind">
         <div class="container behind-inner">
-            <div class="steps">
-                <h2>Behind Your VIN Check</h2>
-                <article>
-                    <b>01 Smart Data Matching</b>
-                    <p>Your VIN is cross-referenced across multiple data points.</p>
-                </article>
-                <article>
-                    <b>02 Pattern Recognition</b>
-                    <p>Your VIN is cross-referenced across multiple data points.</p>
-                </article>
-                <article>
-                    <b>03 Instant Report Generation</b>
-                    <p>Key vehicle insights delivered in seconds.</p>
-                </article>
-            </div>
-            <div class="vin-diagram">
-                <img src="./assets/img/vin-diagram.png" alt="VIN data matching process" />
+            <h2>Behind Your VIN Check</h2>
+            <div class="tabs-area">
+                <div class="steps" role="tablist" aria-label="VIN check process">
+                    <button class="steps-item active" type="button" role="tab" id="vin-step-1"
+                        aria-controls="vin-diagram-panel" aria-selected="true"
+                        data-image="./assets/img/vin-diagram.png" data-alt="VIN data matching process">
+                        <span class="title">01 Smart Data Matching</span>
+                        <p>Your VIN is cross-referenced across multiple data points.</p>
+                    </button>
+                    <button class="steps-item" type="button" role="tab" id="vin-step-2"
+                        aria-controls="vin-diagram-panel" aria-selected="false" tabindex="-1"
+                        data-image="./assets/img/report-phone-1.png" data-alt="VIN pattern recognition process">
+                        <span class="title">02 Pattern Recognition</span>
+                        <p>Your VIN is cross-referenced across multiple data points.</p>
+                    </button>
+                    <button class="steps-item" type="button" role="tab" id="vin-step-3"
+                        aria-controls="vin-diagram-panel" aria-selected="false" tabindex="-1"
+                        data-image="./assets/img/report-preview-figma.png" data-alt="VIN report generation preview">
+                        <span class="title">03 Instant Report Generation</span>
+                        <p>Key vehicle insights delivered in seconds.</p>
+                    </button>
+                </div>
+                <div class="vin-diagram" id="vin-diagram-panel" role="tabpanel" aria-labelledby="vin-step-1">
+                    <img src="./assets/img/vin-diagram.png" alt="VIN data matching process" />
+                </div>
             </div>
         </div>
     </section>

@@ -1,0 +1,74 @@
+@@include('templates/head.html')
+@@include('templates/header-loading.html')
+<main class="loading-report" data-loading-duration="18000">
+    <section class="loading-report__intro" aria-labelledby="loading-title">
+        <div class="container">
+            <h1 id="loading-title">Searching for VIN # <span>wbyCM82633A123456</span></h1>
+            <p class="loading-report__lead">
+                <span class="loading-report__lead-desktop">We are scanning multiple trusted sources to generate your report...</span>
+                <span class="loading-report__lead-mobile">Get instant access to accident, mileage and auction data</span>
+            </p>
+            <div class="loading-progress" role="progressbar" aria-label="VIN report generation progress"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span class="loading-progress__value"></span>
+            </div>
+            <p class="loading-report__status" aria-live="polite">Connecting to NHTSA database...</p>
+        </div>
+    </section>
+
+    @@include('templates/loading-ad.html')
+
+    <section class="loading-checks" aria-label="Vehicle report checks">
+        <div class="loading-checks__scroller">
+            <ol class="loading-checks__list">
+                <li class="loading-check is-active" data-message="Reading vehicle profile...">
+                    <img src="./assets/img/loading-vehicle-profile.svg" alt="" />
+                    <span>Vehicle<br>Profile</span>
+                </li>
+                <li class="loading-check" data-message="Checking ownership records...">
+                    <img src="./assets/img/loading-ownership-records.svg" alt="" />
+                    <span>Ownership<br>Records</span>
+                </li>
+                <li class="loading-check" data-message="Checking title branding...">
+                    <img src="./assets/img/loading-title-branding.svg" alt="" />
+                    <span>Title Branding<br>Check</span>
+                </li>
+                <li class="loading-check" data-message="Analyzing reported damage...">
+                    <img src="./assets/img/loading-damage-analysis.svg" alt="" />
+                    <span>Damage<br>Analysis</span>
+                </li>
+                <li class="loading-check" data-message="Verifying vehicle title...">
+                    <img src="./assets/img/loading-title-verification.svg" alt="" />
+                    <span>Title<br>Verification</span>
+                </li>
+                <li class="loading-check" data-message="Validating odometer records...">
+                    <img src="./assets/img/loading-odometer-validation.svg" alt="" />
+                    <span>Odometer<br>Validation</span>
+                </li>
+                <li class="loading-check" data-message="Searching sale and auction history...">
+                    <img src="./assets/img/loading-sale-auction-history.svg" alt="" />
+                    <span>Sale &amp; Auction<br>History</span>
+                </li>
+                <li class="loading-check" data-message="Running theft screening...">
+                    <img src="./assets/img/loading-theft-screening.svg" alt="" />
+                    <span>Theft<br>Screening</span>
+                </li>
+                <li class="loading-check" data-message="Checking recall status...">
+                    <img src="./assets/img/loading-recall-status.svg" alt="" />
+                    <span>Recall Status<br>Check</span>
+                </li>
+                <li class="loading-check" data-message="Calculating market valuation...">
+                    <img src="./assets/img/loading-market-valuation.svg" alt="" />
+                    <span>Market<br>Valuation</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    @@include('templates/loading-partners.html')
+</main>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="./assets/js/custom.js"></script>
+<script src="./assets/js/loading.js"></script>
+</body>
+</html>

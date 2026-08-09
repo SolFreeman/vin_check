@@ -1,0 +1,53 @@
+@@include('templates/head-vin-help.html')
+@@include('templates/header.html')
+<main id="top" class="wrapper vin-help">
+    <section class="vin-help__intro container">
+        <h1>Where to Find the VIN Number</h1>
+        <p>The 17-character Vehicle Identification Number (VIN) can be found in several standard locations on most vehicles, as well as in official documents. It is recommended to check the VIN in multiple places to ensure its authenticity.</p>
+        <h2>Main Locations on the Vehicle</h2>
+        <div class="vin-card-slider swiper" aria-label="Main VIN locations">
+            <div class="swiper-wrapper">
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-windshield.png" alt="VIN in the lower windshield corner"><div><h3>Windshield (lower corner)</h3><p>The quickest way to find the VIN is by looking through the windshield from outside the vehicle. It is typically located on the driver’s side.</p></div></article>
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-door.png" alt="VIN on the driver's door frame"><div><h3>Driver’s Door Frame</h3><p>Open the driver’s door and inspect the door pillar. You will usually find a sticker or metal plate displaying the VIN, along with production and technical details.</p></div></article>
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-engine-tower.png" alt="VIN in the engine bay"><div><h3>Engine Bay</h3><p>The VIN may be stamped directly onto the body: on the right strut tower.</p></div></article>
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-firewall.png" alt="VIN stamped on the firewall"><div><h3>Engine Bay</h3><p>The VIN may be stamped directly onto the body: on the firewall between the engine and the cabin.</p></div></article>
+            </div>
+        </div>
+    </section>
+    <section class="ad vin-help__ad"><span>Ad-slot-1</span><b>728×90 desktop</b></section>
+    <section class="vin-help__section container">
+        <h2>Additional Locations (Depending on Vehicle)</h2>
+        <div class="vin-card-slider vin-card-slider--additional swiper">
+            <div class="swiper-wrapper">
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-rear-seat.png" alt="VIN under the rear seat or in the trunk"><div><h3>Under Rear Seat or in the Trunk</h3><p>In some vehicles, the VIN may be located under the rear seat or beneath the trunk floor near the spare wheel compartment.</p></div></article>
+                <article class="vin-location-card swiper-slide"><img src="./assets/img/vin-location-idrive.png" alt="VIN in the vehicle information display"><div><h3>Onboard System (Digital Display)</h3><p>In modern vehicles, the VIN can often be accessed through the infotainment system under “Vehicle Information”.</p></div></article>
+            </div>
+        </div>
+        <h2 class="vin-documents-title">Where to Find the VIN in Documents</h2>
+        <p>If you don’t have access to the vehicle, check the following documents:</p>
+        <div class="vin-document-slider swiper">
+            <div class="swiper-wrapper">
+                <article class="swiper-slide"><img src="./assets/img/vin-document-registration.png" alt="Vehicle registration certificate"><h3>Vehicle registration<br>certificate</h3></article>
+                <article class="swiper-slide"><img src="./assets/img/vin-document-insurance.png" alt="Insurance policy"><h3>Insurance policy</h3></article>
+                <article class="swiper-slide"><div class="vin-document-slider__image"><img src="./assets/img/vin-document-service.svg" alt="Service records"></div><h3>Service book<br>or maintenance records</h3></article>
+            </div>
+        </div>
+        <aside class="vin-tip"><img src="./assets/img/icon-caution.svg" alt=""><p>Always compare the VIN in multiple locations (for example, the windshield and the door frame). Any mismatch may indicate tampering or potential issues with the vehicle’s history.</p></aside>
+    </section>
+    <section class="window-sticker container" data-sticker-tabs>
+        <h2>Get Your Original Window Sticker</h2>
+        <div class="window-sticker__grid">
+            <div class="steps window-sticker__steps" role="tablist" aria-label="Window sticker details">
+                <button class="steps-item active" type="button" role="tab" aria-selected="true" data-view="specs"><span class="title">01 Factory specs</span><p>Original manufacturer specifications including engine, transmission, and trim details</p></button>
+                <button class="steps-item" type="button" role="tab" aria-selected="false" data-view="options"><span class="title">02 Options</span><p>Installed packages and optional features added at the factory</p></button>
+                <button class="steps-item" type="button" role="tab" aria-selected="false" data-view="pricing"><span class="title">03 Pricing</span><p>Official MSRP with full price breakdown and equipment costs</p></button>
+                <button class="steps-item window-sticker__price" type="button" role="tab" aria-selected="false" data-view="full"><span class="title">Full sticker available</span><p>for just <strong>$9.99</strong></p></button>
+            </div>
+            <div class="window-sticker__preview" data-view="specs"><img src="./assets/img/window-sticker-preview.png" alt="Original vehicle window sticker preview"></div>
+        </div>
+        <a class="window-sticker__button" href="#check"><span class="window-sticker__lock" aria-hidden="true"></span> Get Sticker</a>
+    </section>
+    <section class="ad container ad-bottom vin-help__ad vin-help__ad--bottom"><span>Ad-slot 2-footer</span><b>desktop: 970×90</b></section>
+</main>
+<script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+@@include('templates/footer.html')

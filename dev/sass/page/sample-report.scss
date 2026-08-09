@@ -1,0 +1,107 @@
+.sample-report { color: #333; padding-top: 60px; }
+.sample-report > .container { width: 1200px; max-width: calc(100% - 36px); padding-right: 0; padding-left: 0; }
+.report-summary { position: relative; }
+.report-breadcrumb { margin-bottom: 32px; font-size: 20px; line-height: 1.3; }
+.report-vehicle { display: grid; grid-template-columns: 590px 1fr; gap: 20px; align-items: start; }
+.report-vehicle__visual { position: relative; padding-top: 58px; }
+.report-vehicle__visual > img { display: block; width: 590px; height: 360px; border-radius: 12px; object-fit: cover; }
+.report-vin { position: absolute; top: 0; left: 0; display: flex; border-radius: 8px; font-size: 20px; }
+.report-vin span { padding: 8px; border-radius: 8px 0 0 8px; background: #2c3e50; color: #fff; }
+.report-vin strong { padding: 8px; border-radius: 0 8px 8px 0; background: #fff; color: #007bff; font-weight: 400; }
+.report-copy { width: 24px; height: 24px; margin: 1px 0 0 8px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.report-copy img { display: block; width: 24px; height: 24px; }
+.report-vehicle__details { padding: 0 0 0 0; }
+.report-vehicle__details h1 { margin: 0 0 24px; font-size: 36px; line-height: 1.2; font-weight: 500; }
+.report-vehicle__details h2 { margin: 0 0 24px; font-size: 24px; line-height: 1.3; font-weight: 500; }
+.report-vehicle__details dl { margin: 0; }
+.report-vehicle__details dl div { display: flex; min-height: 45px; align-items: center; margin: 0; padding: 12px; font-size: 16px; line-height: 1.3; }
+.report-vehicle__details dt { font-weight: 600; }
+.report-vehicle__details dd { margin-left: 8px; }
+.report-upsell { display: flex; align-items: center; gap: 12px; margin-top: 24px; font-size: 20px; white-space: nowrap; }
+.report-upsell > img { flex: 0 0 32px; width: 32px; height: 32px; }
+.report-upsell p { margin: 0; }
+.report-upsell a { color: #ff8c00; }
+.report-ad { display: flex; align-items: center; justify-content: center; gap: 24px; border-radius: 12px; background: #e9ecef; font-size: 14px; }
+.report-ad--leaderboard { width: 728px; min-height: 90px; margin: 100px auto !important; }
+.report-specifications { width: 793px !important; }
+.report-specifications h2 { margin: 0 0 24px; text-align: center; font-size: 24px; font-weight: 500; }
+.spec-row { display: grid; grid-template-columns: 1fr 1fr; height: 45px; min-height: 45px; align-items: center; border-bottom: 1px solid #e4e7eb; font-size: 16px; line-height: 1.3; }
+.spec-row > * { padding: 12px; }
+.spec-row--head { background: #f8f9fa; }
+.report-ad--square { display: none; width: 300px; height: 250px; margin: 24px auto; }
+.spec-table > .report-ad--square:not(.report-ad--square-second) { display: flex; margin: 100px auto !important; }
+.spec-mobile-slider { display: none; }
+.report-trust { display: flex; justify-content: space-between; gap: 20px; margin-top: 24px; }
+.report-trust span { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.report-trust img { width: 32px; height: 32px; }
+.report-sticker { margin-top: 100px; }
+.report-sticker.window-sticker { width: 1200px; max-width: calc(100% - 36px); }
+.report-sticker .window-sticker__grid { grid-template-columns: 407px 590px; gap: 101px; margin-left: 0; }
+.report-sticker h2 { line-height: 1.2; }
+.report-sticker .window-sticker__grid { height: 416px; }
+.report-sticker .window-sticker__steps .steps-item { height: 103px; min-height: 0; }
+.report-sticker .window-sticker__steps .steps-item:last-child { height: 107px; }
+.report-sticker .window-sticker__preview img { width: 590px; }
+.full-report { height: 554px; margin-top: 100px; padding: 60px 104px !important; border-radius: 12px; background: #fff7e6; }
+.full-report h2 { margin: 0 0 24px; font-size: 36px; font-weight: 500; }
+.full-report__mobile-title { display: none; }
+.full-report p, .full-report h3, .full-report > strong { font-size: 20px; line-height: 1.3; }
+.full-report h3 { margin: 0 0 16px; }
+.full-report ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 48px; margin: 0 0 16px; padding: 0; list-style: none; }
+.full-report li { position: relative; padding-left: 32px; font-size: 22px; }
+.full-report li::before { position: absolute; top: 4px; left: 0; width: 24px; height: 24px; background: url("./assets/img/icon-checkmark.svg") center/contain no-repeat; content: ""; }
+.full-report__brand { display: block; width: 173px; height: 34px; margin-top: -45px; object-fit: contain; }
+.full-report__button { display: inline-flex; min-width: 282px; min-height: 56px; margin-top: 40px; margin-left: 357px; padding: 10px 32px; align-items: center; justify-content: center; border-radius: 12px; background: #ff8c00; color: #fff; font-size: 22px; text-decoration: none; }
+.report-ad--bottom { width: 970px; max-width: calc(100% - 36px); min-height: 90px; margin: 100px auto !important; }
+.mobile-only { display: none; }
+
+@media (max-width: 767px) {
+  .sample-report { padding-top: 20px; overflow: hidden; }
+  .sample-report > .container { width: 343px; max-width: none; margin-right: 0; margin-left: 16px; }
+  .report-breadcrumb { margin-bottom: 20px; font-size: 16px; white-space: nowrap; }
+  .mobile-only { display: block; }
+  .report-vehicle { display: flex; flex-direction: column; gap: 20px; align-items: stretch; }
+  .report-vehicle__visual { display: contents; }
+  .report-vin { position: relative; top: auto; left: auto; order: 1; align-self: flex-start; font-size: 16px; line-height: 1.3; }
+  .report-vehicle__visual > img { order: 2; width: 100%; }
+  .report-vehicle__visual > img { height: 268px; object-fit: cover; }
+  .report-vin span, .report-vin strong { padding: 1.5px 8px; }
+  .report-vehicle__details { order: 3; }
+  .report-vehicle__details h1 { font-size: 24px; line-height: 1.3; }
+  .report-vehicle__details h2 { margin-bottom: 20px; font-size: 22px; line-height: 1.5; font-weight: 400; }
+  .report-vehicle__details dl div { margin-bottom: 10px; }
+  .report-upsell { display: grid; grid-template-columns: 32px 1fr; order: 4; gap: 8px 12px; margin-top: 20px; white-space: normal; }
+  .report-upsell > img { grid-row: 1 / 3; }
+  .report-upsell p { width: auto; font-size: 20px; line-height: 1.3; }
+  .report-upsell a { margin-left: 0; font-size: 20px; line-height: 1.3; }
+  .report-ad--leaderboard { display: none; }
+  .report-specifications { width: auto !important; margin-top: 48px !important; }
+  .report-specifications h2 { font-size: 22px; font-weight: 400; }
+  .spec-row { grid-template-columns: 130px 1fr; min-height: 45px; }
+  .spec-row > * { padding: 12px; overflow-wrap: anywhere; }
+  .report-specifications > .spec-table { display: none; }
+  .spec-mobile-slider { display: block; overflow: hidden; padding-bottom: 28px; }
+  .spec-mobile-slider .swiper-slide { width: 100%; }
+  .spec-mobile-slider .report-ad--square { display: flex; }
+  .spec-mobile-slider .swiper-pagination { bottom: 0; }
+  .spec-mobile-slider .swiper-pagination-bullet { width: 8px; height: 8px; }
+  .spec-mobile-slider .swiper-pagination-bullet-active { background: #007bff; }
+  .report-trust { flex-direction: column; margin: 24px 0; }
+  .report-sticker { margin-top: 48px; }
+  .report-sticker.window-sticker { width: auto; max-width: none; }
+  .report-sticker .window-sticker__grid { display: flex; flex-direction: column-reverse; gap: 16px; margin-left: 0; }
+  .report-sticker .window-sticker__grid { height: auto; }
+  .report-sticker .window-sticker__steps .steps-item,
+  .report-sticker .window-sticker__steps .steps-item:last-child { height: auto; min-height: auto; }
+  .report-sticker .window-sticker__preview img { width: 100%; height: auto; }
+  .full-report { height: auto; margin: 48px 0 0 !important; padding: 24px 16px 32px !important; border-radius: 0; }
+  .full-report h2 { font-size: 24px; font-weight: 700; }
+  .full-report__desktop-title { display: none; }
+  .full-report__mobile-title { display: block; margin-left: 16px; }
+  .full-report p, .full-report h3, .full-report > strong { font-size: 16px; }
+  .full-report ul { grid-template-columns: 1fr; gap: 8px; }
+  .full-report li { font-size: 16px; }
+  .full-report__button { display: flex; width: 100%; min-width: 0; margin: 32px 0 0; justify-content: center; }
+  .full-report__brand { margin-top: 32px; }
+  .report-ad--bottom { width: 320px; min-height: 50px; margin: 48px auto; }
+}
