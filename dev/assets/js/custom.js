@@ -313,3 +313,53 @@ if (specTable && specSlider) {
     syncSpecSwiper();
     window.addEventListener('resize', syncSpecSwiper);
 }
+
+const brandsSeo = document.querySelector('.brands-seo');
+const brandsSeoToggle = brandsSeo && brandsSeo.querySelector('button');
+if (brandsSeoToggle) {
+    brandsSeoToggle.addEventListener('click', () => {
+        const expanded = brandsSeo.classList.toggle('is-expanded');
+        brandsSeoToggle.textContent = expanded ? 'Show less' : 'Read more';
+    });
+}
+
+const brandFilter = document.querySelector('.brand-directory');
+if (brandFilter) {
+    const filterButtons = brandFilter.querySelectorAll('[data-brand-letter]');
+    const brandGroups = brandFilter.querySelectorAll('[data-brand-group]');
+    filterButtons.forEach((button) => button.addEventListener('click', () => {
+        const letter = button.dataset.brandLetter;
+        filterButtons.forEach((item) => item.classList.toggle('active', item === button));
+        brandGroups.forEach((group) => { group.hidden = letter !== 'all' && group.dataset.brandGroup !== letter; });
+        const scroller = brandFilter.querySelector('.brand-directory__scroll');
+        if (scroller) scroller.scrollTo({ left: 0, behavior: 'smooth' });
+    }));
+}
+
+const toyotaSeo = document.querySelector('.toyota-seo');
+const toyotaSeoToggle = toyotaSeo && toyotaSeo.querySelector('button');
+if (toyotaSeoToggle) {
+    toyotaSeoToggle.addEventListener('click', () => {
+        const expanded = toyotaSeo.classList.toggle('is-expanded');
+        toyotaSeoToggle.textContent = expanded ? 'Show less' : 'Read more';
+    });
+}
+
+const toyotaModelSlider = document.querySelector('.toyota-models');
+const toyotaTipsSlider = document.querySelector('.toyota-tips__slider');
+let toyotaModelSwiper = null;
+let toyotaTipsSwiper = null;
+
+function syncToyotaSliders() {
+    if (typeof Swiper === 'undefined') return;
+    if (window.innerWidth < 768) {
+        if (toyotaModelSlider && !toyotaModelSwiper) toyotaModelSwiper = new Swiper(toyotaModelSlider, { slidesPerView: 'auto', spaceBetween: 16, speed: 420, grabCursor: true });
+        if (toyotaTipsSlider && !toyotaTipsSwiper) toyotaTipsSwiper = new Swiper(toyotaTipsSlider, { slidesPerView: 'auto', spaceBetween: 16, speed: 420, grabCursor: true, pagination: { el: toyotaTipsSlider.querySelector('.swiper-pagination'), clickable: true } });
+    } else {
+        if (toyotaModelSwiper) { toyotaModelSwiper.destroy(true, true); toyotaModelSwiper = null; }
+        if (toyotaTipsSwiper) { toyotaTipsSwiper.destroy(true, true); toyotaTipsSwiper = null; }
+    }
+}
+
+syncToyotaSliders();
+window.addEventListener('resize', syncToyotaSliders);
