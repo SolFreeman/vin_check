@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Сборка Markup</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+
+    <header class="site-header site-header--loading">
+        <div class="container header-inner">
+            <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
+                aria-expanded="false">
+                <span></span>
+            </button>
+            <a class="logo" href="./index.html" aria-label="VIN Check home">
+                <img src="./assets/img/vin-check-logo.svg" alt="VIN Check" />
+            </a>
+            <div class="header-menu" id="header-menu" aria-hidden="true">
+                <nav class="primary-nav" aria-label="Primary navigation">
+                    <a class="active" href="./index.html#check">Check VIN</a>
+                    <a href="./index.html#brands">Car Brands</a>
+                    <a href="./index.html#report">Sample Reports</a>
+                    <a href="./index.html#faq">FAQ</a>
+                    <a href="./index.html#contact">Contact Us</a>
+                </nav>
+                <div class="menu-contact">
+                    <b>Contact</b>
+                    <div class="menu-language language-switcher"></div>
+                    <a href="tel:18004884428">1-800-488-4428</a>
+                    <a href="mailto:support@yoursite.com">support@yoursite.com</a>
+                </div>
+            </div>
+            <div class="language-bar">
+                <div class="language-title">English</div>
+                <ul class="language-list">
+                    <li class="menu-item active">
+                        <a href="#">English</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Deutsch</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Poland</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Romania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="loading-report loading-report--error">
+        <section class="loading-error" aria-labelledby="loading-error-title">
+            <div class="loading-error__inner">
+                <h1 id="loading-error-title">VIN Search Completed</h1>
+                <p class="loading-error__lead">We couldn’t locate detailed public records for this VIN in the free
+                    database.</p>
+
+                <form class="vin-form loading-error__form" id="vinForm" novalidate>
+                    <label for="vin">Enter your VIN to check vehicle history instantly and please try again..</label>
+                    <div class="loading-error__controls">
+                        <div class="loading-error__input">
+                            <input id="vin" name="vin" maxlength="17" placeholder="17 digits of your VIN"
+                                autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
+                                data-msg-required="Please enter your VIN code."
+                                data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)" />
+                            <span class="error-message" id="vinError"></span>
+                        </div>
+                        <button type="submit">Get Free VIN Report</button>
+                    </div>
+                    <div class="loading-error__links">
+                        <a href="./index.html#vin-help">Where to find VIN</a>
+                        <a href="./index.html#report">View report sample</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <aside class="loading-ad" aria-label="Advertisement">
+            <span>Ad-slot-1</span>
+            <b>300×250</b>
+        </aside>
+
+        <section class="loading-partners" aria-label="Trusted data partners">
+            <img src="./assets/img/partner-carfax.svg" alt="CARFAX" />
+            <img src="./assets/img/partner-fmcsa.svg" alt="FMCSA" />
+            <img src="./assets/img/partner-nhtsa.svg" alt="NHTSA" />
+            <img src="./assets/img/partner-vinaudit.svg" alt="VinAudit" />
+        </section>
+
+    </main>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>

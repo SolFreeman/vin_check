@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Сборка Markup</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+
+    <header class="site-header site-header--loading">
+        <div class="container header-inner">
+            <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
+                aria-expanded="false">
+                <span></span>
+            </button>
+            <a class="logo" href="./index.html" aria-label="VIN Check home">
+                <img src="./assets/img/vin-check-logo.svg" alt="VIN Check" />
+            </a>
+            <div class="header-menu" id="header-menu" aria-hidden="true">
+                <nav class="primary-nav" aria-label="Primary navigation">
+                    <a class="active" href="./index.html#check">Check VIN</a>
+                    <a href="./index.html#brands">Car Brands</a>
+                    <a href="./index.html#report">Sample Reports</a>
+                    <a href="./index.html#faq">FAQ</a>
+                    <a href="./index.html#contact">Contact Us</a>
+                </nav>
+                <div class="menu-contact">
+                    <b>Contact</b>
+                    <div class="menu-language language-switcher"></div>
+                    <a href="tel:18004884428">1-800-488-4428</a>
+                    <a href="mailto:support@yoursite.com">support@yoursite.com</a>
+                </div>
+            </div>
+            <div class="language-bar">
+                <div class="language-title">English</div>
+                <ul class="language-list">
+                    <li class="menu-item active">
+                        <a href="#">English</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Deutsch</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Poland</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Romania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="loading-report" data-loading-duration="18000">
+        <section class="loading-report__intro" aria-labelledby="loading-title">
+            <div class="container">
+                <h1 id="loading-title">Searching for VIN # <span>wbyCM82633A123456</span>
+                </h1>
+                <p class="loading-report__lead">
+                    <span class="loading-report__lead-desktop">We are scanning multiple trusted sources to generate your
+                        report...</span>
+                    <span class="loading-report__lead-mobile">Get instant access to accident, mileage and auction data
+                    </span>
+                </p>
+                <div class="loading-progress" role="progressbar" aria-label="VIN report generation progress"
+                    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span class="loading-progress__value"></span>
+                </div>
+                <p class="loading-report__status" aria-live="polite">Connecting to NHTSA database...</p>
+            </div>
+        </section>
+
+        <aside class="loading-ad" aria-label="Advertisement">
+            <span>Ad-slot-1</span>
+            <b>300×250</b>
+        </aside>
+
+
+        <section class="loading-checks" aria-label="Vehicle report checks">
+            <div class="loading-checks__scroller">
+                <ol class="loading-checks__list">
+                    <li class="loading-check is-active" data-message="Reading vehicle profile...">
+                        <img src="./assets/img/loading-vehicle-profile.svg" alt="" />
+                        <span>Vehicle
+                            <br>Profile
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Checking ownership records...">
+                        <img src="./assets/img/loading-ownership-records.svg" alt="" />
+                        <span>Ownership
+                            <br>Records
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Checking title branding...">
+                        <img src="./assets/img/loading-title-branding.svg" alt="" />
+                        <span>Title Branding
+                            <br>Check
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Analyzing reported damage...">
+                        <img src="./assets/img/loading-damage-analysis.svg" alt="" />
+                        <span>Damage
+                            <br>Analysis
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Verifying vehicle title...">
+                        <img src="./assets/img/loading-title-verification.svg" alt="" />
+                        <span>Title
+                            <br>Verification
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Validating odometer records...">
+                        <img src="./assets/img/loading-odometer-validation.svg" alt="" />
+                        <span>Odometer
+                            <br>Validation
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Searching sale and auction history...">
+                        <img src="./assets/img/loading-sale-auction-history.svg" alt="" />
+                        <span>Sale &amp; Auction
+                            <br>History
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Running theft screening...">
+                        <img src="./assets/img/loading-theft-screening.svg" alt="" />
+                        <span>Theft
+                            <br>Screening
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Checking recall status...">
+                        <img src="./assets/img/loading-recall-status.svg" alt="" />
+                        <span>Recall Status
+                            <br>Check
+                        </span>
+                    </li>
+                    <li class="loading-check" data-message="Calculating market valuation...">
+                        <img src="./assets/img/loading-market-valuation.svg" alt="" />
+                        <span>Market
+                            <br>Valuation
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="loading-partners" aria-label="Trusted data partners">
+            <img src="./assets/img/partner-carfax.svg" alt="CARFAX" />
+            <img src="./assets/img/partner-fmcsa.svg" alt="FMCSA" />
+            <img src="./assets/img/partner-nhtsa.svg" alt="NHTSA" />
+            <img src="./assets/img/partner-vinaudit.svg" alt="VinAudit" />
+        </section>
+
+    </main>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/loading.js"></script>
+</body>
+
+</html>
