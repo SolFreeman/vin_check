@@ -1,120 +1,597 @@
-.car-brands-page { color: #333; }
-.car-brands-screen .primary-nav a { color: #333; }
-.car-brands-screen .primary-nav a:nth-child(2) { color: #007bff; }
-.brands-hero { height: 567px; background: url('./assets/img/car-brands-hero-desktop.png') center/cover no-repeat; }
-.brands-hero__content { width: 794px; margin: 0 auto; padding-top: 126px; }
-.brands-hero h1 { margin: 0 0 32px; font-size: 42px; line-height: 1.2; font-weight: 500; }
-.brands-hero__copy { margin: 0 0 32px; font-size: 24px; line-height: 1.3; font-weight: 500; }
-.brands-hero__mobile-copy { display: none; }
-.brands-vin-form { display: flex; gap: 8px; margin-bottom: 56px; }
-.brands-vin-form input, .brands-vin-form button { height: 56px; border: 1px solid #2c3e50; border-radius: 12px; font-size: 22px; }
-.brands-vin-form input { width: 360px; padding: 10px 16px; color: #007bff; }
-.brands-vin-form input::placeholder { color: #007bff; opacity: 1; }
-.brands-vin-form button { padding: 8px 16px; background: #ff8c00; color: #fff; cursor: pointer; }
-.brands-hero__benefits { display: flex; gap: 40px; }
-.brands-hero__benefits span, .brand-advantages h3 { position: relative; padding-left: 28px; }
-.brands-hero__benefits span::before, .brand-advantages h3::before { position: absolute; top: 0; left: 0; width: 24px; height: 24px; background: url('./assets/img/icon-check-orange.svg') center/contain no-repeat; content: ''; }
-.brands-ad { display: flex; align-items: center; justify-content: center; gap: 24px; border-radius: 12px; background: #e9ecef; font-size: 14px; }
-.brands-ad--top { width: 728px; height: 90px; margin: 100px auto !important; }
-.popular-brands { width: 977px !important; }
-.popular-brands h2, .why-brand h2, .smart-choice h2 { margin: 0 0 32px; text-align: center; font-size: 36px; font-weight: 500; }
-.popular-brands picture, .popular-brands img { display: block; width: 956px; height: 486px; }
-.popular-brands h3 { margin: 24px 0 12px; font-size: 22px; font-weight: 400; }
-.popular-brands p, .why-brand > p { margin: 0; font-size: 16px; line-height: 1.3; }
-.why-brand { width: 793px !important; margin-top: 100px !important; }
-.why-brand > p { margin: 0 auto 40px; text-align: center; }
-.brand-data-row { display: grid; grid-template-columns: 1fr 1fr; min-height: 45px; align-items: center; padding: 0 12px; background: #f8f9fa; }
-.brand-data-row:nth-child(odd) { background: #fff; }
-.brand-data-row--head { background: #d6e8ff !important; }
-.brand-advantages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 74px; width: 1200px !important; margin-top: 100px !important; }
-.brand-advantages article { text-align: center; }
-.brand-advantages h3 { display: inline-block; margin: 0 0 8px; font-size: 22px; font-weight: 500; }
-.brand-advantages p { margin: 0; font-size: 16px; line-height: 1.3; }
-.smart-choice { width: 996px !important; margin-top: 100px !important; }
-.smart-choice__grid { display: grid; grid-template-columns: 386px 590px; gap: 20px; align-items: end; }
-.smart-choice__grid p { margin: 0 0 16px; font-size: 16px; line-height: 1.3; }
-.smart-choice img { display: block; width: 590px; height: 340px; border-radius: 12px; }
-.brands-full-report { position: relative; width: 1200px !important; height: 554px; margin-top: 100px !important; padding: 60px 104px !important; border-radius: 12px; background: #fff7e6; }
-.brands-full-report h2 { margin: 0 0 24px; font-size: 36px; font-weight: 500; }
-.brands-full-report p, .brands-full-report h3, .brands-full-report > strong { font-size: 20px; line-height: 1.3; }
-.brands-full-report h3 { margin: 16px 0; }
-.brands-full-report ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; margin: 0; padding: 0; list-style: none; }
-.brands-full-report li { position: relative; padding-left: 32px; font-size: 22px; }
-.brands-full-report li::before { position: absolute; top: 3px; left: 0; width: 24px; height: 24px; background: url('./assets/img/icon-checkmark.svg') center/contain no-repeat; content: ''; }
-.brands-full-report > a { position: absolute; bottom: 60px; left: 461px; display: flex; width: 282px; height: 56px; align-items: center; justify-content: center; border-radius: 12px; background: #ff8c00; color: #fff; font-size: 22px; text-decoration: none; }
-.brands-full-report > img { position: absolute; bottom: 60px; left: 104px; width: 173px; height: 34px; }
-.brand-directory { margin-top: 100px; padding: 60px 0; background: #f8f9fa; }
-.brand-directory > .container { width: 994px; }
-.brand-directory h2 { margin: 0 0 32px; font-size: 36px; font-weight: 500; }
-.brand-alphabet { display: flex; height: 48px; align-items: center; gap: 14px; border-top: 1px solid #bdbab7; border-bottom: 1px solid #bdbab7; overflow-x: auto; scrollbar-width: none; }
-.brand-alphabet::-webkit-scrollbar { display: none; }
-.brand-alphabet button { min-width: 28px; height: 28px; padding: 0 6px; border: 0; background: transparent; color: #333; cursor: pointer; }
-.brand-alphabet button.active { background: #dbeafe; color: #007bff; }
-.brand-columns { display: grid; grid-template-columns: repeat(4, 1fr); min-width: 994px; margin-top: 40px; }
-.brand-columns > div, .brand-columns section { display: flex; flex-direction: column; gap: 12px; }
-.brand-columns section { margin-bottom: 20px; }
-.brand-columns a { color: #007bff; text-decoration: none; }
-.brand-columns a:hover { text-decoration: underline; }
-.brand-columns [hidden] { display: none; }
-.brand-directory p { margin: 32px 0 0; font-size: 14px; line-height: 1.3; }
-.brands-seo { position: relative; width: 860px !important; height: 239px; margin-top: 100px !important; overflow: hidden; }
-.brands-seo h2 { margin: 0 0 24px; font-size: 24px; }
-.brands-seo p { margin: 0 0 16px; font-size: 16px; line-height: 1.3; }
-.brands-seo button { display: none; }
-.brands-ad--bottom { width: 970px; height: 90px; margin: 100px auto !important; }
-.mobile-only { display: none; }
+.car-brands-page {
+	color: #333;
+}
+.car-brands-screen .primary-nav a {
+	color: #333;
+}
+.car-brands-screen .primary-nav a:nth-child(2) {
+	color: #007bff;
+}
+.brands-hero {
+	height: 567px;
+	background: url("./assets/img/car-brands-hero-desktop.png") center/cover
+		no-repeat;
+}
+.brands-hero__content {
+	width: 794px;
+	margin: 0 auto;
+	padding-top: 126px;
+}
+.brands-hero h1 {
+	margin: 0 0 32px;
+	font-size: 42px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+.brands-hero__copy {
+	margin: 0 0 32px;
+	font-size: 24px;
+	line-height: 1.3;
+	font-weight: 500;
+}
+.brands-hero__mobile-copy {
+	display: none;
+}
+.brands-vin-form {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 56px;
+}
+.brands-vin-form input,
+.brands-vin-form button {
+	height: 56px;
+	border: 1px solid #2c3e50;
+	border-radius: 12px;
+	font-size: 22px;
+}
+.brands-vin-form input {
+	width: 360px;
+	padding: 10px 16px;
+	color: #007bff;
+}
+.brands-vin-form input::placeholder {
+	color: #007bff;
+	opacity: 1;
+}
+.brands-vin-form button {
+	padding: 8px 16px;
+	background: #ff8c00;
+	color: #fff;
+	cursor: pointer;
+}
+.brands-hero__benefits {
+	display: flex;
+	gap: 40px;
+}
+.brands-hero__benefits span,
+.brand-advantages h3 {
+	position: relative;
+	padding-left: 28px;
+}
+.brands-hero__benefits span::before,
+.brand-advantages h3::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url("./assets/img/icon-check-orange.svg") center/contain no-repeat;
+	content: "";
+}
+.brands-ad {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	border-radius: 12px;
+	background: #e9ecef;
+	font-size: 14px;
+}
+.brands-ad--top {
+	width: 728px;
+	height: 90px;
+	margin: 100px auto !important;
+}
+.popular-brands {
+	width: 977px !important;
+}
+.popular-brands h2,
+.why-brand h2,
+.smart-choice h2 {
+	margin: 0 0 32px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
+}
+.popular-brands picture,
+.popular-brands img {
+	display: block;
+	width: 956px;
+	height: 486px;
+}
+.popular-brands h3 {
+	margin: 24px 0 12px;
+	font-size: 22px;
+	font-weight: 400;
+}
+.popular-brands p,
+.why-brand > p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.3;
+}
+.why-brand {
+	width: 793px !important;
+	margin-top: 100px !important;
+}
+.why-brand > p {
+	margin: 0 auto 40px;
+	text-align: center;
+}
+.brand-data-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 45px;
+	align-items: center;
+	padding: 0 12px;
+	background: #f8f9fa;
+}
+.brand-data-row:nth-child(odd) {
+	background: #fff;
+}
+.brand-data-row--head {
+	background: #d6e8ff !important;
+}
+.brand-advantages {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 74px;
+	width: 1200px !important;
+	margin-top: 100px !important;
+}
+.brand-advantages article {
+	text-align: center;
+}
+.brand-advantages h3 {
+	display: inline-block;
+	margin: 0 0 8px;
+	font-size: 22px;
+	font-weight: 500;
+}
+.brand-advantages p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.3;
+}
+.smart-choice {
+	width: 996px !important;
+	margin-top: 100px !important;
+}
+.smart-choice__grid {
+	display: grid;
+	grid-template-columns: 386px 590px;
+	gap: 20px;
+	align-items: end;
+}
+.smart-choice__grid p {
+	margin: 0 0 16px;
+	font-size: 16px;
+	line-height: 1.3;
+}
+.smart-choice img {
+	display: block;
+	width: 590px;
+	height: 340px;
+	border-radius: 12px;
+}
+.brands-full-report {
+	position: relative;
+	width: 1200px !important;
+	margin-top: 100px !important;
+	padding: 60px 104px !important;
+	border-radius: 12px;
+	background: #fff7e6;
+}
+.brands-full-report h2 {
+	margin: 0 0 24px;
+	font-size: 36px;
+	font-weight: 500;
+}
+.brands-full-report p,
+.brands-full-report h3,
+.brands-full-report > strong {
+	font-size: 20px;
+	line-height: 1.3;
+}
+.brands-full-report h3 {
+	margin: 16px 0;
+}
+.brands-full-report ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px 48px;
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+}
+.brands-full-report li {
+	position: relative;
+	padding-left: 32px;
+	font-size: 22px;
+}
+.brands-full-report li::before {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url("./assets/img/icon-checkmark.svg") center/contain no-repeat;
+	content: "";
+}
+.brands-full-report .btn-primary {
+	display: flex;
+	padding: 11px 60px;
+	height: 56px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	background: #ff8c00;
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+	border: 1px solid #2C3E50;
+}
+
+.bottom-holder {
+	display: flex;
+	padding-top: 40px;
+	max-width: 645px;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+}
+
+
+.brands-full-report > img {
+	width: 173px;
+	height: 34px;
+}
+.brand-directory {
+	margin-top: 100px;
+	padding: 60px 0;
+	background: #f8f9fa;
+}
+.brand-directory > .container {
+	width: 994px;
+}
+.brand-directory h2 {
+	margin: 0 0 32px;
+	font-size: 36px;
+	font-weight: 500;
+}
+.brand-alphabet {
+	display: flex;
+	height: 48px;
+	align-items: center;
+	gap: 14px;
+	border-top: 1px solid #bdbab7;
+	border-bottom: 1px solid #bdbab7;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+.brand-alphabet::-webkit-scrollbar {
+	display: none;
+}
+.brand-alphabet button {
+	min-width: 28px;
+	height: 28px;
+	padding: 0 6px;
+	border: 0;
+	background: transparent;
+	color: #333;
+	cursor: pointer;
+}
+.brand-alphabet button.active {
+	background: #dbeafe;
+	color: #007bff;
+}
+.brand-columns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	min-width: 994px;
+	margin-top: 40px;
+}
+.brand-columns > div,
+.brand-columns section {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.brand-columns section {
+	margin-bottom: 20px;
+}
+.brand-columns a {
+	color: #007bff;
+	text-decoration: none;
+}
+.brand-columns a:hover {
+	text-decoration: underline;
+}
+.brand-columns [hidden] {
+	display: none;
+}
+.brand-directory p {
+	margin: 32px 0 0;
+	font-size: 14px;
+	line-height: 1.3;
+}
+.brands-seo {
+	position: relative;
+	width: 860px !important;
+	height: 239px;
+	margin-top: 100px !important;
+	overflow: hidden;
+}
+.brands-seo h2 {
+	margin: 0 0 24px;
+	font-size: 24px;
+}
+.brands-seo p {
+	margin: 0 0 16px;
+	font-size: 16px;
+	line-height: 1.3;
+}
+.brands-seo button {
+	display: none;
+}
+.brands-ad--bottom {
+	width: 970px;
+	height: 90px;
+	margin: 100px auto !important;
+}
+.mobile-only {
+	display: none;
+}
 
 @media (max-width: 767px) {
-  .desktop-only { display: none !important; }
-  .mobile-only { display: block; }
-  .brands-hero { height: 738px; background-image: url('./assets/img/car-brands-hero-mobile.png'); background-size: 375px 812px; background-position: center -74px; }
-  .brands-hero__content { width: 343px; padding-top: 20px; text-align: center; }
-  .brands-hero h1 { width: 257px; margin: 0 auto 20px; font-size: 34px; }
-  .brands-hero__mobile-copy { display: block; margin: 0 0 20px; font-size: 20px; line-height: 1.3; }
-  .brands-hero__copy { margin: 0 0 20px; text-align: left; font-size: 16px; font-weight: 400; }
-  .brands-hero__copy br { display: none; }
-  .brands-vin-form { flex-direction: column; gap: 20px; margin: 0; }
-  .brands-vin-form input, .brands-vin-form button { width: 100%; font-size: 18px; }
-  .brands-hero__benefits { position: absolute; top: 688px; flex-direction: column; gap: 8px; text-align: left; font-size: 14px; }
-  .brands-ad--top { width: 320px; height: 100px; margin: 48px auto !important; }
-  .popular-brands { width: 343px !important; }
-  .popular-brands h2, .why-brand h2, .smart-choice h2 { margin-bottom: 20px; font-size: 24px; }
-  .popular-brands picture, .popular-brands img { width: 337px; height: 256px; }
-  .popular-brands h3 { margin-top: 20px; font-size: 20px; }
-  .popular-brands p { font-size: 16px; }
-  .why-brand { width: 343px !important; margin-top: 48px !important; }
-  .why-brand > p { margin-bottom: 20px; text-align: left; }
-  .brand-data-row { grid-template-columns: 150px 1fr; min-height: 66px; align-items: start; padding: 12px; gap: 12px; }
-  .brand-data-row:nth-child(4) { min-height: 45px; }
-  .brand-advantages { grid-template-columns: 1fr; gap: 16px; width: 343px !important; margin-top: 48px !important; }
-  .brand-advantages article { text-align: left; }
-  .brand-advantages h3 { margin: 0; font-size: 18px; }
-  .brand-advantages p { padding-left: 0; }
-  .smart-choice { width: 343px !important; margin-top: 48px !important; }
-  .smart-choice h2 { width: 334px; }
-  .smart-choice__grid { display: flex; flex-direction: column; gap: 20px; }
-  .smart-choice img { width: 343px; height: 264px; }
-  .brands-full-report { width: 375px !important; height: 692px; margin-top: 48px !important; padding: 24px 16px 32px !important; border-radius: 0; }
-  .brands-full-report h2 { margin: 0 15px 20px; text-align: center; font-size: 24px; }
-  .brands-full-report p, .brands-full-report h3, .brands-full-report > strong { font-size: 16px; }
-  .brands-full-report ul { grid-template-columns: 1fr; gap: 8px; }
-  .brands-full-report li { font-size: 16px; }
-  .brands-full-report > a { bottom: 154px; left: 16px; width: 343px; }
-  .brands-full-report > img { bottom: 32px; left: 16px; }
-  .brand-directory { margin-top: 48px; padding: 24px 0; }
-  .brand-directory > .container { width: 343px; }
-  .brand-directory h2 { margin-bottom: 20px; font-size: 24px; }
-  .brand-alphabet { width: calc(100vw - 16px); gap: 8px; scroll-snap-type: x proximity; }
-  .brand-alphabet button { scroll-snap-align: start; }
-  .brand-directory__scroll { width: calc(100vw - 16px); overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
-  .brand-columns { grid-template-columns: repeat(4, 132px); gap: 16px; min-width: 576px; margin-top: 20px; }
-  .brand-columns > div { scroll-snap-align: start; }
-  .brand-directory p { margin-top: 20px; font-size: 14px; }
-  .brands-seo { width: 343px !important; height: 382px; margin-top: 48px !important; }
-  .brands-seo h2 { font-size: 20px; }
-  .brands-seo__text { height: 294px; overflow: hidden; }
-  .brands-seo.is-expanded { height: auto; padding-bottom: 12px; }
-  .brands-seo.is-expanded .brands-seo__text { height: auto; }
-  .brands-seo button { display: block; margin-top: 12px; padding: 0; border: 0; background: none; color: #007bff; font-size: 16px; }
-  .brands-ad--bottom { width: 320px; height: 50px; margin: 48px auto !important; }
+	.desktop-only {
+		display: none !important;
+	}
+	.mobile-only {
+		display: block;
+	}
+	.brands-hero {
+		height: 738px;
+		background-image: url("./assets/img/car-brands-hero-mobile.png");
+		background-size: 375px 812px;
+		background-position: center -74px;
+	}
+	.brands-hero__content {
+		width: 343px;
+		padding-top: 20px;
+		text-align: center;
+	}
+	.brands-hero h1 {
+		width: 257px;
+		margin: 0 auto 20px;
+		font-size: 34px;
+	}
+	.brands-hero__mobile-copy {
+		display: block;
+		margin: 0 0 20px;
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	.brands-hero__copy {
+		margin: 0 0 20px;
+		text-align: left;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.brands-hero__copy br {
+		display: none;
+	}
+	.brands-vin-form {
+		flex-direction: column;
+		gap: 20px;
+		margin: 0;
+	}
+	.brands-vin-form input,
+	.brands-vin-form button {
+		width: 100%;
+		font-size: 18px;
+	}
+	.brands-hero__benefits {
+		position: absolute;
+		top: 688px;
+		flex-direction: column;
+		gap: 8px;
+		text-align: left;
+		font-size: 14px;
+	}
+	.brands-ad--top {
+		width: 320px;
+		height: 100px;
+		margin: 48px auto !important;
+	}
+	.popular-brands {
+		width: 343px !important;
+	}
+	.popular-brands h2,
+	.why-brand h2,
+	.smart-choice h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	.popular-brands picture,
+	.popular-brands img {
+		width: 337px;
+		height: 256px;
+	}
+	.popular-brands h3 {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+	.popular-brands p {
+		font-size: 16px;
+	}
+	.why-brand {
+		width: 343px !important;
+		margin-top: 48px !important;
+	}
+	.why-brand > p {
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	.brand-data-row {
+		grid-template-columns: 150px 1fr;
+		min-height: 66px;
+		align-items: start;
+		padding: 12px;
+		gap: 12px;
+	}
+	.brand-data-row:nth-child(4) {
+		min-height: 45px;
+	}
+	.brand-advantages {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		width: 343px !important;
+		margin-top: 48px !important;
+	}
+	.brand-advantages article {
+		text-align: left;
+	}
+	.brand-advantages h3 {
+		margin: 0;
+		font-size: 18px;
+	}
+	.brand-advantages p {
+		padding-left: 0;
+	}
+	.smart-choice {
+		width: 343px !important;
+		margin-top: 48px !important;
+	}
+	.smart-choice h2 {
+		width: 334px;
+	}
+	.smart-choice__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.smart-choice img {
+		width: 343px;
+		height: 264px;
+	}
+	.brands-full-report {
+		width: 375px !important;
+		margin-top: 48px !important;
+		padding: 24px 16px 32px !important;
+		border-radius: 0;
+	}
+	.brands-full-report h2 {
+		margin: 0 15px 20px;
+		text-align: center;
+		font-size: 24px;
+	}
+	.brands-full-report p,
+	.brands-full-report h3,
+	.brands-full-report > strong {
+		font-size: 16px;
+	}
+	.brands-full-report ul {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+	.brands-full-report li {
+		font-size: 16px;
+	}
+	
+	.bottom-holder {
+		flex-direction: column-reverse;
+		gap: 32px;
+	}
+
+	.bottom-holder .btn-primary {
+
+	}
+
+	.brands-full-report > img {
+		bottom: 32px;
+		left: 16px;
+	}
+	.brand-directory {
+		margin-top: 48px;
+		padding: 24px 0;
+	}
+	.brand-directory > .container {
+		width: 343px;
+	}
+	.brand-directory h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	.brand-alphabet {
+		width: calc(100vw - 16px);
+		gap: 8px;
+		scroll-snap-type: x proximity;
+	}
+	.brand-alphabet button {
+		scroll-snap-align: start;
+	}
+	.brand-directory__scroll {
+		width: calc(100vw - 16px);
+		overflow-x: auto;
+		padding-bottom: 12px;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: thin;
+	}
+	.brand-columns {
+		grid-template-columns: repeat(4, 132px);
+		gap: 16px;
+		min-width: 576px;
+		margin-top: 20px;
+	}
+	.brand-columns > div {
+		scroll-snap-align: start;
+	}
+	.brand-directory p {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+	.brands-seo {
+		width: 343px !important;
+		height: 382px;
+		margin-top: 48px !important;
+	}
+	.brands-seo h2 {
+		font-size: 20px;
+	}
+	.brands-seo__text {
+		height: 294px;
+		overflow: hidden;
+	}
+	.brands-seo.is-expanded {
+		height: auto;
+		padding-bottom: 12px;
+	}
+	.brands-seo.is-expanded .brands-seo__text {
+		height: auto;
+	}
+	.brands-seo button {
+		display: block;
+		margin-top: 12px;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: #007bff;
+		font-size: 16px;
+	}
+	.brands-ad--bottom {
+		width: 320px;
+		height: 50px;
+		margin: 48px auto !important;
+	}
 }

@@ -1,0 +1,26 @@
+@@include('templates/head-contact.html')
+@@include('templates/header.html')
+<main class="vin-contact-page">
+  <section class="contact-layout container">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <div class="contact-detail contact-detail--place"><img src="./assets/img/contact-place.svg" alt=""><p>UAB CheckCar.VIN<br>Vilnius, Lithuania</p></div>
+      <div class="contact-detail"><h2>Customer Support Phone:</h2><a href="tel:18004884428">1-800-488-4428</a></div>
+      <div class="contact-detail contact-detail--mail"><img src="./assets/img/contact-mail.svg" alt="Email"><a href="mailto:support@yoursite.com">support@yoursite.com</a></div>
+      <div class="contact-availability"><h2><img src="./assets/img/contact-clock.svg" alt="">Support Team Availability:</h2><p>Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM<br>Sunday: Closed</p><small>We aim to respond to all inquiries within 24 hours.</small></div>
+    </div>
+    <div class="contact-support">
+      <h2>Get Support for Your VIN Check</h2>
+      <p>If you have questions about VIN reports, billing, or vehicle history — our team is here to help.</p>
+      <form class="contact-form" novalidate>
+        <div class="contact-form__row"><label><span class="sr-only">Your name</span><input name="name" placeholder="Your name" required></label><label><span class="sr-only">Your E-Mail</span><input type="email" name="email" placeholder="Your E-Mail" required></label></div>
+        <label><span class="sr-only">VIN</span><input name="vin" placeholder="VIN" maxlength="17"></label>
+        <label><span class="sr-only">Your message</span><textarea name="message" placeholder="Your message" required></textarea></label>
+        <button type="submit">Send message</button>
+      </form>
+      <small>We do not sell your data. Your VIN is used only to process your request.</small>
+    </div>
+  </section>
+  <section class="ad contact-ad"><span>Ad-slot 2-footer</span><b>desktop: 970×90</b><b>mobile: 320×50</b></section>
+</main>
+@@include('templates/footer.html')

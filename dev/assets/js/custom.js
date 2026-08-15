@@ -7,6 +7,41 @@ const languageLabels = {
 };
 let selectedLanguage = 'EN';
 
+
+document.querySelectorAll('[data-payment-modal]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var modal = document.querySelector('.payment-modal');
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+});
+document.querySelectorAll('[data-payment-close]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var modal = button.closest('.payment-modal');
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  });
+});
+
+var bmwMobileSwipers = [];
+function syncBmwSwipers() {
+  var sliders = document.querySelectorAll('.bmw-page .bmw-card-slider, .bmw-page .bmw-doc-slider, .bmw-page .bmw-models__slider');
+  if (typeof Swiper === 'undefined' || !sliders.length) return;
+  if (window.innerWidth < 768 && !bmwMobileSwipers.length) {
+    bmwMobileSwipers = Array.from(sliders, function (slider) {
+      return new Swiper(slider, { slidesPerView: 'auto', spaceBetween: 16, speed: 420, grabCursor: true });
+    });
+  } else if (window.innerWidth >= 768 && bmwMobileSwipers.length) {
+    bmwMobileSwipers.forEach(function (swiper) { swiper.destroy(true, true); });
+    bmwMobileSwipers = [];
+  }
+}
+syncBmwSwipers();
+window.addEventListener('resize', syncBmwSwipers);
 function renderLanguages() {
     document.querySelectorAll('.language-switcher').forEach((switcher) => {
         switcher.replaceChildren(...languages.map((language) => {
@@ -363,3 +398,131 @@ function syncToyotaSliders() {
 
 syncToyotaSliders();
 window.addEventListener('resize', syncToyotaSliders);
+
+document.querySelectorAll('[data-google-modal]').forEach(function (button) {
+    button.addEventListener('click', function () {
+        var modal = document.querySelector('.google-payment-modal');
+        if (!modal) return;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    var modal = document.querySelector('.payment-modal.is-open');
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+});
+
+function getValidationMessage(field) {
+    if (field.type === 'email') return 'Please enter a valid email address';
+    if ((field.name || '').toLowerCase() === 'vin') return 'Please enter a valid 17-character VIN';
+    if (field.tagName === 'TEXTAREA') return 'Please enter your message';
+    return 'This field is required';
+}
+
+function fieldIsValid(field) {
+    var value = field.value.trim();
+    if (!field.required && !value) return true;
+    if (!value) return false;
+    if (field.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if ((field.name || '').toLowerCase() === 'vin') return /^[A-HJ-NPR-Z0-9]{17}$/i.test(value);
+    return true;
+}
+
+function setFieldValidation(field, valid) {
+    var label = field.closest('label') || field.parentElement;
+    if (!label) return;
+    label.classList.toggle('is-invalid', !valid);
+    field.setAttribute('aria-invalid', valid ? 'false' : 'true');
+    var error = label.querySelector('.field-error');
+    if (!valid && !error) {
+        error = document.createElement('span');
+        error.className = 'field-error';
+        error.textContent = getValidationMessage(field);
+        label.appendChild(error);
+    } else if (valid && error) {
+        error.remove();
+    }
+}
+
+document.querySelectorAll('.contact-form, .checkout-form, .google-payment-modal__form').forEach(function (form) {
+    var fields = form.querySelectorAll('input[required], textarea[required], select[required]');
+    fields.forEach(function (field) {
+        field.addEventListener('input', function () { if (field.classList.contains('was-checked') || field.value) setFieldValidation(field, fieldIsValid(field)); });
+        field.addEventListener('blur', function () { field.classList.add('was-checked'); setFieldValidation(field, fieldIsValid(field)); });
+    });
+    form.addEventListener('submit', function (event) {
+        var valid = true;
+        fields.forEach(function (field) { field.classList.add('was-checked'); var currentValid = fieldIsValid(field); setFieldValidation(field, currentValid); valid = valid && currentValid; });
+        if (!valid) {
+            event.preventDefault();
+            var firstInvalid = form.querySelector('[aria-invalid="true"]');
+            if (firstInvalid) firstInvalid.focus();
+        }
+    });
+});
+
+function openPaymentModal(modal) {
+    if (!modal) return;
+    document.querySelectorAll('.payment-modal.is-open').forEach(function (item) {
+        item.classList.remove('is-open');
+        item.setAttribute('aria-hidden', 'true');
+    });
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+document.querySelectorAll('[data-custom-select]').forEach(function (select) {
+    var trigger = select.querySelector('.custom-select__trigger');
+    var hiddenInput = select.querySelector('input[type="hidden"]');
+    trigger.addEventListener('click', function () {
+        document.querySelectorAll('[data-custom-select].is-open').forEach(function (item) { if (item !== select) item.classList.remove('is-open'); });
+        select.classList.toggle('is-open');
+    });
+    select.querySelectorAll('.custom-select__menu button').forEach(function (option) {
+        option.addEventListener('click', function () {
+            var value = option.dataset.value || option.textContent.trim();
+            hiddenInput.value = value;
+            trigger.textContent = value;
+            select.classList.add('has-value');
+            select.classList.remove('is-open');
+            select.querySelectorAll('.custom-select__menu button').forEach(function (item) { item.classList.toggle('is-selected', item === option); });
+            hiddenInput.dispatchEvent(new Event('input', { bubbles: true }));
+        });
+    });
+});
+
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('[data-custom-select]')) document.querySelectorAll('[data-custom-select].is-open').forEach(function (item) { item.classList.remove('is-open'); });
+});
+
+document.querySelectorAll('[data-payment-help]').forEach(function (button) {
+    button.addEventListener('click', function () {
+        var form = button.closest('.google-payment-modal__form');
+        var popover = form && form.querySelector('[data-payment-popover="' + button.dataset.paymentHelp + '"]');
+        if (popover) popover.hidden = false;
+    });
+});
+document.querySelectorAll('[data-help-close]').forEach(function (button) {
+    button.addEventListener('click', function () { button.closest('.nested-payment-popover').hidden = true; });
+});
+
+var googlePaymentForm = document.querySelector('.google-payment-modal__form');
+if (googlePaymentForm) {
+    googlePaymentForm.addEventListener('submit', function (event) {
+        if (event.defaultPrevented) return;
+        event.preventDefault();
+        var card = googlePaymentForm.querySelector('[name="google-card"]').value.replace(/\s+/g, '');
+        var result = card === '4000000000000002' ? document.querySelector('.payment-result-modal--error') : document.querySelector('.payment-result-modal--success');
+        openPaymentModal(result);
+    });
+}
+document.querySelectorAll('[data-payment-back]').forEach(function (button) {
+    button.addEventListener('click', function () { openPaymentModal(document.querySelector('.google-payment-modal')); });
+});
