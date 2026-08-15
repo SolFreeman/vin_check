@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#188de7">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <title>Сборка Markup</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png" />
-
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>404 — Page Not Found</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-    <div class='thetop'></div>
-    <div class='scrolltop'>
-        <div class='muve-top'></div>
+<body class="vin-404-screen">
+    <div class="thetop"></div>
+    <div class="scrolltop">
+        <div class="muve-top"></div>
     </div>
 
     <header class="site-header">
@@ -63,69 +60,15 @@
         </div>
     </header>
 
-    <main class="wrapper contact">
-        <section class="page-404" style="background-image: url('./assets/img/certificates-bg.png')">
-            <div class="container">
-                <div class="img-holder">
-                    <img src="./assets/img/heart-404.png" alt="image  description">
-                </div>
-                <div class="text-holder">
-                    <strong>404</strong>
-                    <span>not found</span>
-                    <a href="/" class="btn btn-primary">Main page</a>
-                </div>
-            </div>
+    <main class="vin-404-page">
+        <section class="vin-404-page__content">
+            <strong>404</strong>
+            <h1>Oops! We can’t find that page</h1>
+            <p>It looks like the page you’re trying to reach is no longer available or never existed.</p>
+            <a href="./index.html">Back to Home</a>
+            <picture>
+                <source media="(max-width:767px)" srcset="./assets/img/404-mobile.png">
+                <img src="./assets/img/404-desktop.png" alt="Car driving away">
+            </picture>
         </section>
     </main>
-    <footer id="contact">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a class="logo footer-logo" href="#top">
-                    <img src="./assets/img/vin-check-logo-footer.svg" alt="VIN Check" />
-                </a>
-                <p>Free VIN Check service.
-                    <br>Get instant access to vehicle history, auctions, mileage and more.
-                </p>
-            </div>
-            <div class="footer-column footer-navigation">
-                <h3>Navigation</h3>
-                <a href="#check">Check VIN</a>
-                <a href="#brands">Car Brands</a>
-                <a href="#report">Sample Reports</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact Us</a>
-            </div>
-            <div class="footer-column footer-brands">
-                <h3>Popular Brands</h3>
-                <a>BMW VIN Check</a>
-                <a>Audi VIN Check</a>
-                <a>Toyota VIN Check</a>
-                <a>Mercedes VIN Check</a>
-                <a>Ford VIN Check</a>
-            </div>
-            <div class="footer-column footer-legal">
-                <h3>Legal</h3>
-                <a>Privacy Policy</a>
-                <a>Terms of Use</a>
-                <a>Disclaimer</a>
-                <a>Affiliate Disclosure</a>
-                <a>Cookie Policy</a>
-            </div>
-            <div class="footer-column footer-contact">
-                <h3>Contact</h3>
-                <a>1-800-488-4428</a>
-                <a>Email: support@yoursite.com</a>
-                <div class="footer-language language-switcher"></div>
-            </div>
-        </div>
-        <div class="container footer-meta">
-            <div class="copyright">© 2026 VIN Check service. All rights reserved.</div>
-            <p class="footer-disclaimer">This website provides vehicle information for informational purposes only. Some
-                links on this site are affiliate links, and we may earn a commission at no additional cost to you.</p>
-        </div>
-    </footer>
-    <div class="toast" role="status" aria-live="polite"></div>
-    <script async src="./assets/js/custom.js"></script>
-</body>
-
-</html>
