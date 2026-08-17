@@ -15,7 +15,6 @@
     <div class="scrolltop">
         <div class="muve-top"></div>
     </div>
-
     <header class="site-header">
         <div class="container header-inner">
             <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
@@ -66,11 +65,14 @@
             <h1>Get your Original Window Sticker</h1>
             <div class="checkout__grid">
                 <div class="checkout__preview">
-                    <img src="./assets/img/window-sticker-preview.png" alt="Original window sticker preview">
+                    <img src="./assets/img/window-sticker-preview.png" alt="Original window sticker preview" />
                     <div class="checkout-features">
                         <article>
                             <h2>01 Factory specs</h2>
-                            <p>Original manufacturer specifications including engine, transmission, and trim details</p>
+                            <p>
+                                Original manufacturer specifications including engine,
+                                transmission, and trim details
+                            </p>
                         </article>
                         <article>
                             <h2>02 Options</h2>
@@ -90,49 +92,51 @@
                     <div class="checkout-person">
                         <label>
                             <span class="sr-only">Full Name</span>
-                            <input name="full-name" placeholder="Full Name" required>
+                            <input name="full-name" placeholder="Full Name" required />
                         </label>
                         <div>
                             <label>
                                 <span class="sr-only">E-Mail</span>
-                                <input type="email" name="email" placeholder="E-Mail" required>
+                                <input type="email" name="email" placeholder="E-Mail" required />
                             </label>
                             <label>
                                 <span class="sr-only">VIN</span>
-                                <input name="vin" placeholder="VIN" maxlength="17" required>
+                                <input name="vin" placeholder="VIN" maxlength="17" required />
                             </label>
                         </div>
                     </div>
                     <button class="wallet-button" type="button" data-payment-modal>
                         <span>Pay with</span>
-                        <img src="./assets/img/apple-pay.svg" alt="Apple Pay">
+                        <img src="./assets/img/apple-pay.svg" alt="Apple Pay" />
                         <b>Pay</b>
                     </button>
                     <button class="wallet-button" type="button" data-google-modal>
                         <span>Pay with</span>
-                        <img src="./assets/img/google-pay.svg" alt="Google Pay">
+                        <img src="./assets/img/google-pay.svg" alt="Google Pay" />
                         <b>Pay</b>
                     </button>
                     <div class="card-title">
-                        <img src="./assets/img/checkout-cards.svg" alt="Credit card, Visa and Mastercard">
+                        <img src="./assets/img/checkout-cards.svg" alt="Credit card, Visa and Mastercard" />
                     </div>
                     <div class="card-box">
                         <label>
                             <span class="sr-only">Card number</span>
-                            <input inputmode="numeric" name="card-number" placeholder="Card number" required>
+                            <input inputmode="numeric" name="card-number" placeholder="Card number" required />
                         </label>
                         <div>
                             <label>
                                 <span class="sr-only">MM / YY</span>
-                                <input name="expiry" placeholder="MM / YY" required>
+                                <input name="expiry" placeholder="MM / YY" required />
                             </label>
                             <label>
                                 <span class="sr-only">CVC</span>
-                                <input name="cvc" placeholder="CVC" required>
+                                <input name="cvc" placeholder="CVC" required />
                             </label>
                         </div>
                     </div>
-                    <button class="checkout-submit" type="submit">Pay $9.99 &amp; Get Sticker</button>
+                    <button class="checkout-submit btn-primary" type="submit">
+                        Pay $9.99 &amp; Get Sticker
+                    </button>
                 </form>
             </div>
         </section>
@@ -146,15 +150,17 @@
         <button class="payment-modal__overlay" data-payment-close aria-label="Close payment window"></button>
         <div class="payment-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="payment-title">
             <button class="payment-modal__close" data-payment-close aria-label="Close">
-                <img src="./assets/img/checkout-close.svg" alt="">
+                <img src="./assets/img/checkout-close.svg" alt="" />
             </button>
             <div class="payment-modal__visual">
-                <img src="./assets/img/apple-pay-qr.svg" alt="Apple Pay QR code">
+                <img src="./assets/img/apple-pay-qr.svg" alt="Apple Pay QR code" />
             </div>
             <div class="payment-modal__copy">
                 <h2 id="payment-title">Scan this code using your iPhone camera</h2>
-                <p>Use the built-in Camera app to quickly pay with Apple Pay.
-                    <br>Supported on iOS 18 and later.
+                <p>
+                    Use the built-in Camera app to quickly pay with Apple Pay.
+                    <br />Supported
+                    on iOS 18 and later.
                 </p>
             </div>
         </div>
@@ -164,30 +170,37 @@
         <div class="payment-modal__dialog google-payment-modal__dialog" role="dialog" aria-modal="true"
             aria-labelledby="google-payment-title">
             <button class="payment-modal__close" data-payment-close aria-label="Close">
-                <img src="./assets/img/checkout-close.svg" alt="">
+                <img src="./assets/img/checkout-close.svg" alt="" />
             </button>
-            <header class="google-payment-modal__header" id="google-payment-title">pay.google.com</header>
+            <header class="google-payment-modal__header" id="google-payment-title">
+                pay.google.com
+            </header>
             <div class="google-payment-modal__body">
                 <form class="google-payment-modal__form">
                     <label class="google-field google-field--help">
-                        <input name="google-card" inputmode="numeric" placeholder="Card number" required>
-                        <button type="button" data-payment-help="cards" aria-label="Accepted cards">?</button>
+                        <input name="google-card" inputmode="numeric" placeholder="Card number" required />
+                        <button type="button" data-payment-help="cards" aria-label="Accepted cards">
+                            ?
+                        </button>
                     </label>
                     <div class="two-fields">
                         <label class="google-field">
-                            <input name="google-expiry" placeholder="MM/YY" required>
+                            <input name="google-expiry" placeholder="MM/YY" required />
                         </label>
                         <label class="google-field google-field--help">
-                            <input name="google-cvc" placeholder="CVC" required>
-                            <button type="button" data-payment-help="cvc" aria-label="What is CVC">?</button>
+                            <input name="google-cvc" placeholder="CVC" required />
+                            <button type="button" data-payment-help="cvc" aria-label="What is CVC">
+                                ?
+                            </button>
                         </label>
                     </div>
                     <label class="google-field">
-                        <input name="google-cardholder" placeholder="Cardholder" autocomplete="cc-name" required>
+                        <input name="google-cardholder" placeholder="Cardholder" autocomplete="cc-name" required />
                     </label>
                     <div class="custom-select" data-custom-select>
-                        <button type="button" class="custom-select__trigger">Country / Region</button>
-                        <input type="hidden" name="country" required>
+                        <button type="button" class="custom-select__trigger">
+                            Country / Region</button>
+                        <input type="hidden" name="country" required />
                         <div class="custom-select__menu">
                             <button type="button" data-value="Palestine">Palestine</button>
                             <button type="button" data-value="Panama">Panama</button>
@@ -196,46 +209,52 @@
                         </div>
                     </div>
                     <label class="google-field">
-                        <input name="address-1" placeholder="Address line 1" required>
+                        <input name="address-1" placeholder="Address line 1" required />
                     </label>
                     <label class="google-field">
-                        <input name="address-2" placeholder="Address line 2">
+                        <input name="address-2" placeholder="Address line 2" />
                     </label>
                     <label class="google-field">
-                        <input name="apartment" placeholder="Apartment, flat (optional)">
+                        <input name="apartment" placeholder="Apartment, flat (optional)" />
                     </label>
                     <label class="google-field">
-                        <input name="city" placeholder="City" required>
+                        <input name="city" placeholder="City" required />
                     </label>
                     <div class="two-fields province-fields">
                         <div class="custom-select" data-custom-select>
-                            <button type="button" class="custom-select__trigger">State / Province / Region</button>
-                            <input type="hidden" name="region" required>
+                            <button type="button" class="custom-select__trigger">
+                                State / Province / Region</button>
+                            <input type="hidden" name="region" required />
                             <div class="custom-select__menu">
-                                <button type="button" data-value="Greater Poland Voivodeship">Greater Poland Voivodeship
+                                <button type="button" data-value="Greater Poland Voivodeship">
+                                    Greater Poland Voivodeship</button>
+                                <button type="button" data-value="Lesser Poland Voivodeship">
+                                    Lesser Poland Voivodeship</button>
+                                <button type="button" data-value="Masovian Voivodeship">
+                                    Masovian Voivodeship
                                 </button>
-                                <button type="button" data-value="Lesser Poland Voivodeship">Lesser Poland Voivodeship
-                                </button>
-                                <button type="button" data-value="Masovian Voivodeship">Masovian Voivodeship</button>
                             </div>
                         </div>
                         <label class="google-field">
-                            <input name="postal" placeholder="ZIP / Postal Code" required>
+                            <input name="postal" placeholder="ZIP / Postal Code" required />
                         </label>
                     </div>
                     <div class="two-fields phone-fields">
                         <div class="custom-select custom-select--phone" data-custom-select>
                             <button type="button" class="custom-select__trigger">🇵🇱 +48</button>
-                            <input type="hidden" name="phone-code" value="+48">
+                            <input type="hidden" name="phone-code" value="+48" />
                             <div class="custom-select__menu">
                                 <button type="button" data-value="🇵🇪 +51">🇵🇪 Peru (+51)</button>
                                 <button type="button" data-value="🇵🇱 +48">🇵🇱 Poland (+48)</button>
-                                <button type="button" data-value="🇵🇹 +351">🇵🇹 Portugal (+351)</button>
-                                <button type="button" data-value="🇵🇷 +1">🇵🇷 Puerto Rico (+1)</button>
+                                <button type="button" data-value="🇵🇹 +351">
+                                    🇵🇹 Portugal (+351)</button>
+                                <button type="button" data-value="🇵🇷 +1">
+                                    🇵🇷 Puerto Rico (+1)
+                                </button>
                             </div>
                         </div>
                         <label class="google-field">
-                            <input type="tel" name="phone" placeholder="Phone number" required>
+                            <input type="tel" name="phone" placeholder="Phone number" required />
                         </label>
                     </div>
                     <button type="submit">Save card</button>
@@ -243,8 +262,8 @@
                         <div>
                             <h3>Which cards are accepted for payment</h3>
                             <p class="accepted-cards">
-                                <img src="./assets/img/visa-logo.svg" alt="Visa">
-                                <img src="./assets/img/mastercard-logo.svg" alt="Mastercard">
+                                <img src="./assets/img/visa-logo.svg" alt="Visa" />
+                                <img src="./assets/img/mastercard-logo.svg" alt="Mastercard" />
                             </p>
                             <button type="button" data-help-close>OK</button>
                         </div>
@@ -252,9 +271,11 @@
                     <div class="nested-payment-popover" data-payment-popover="cvc" hidden>
                         <div>
                             <h3>CVC code</h3>
-                            <p>The security code is a three-digit number on the back of the card.</p>
+                            <p>
+                                The security code is a three-digit number on the back of the card.
+                            </p>
                             <img class="cvc-card-image" src="./assets/img/cvc-card-back.png"
-                                alt="CVC location on the back of a card">
+                                alt="CVC location on the back of a card" />
                             <button type="button" data-help-close>OK</button>
                         </div>
                     </div>
@@ -266,7 +287,7 @@
         <button class="payment-modal__overlay" data-payment-close aria-label="Close"></button>
         <div class="payment-modal__dialog payment-result-modal__dialog">
             <button class="payment-modal__close" data-payment-close aria-label="Close">
-                <img src="./assets/img/checkout-close.svg" alt="">
+                <img src="./assets/img/checkout-close.svg" alt="" />
             </button>
             <div class="payment-result__status">
                 <span>✓</span>
@@ -311,7 +332,7 @@
         <button class="payment-modal__overlay" data-payment-close aria-label="Close"></button>
         <div class="payment-modal__dialog payment-result-modal__dialog">
             <button class="payment-modal__close" data-payment-close aria-label="Close">
-                <img src="./assets/img/checkout-close.svg" alt="">
+                <img src="./assets/img/checkout-close.svg" alt="" />
             </button>
             <div class="payment-error">
                 <h2>Could not complete payment</h2>

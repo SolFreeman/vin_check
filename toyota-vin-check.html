@@ -63,15 +63,27 @@
 
     <main id="top" class="toyota-vin-page">
         <section class="toyota-hero" id="check">
+            <picture class="toyota-hero__media" aria-hidden="true">
+                <source media="(max-width: 767px)" srcset="./assets/img/toyota-hero-mobile.png">
+                <img src="./assets/img/toyota-hero-desktop.png" alt="">
+            </picture>
             <div class="toyota-hero__content">
                 <h1>Check Toyota VIN in Seconds</h1>
                 <p class="toyota-hero__mobile-copy">Get instant access to accident, mileage and auction data</p>
                 <p class="toyota-hero__copy">Discover factory specifications, trim details, country of manufacture,
                     <br>engine information, and other key data by Toyota VIN code
                 </p>
-                <form class="toyota-vin-form">
-                    <input placeholder="Enter VIN Number" aria-label="Enter VIN Number">
-                    <button>Get Free VIN Report</button>
+                <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
+                <form class="vin-form" id="vinForm" novalidate>
+                    <div class="input-wrapper">
+                        <input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN"
+                            autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
+                            data-msg-required="Please enter your VIN code."
+                            data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)">
+                        <span class="error-message" id="vinError"></span>
+                        <small>Example: wBCM82c633A123456</small>
+                    </div>
+                    <button class="btn-primary" type="submit">Get Free VIN Report</button>
                 </form>
                 <div class="toyota-hero__benefits">
                     <span>No Registration Required</span>
@@ -101,9 +113,9 @@
                     <a href="#">Toyota bZ4X</a>
                 </div>
             </div>
-            <div class="toyota-seo">
-                <h3>SEO-текст для блока_H3</h3>
-                <div>
+            <div class="toyota-seo seo-block">
+                <h3 class="seo-block__title">SEO-текст для блока_H3</h3>
+                <div class="seo-block__content">
                     <p>Toyota Motor Corporation is one of the world’s most trusted automotive brands, known for
                         reliability, fuel efficiency, and long-term value. From practical sedans to rugged SUVs and
                         advanced hybrids, Toyota offers vehicles for every type of driver.</p>
@@ -255,7 +267,7 @@
                 <li>Full Vehicle specifications</li>
             </ul>
             <strong>to ensure complete transparency before you make your decision.</strong>
-            <a href="#check">Check full report</a>
+            <a class="btn-primary" href="#check">Check full report</a>
             <img src="./assets/img/carfax-logo.svg" alt="CARFAX">
         </section>
         <section class="ad toyota-ad toyota-ad--bottom">

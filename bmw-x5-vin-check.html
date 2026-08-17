@@ -16,7 +16,6 @@
     <div class="scrolltop">
         <div class="muve-top"></div>
     </div>
-
     <header class="site-header">
         <div class="container header-inner">
             <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
@@ -62,20 +61,44 @@
     </header>
 
     <main class="bmw-page" id="check">
-        <section class="bmw-hero">
-            <div class="bmw-hero__content">
-                <h1>Check BMW X5 in Seconds</h1>
-                <p>Discover factory specifications, trim details, country of manufacture,
-                    <br>engine information, and other key data by BMW X5 VIN code
-                </p>
-                <form>
-                    <input placeholder="Enter VIN Number" aria-label="Enter VIN Number">
-                    <button>Get Free VIN Report</button>
-                </form>
-                <div class="bmw-hero__benefits">
-                    <span>No Registration Required</span>
-                    <span>Instant Results</span>
-                    <span>Free Basic Report</span>
+        <section class="hero">
+            <div class="bg-holder">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/bg-mobile-vin2.png">
+                    <img class="hero-background" src="./assets/img/hero-background.png" alt="" aria-hidden="true" />
+                </picture>
+            </div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>Free VIN Check &amp; Car Data Report</h1>
+                    <p>Get instant access to accident, mileage and auction data</p>
+                    <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
+                    <form class="vin-form" id="vinForm" novalidate>
+                        <div class="input-wrapper">
+                            <input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN"
+                                autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
+                                data-msg-required="Please enter your VIN code."
+                                data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)" />
+                            <span class="error-message" id="vinError"></span>
+                            <small>Example: wBCM82c633A123456</small>
+                        </div>
+                        <button class="btn-primary" type="submit">Get Free VIN Report</button>
+                    </form>
+                </div>
+                <img class="mobile_car" src="./assets/img/hero_mobile_car.png" alt="" aria-hidden="true" />
+                <div class="trust">
+                    <div class="trust-item">
+                        <img src="assets/img/icon_official.svg" alt="">
+                        Official Data Sources
+                    </div>
+                    <div class="trust-item">
+                        <img src="assets/img/icon_safty.svg" alt="">
+                        100% Privacy Protected
+                    </div>
+                    <div class="trust-item">
+                        <img src="assets/img/icon_card.svg" alt="">
+                        No Credit Card Required
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,18 +114,20 @@
                 <article>
                     <strong>42</strong>
                     <span>times this model
-                        <br>was tested today
+                        <br />was tested today
                     </span>
                 </article>
                 <article>
                     <strong>150,000+</strong>
                     <span>BMW X5 reports
-                        <br>in the database
+                        <br />in the database
                     </span>
                 </article>
             </div>
-            <p>The BMW X5 is one of the most inspected SUVs with thousands of
-                <br>reports generated every day. Be informed before you buy.
+            <p>
+                The BMW X5 is one of the most inspected SUVs with thousands of
+                <br />reports
+                generated every day. Be informed before you buy.
             </p>
         </section>
         <section class="bmw-sticker container">
@@ -110,7 +135,10 @@
                 <h2>Original Window Sticker available</h2>
                 <article>
                     <h3>01 Factory specs</h3>
-                    <p>Original manufacturer specifications including engine, transmission, and trim details</p>
+                    <p>
+                        Original manufacturer specifications including engine, transmission,
+                        and trim details
+                    </p>
                 </article>
                 <article>
                     <h3>02 Options</h3>
@@ -120,35 +148,40 @@
                     <h3>03 Pricing</h3>
                     <p>Official MSRP with full price breakdown and equipment costs</p>
                 </article>
-                <a href="checkout.html">Get Sticker</a>
+                <a class="btn-primary" href="checkout.html">Get Sticker</a>
             </div>
-            <img src="./assets/img/window-sticker-preview.png" alt="BMW original window sticker">
+            <img src="./assets/img/window-sticker-preview.png" alt="BMW original window sticker" />
         </section>
         <section class="bmw-find container">
             <h2>Where to Find the VIN on a BMW X5</h2>
-            <p>On a BMW X5, the 17-character Vehicle Identification Number (VIN) can be found in several standard
-                locations on the vehicle as well as in official documents.</p>
+            <p>
+                On a BMW X5, the 17-character Vehicle Identification Number (VIN) can be
+                found in several standard locations on the vehicle as well as in official
+                documents.
+            </p>
             <h3>Main Locations on the Vehicle</h3>
             <div class="bmw-card-slider swiper">
                 <div class="swiper-wrapper">
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-windshield.png" alt="VIN under windshield">
+                        <img src="./assets/img/vin-location-windshield.png" alt="VIN under windshield" />
                         <h4>Windshield (lower corner)</h4>
-                        <p>The quickest way to spot the VIN is by looking through the windshield from outside the
-                            vehicle.</p>
+                        <p>
+                            The quickest way to spot the VIN is by looking through the
+                            windshield from outside the vehicle.
+                        </p>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-door.png" alt="Driver's door frame">
+                        <img src="./assets/img/vin-location-door.png" alt="Driver's door frame" />
                         <h4>Driver’s Door Frame</h4>
                         <p>Open the driver’s door and inspect the door pillar.</p>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-engine-tower.png" alt="Engine bay">
+                        <img src="./assets/img/vin-location-engine-tower.png" alt="Engine bay" />
                         <h4>Engine Bay</h4>
                         <p>The VIN may be stamped directly onto the body.</p>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-firewall.png" alt="Engine bay firewall">
+                        <img src="./assets/img/vin-location-firewall.png" alt="Engine bay firewall" />
                         <h4>Engine Bay</h4>
                         <p>The VIN may be stamped directly onto the body.</p>
                     </article>
@@ -158,52 +191,68 @@
             <div class="bmw-card-slider swiper">
                 <div class="swiper-wrapper">
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-rear-seat.png" alt="Under rear seat">
+                        <img src="./assets/img/vin-location-rear-seat.png" alt="Under rear seat" />
                         <h4>Under Rear Seat or in the Trunk</h4>
-                        <p>In some BMW X5 models, the VIN may be located under the rear seat or beneath the trunk floor.
+                        <p>
+                            In some BMW X5 models, the VIN may be located under the rear seat or
+                            beneath the trunk floor.
                         </p>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-location-idrive.png" alt="BMW iDrive">
+                        <img src="./assets/img/vin-location-idrive.png" alt="BMW iDrive" />
                         <h4>Onboard System (iDrive)</h4>
-                        <p>In modern BMW X5 models, the VIN can be accessed through the iDrive system.</p>
+                        <p>
+                            In modern BMW X5 models, the VIN can be accessed through the iDrive
+                            system.
+                        </p>
                     </article>
                 </div>
             </div>
             <h3>Where to Find the VIN in Documents</h3>
-            <p>If you don’t have access to the vehicle, check the following documents:</p>
+            <p>
+                If you don’t have access to the vehicle, check the following documents:
+            </p>
             <div class="bmw-doc-slider swiper">
                 <div class="swiper-wrapper">
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-document-registration.png" alt="">
-                        <b>Vehicle registration
-                            <br>certificate
-                        </b>
+                        <div class="img-holder">
+                            <img src="./assets/img/I 4 1.svg" alt="" />
+                        </div>
+                        <span class="title">Vehicle registration
+                            <br />certificate
+                        </span>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-document-insurance.png" alt="">
-                        <b>Insurance policy</b>
+                        <div class="img-holder">
+                            <img src="./assets/img/K 1.svg" alt="" />
+                        </div>
+                        <span class="title">Insurance policy</span>
                     </article>
                     <article class="swiper-slide">
-                        <img src="./assets/img/vin-document-service.svg" alt="">
-                        <b>Service book
-                            <br>or maintenance records
-                        </b>
+                        <div class="img-holder">
+                            <img src="./assets/img/vin-document-service.svg" alt="" />
+                        </div>
+                        <span class="title">Service book
+                            <br />or maintenance records
+                        </span>
                     </article>
                 </div>
             </div>
             <aside>
-                <img src="./assets/img/icon-caution.svg" alt="Warning">Always compare the VIN in multiple locations (for
-                example, the windshield and the door frame). Any mismatch may indicate tampering or potential issues
-                with the vehicle’s history.
+                <img src="./assets/img/icon-caution.svg" alt="Warning" />Always compare
+                the VIN in multiple locations (for example, the windshield and the door
+                frame). Any mismatch may indicate tampering or potential issues with the
+                vehicle’s history.
             </aside>
         </section>
         <section class="bmw-report">
             <div class="container">
                 <h2>Why Check a BMW X5 VIN?</h2>
-                <p>Every vehicle has a story — and not all of it is visible at first glance.
-                    <br>Before committing to a purchase, review the records that truly matter and protect yourself from
-                    costly surprises.
+                <p>
+                    Every vehicle has a story — and not all of it is visible at first
+                    glance.
+                    <br />Before committing to a purchase, review the records that
+                    truly matter and protect yourself from costly surprises.
                 </p>
                 <h3>We recommend checking:</h3>
                 <ul>
@@ -215,8 +264,8 @@
                     <li>Full Vehicle specifications</li>
                 </ul>
                 <strong>to ensure complete transparency before you make your decision.</strong>
-                <img src="./assets/img/carfax-logo.svg" alt="CARFAX">
-                <a href="#check">Check full report</a>
+                <img src="./assets/img/carfax-logo.svg" alt="CARFAX" />
+                <a class="btn-primary" href="#check">Check full report</a>
             </div>
         </section>
         <section class="bmw-decoder container">
@@ -237,25 +286,42 @@
                 <span>12–17</span>
                 <span>Serial production number</span>
             </div>
-            <p>Use this BMW X5 VIN decoder to identify engine specifications, trim level, production year, and factory
-                details instantly.</p>
+            <p>
+                Use this BMW X5 VIN decoder to identify engine specifications, trim level,
+                production year, and factory details instantly.
+            </p>
         </section>
         <section class="bmw-models">
             <h2>Popular BMW Models</h2>
             <div class="bmw-models__slider swiper">
                 <div class="swiper-wrapper">
-                    <a class="swiper-slide" href="#" aria-label="BMW X5"></a>
-                    <a class="swiper-slide" href="#" aria-label="BMW X3"></a>
-                    <a class="swiper-slide" href="#" aria-label="BMW X6"></a>
-                    <a class="swiper-slide" href="#" aria-label="BMW iX"></a>
-                    <a class="swiper-slide" href="#" aria-label="BMW 3 Series"></a>
+                    <a class="swiper-slide" href="#" aria-label="BMW X5">
+                        <img src="./assets/img/bmw-model-1.png" alt="BMW X5" />
+                    </a>
+                    <a class="swiper-slide" href="#" aria-label="BMW X3">
+                        <img src="./assets/img/bmw-model-2.png" alt="BMW X3" />
+                    </a>
+                    <a class="swiper-slide" href="#" aria-label="BMW X6">
+                        <img src="./assets/img/bmw-model-3.png" alt="BMW X6" />
+                    </a>
+                    <a class="swiper-slide" href="#" aria-label="BMW iX">
+                        <img src="./assets/img/bmw-model-4.png" alt="BMW iX" />
+                    </a>
+                    <a class="swiper-slide" href="#" aria-label="BMW 3 Series">
+                        <img src="./assets/img/bmw-model-5.png" alt="BMW 3 Series" />
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="bmw-seo container">
-            <h3>SEO-текст для блока_H3</h3>
-            <p>The BMW X5 is a premium luxury SUV known for performance, reliability, and advanced technology. A VIN
-                check helps verify its history, specifications, and potential risks before purchase.</p>
+        <section class="bmw-seo seo-block container">
+            <h3 class="seo-block__title">SEO-текст для блока_H3</h3>
+            <div class="seo-block__content">
+                <p>
+                    The BMW X5 is a premium luxury SUV known for performance, reliability,
+                    and advanced technology. A VIN check helps verify its history,
+                    specifications, and potential risks before purchase.
+                </p>
+            </div>
         </section>
         <section class="ad bmw-ad bmw-ad--bottom">
             <span>Ad-slot 2-footer</span>
