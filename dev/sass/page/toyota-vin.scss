@@ -1,115 +1,550 @@
-.toyota-vin-screen .primary-nav a { color: #333; }
-.toyota-vin-page { color: #333; }
-.toyota-hero { position: relative; height: 567px; overflow: hidden; }
-.toyota-hero__media { position: absolute; inset: 0; }
-.toyota-hero__media img { width: 100%; height: 100%; object-fit: cover; }
-.toyota-hero__content { position: relative; z-index: 1; width: 794px; margin: 0 auto; padding-top: 126px; }
-.toyota-hero h1 { margin: 0 0 32px; font-size: 42px; line-height: 1.2; font-weight: 500; }
-.toyota-hero__copy { margin: 0 0 32px; font-size: 24px; line-height: 1.3; font-weight: 500; }
-.toyota-hero__mobile-copy { display: none; }
-.toyota-vin-form { display: flex; gap: 8px; margin-bottom: 56px; }
-.toyota-vin-form input { height: 56px; border: 1px solid #2c3e50; border-radius: 12px; font-size: 22px; }
-.toyota-vin-form input { width: 360px; padding: 10px 16px; }
-.toyota-vin-form input::placeholder { color: #007bff; opacity: 1; }
-.toyota-vin-form button { height: 56px; padding: 8px 16px; font-size: 22px; }
-.toyota-hero__benefits { display: flex; gap: 40px; }
-.toyota-hero__benefits span, .toyota-facts h3 { position: relative; padding-left: 28px; }
-.toyota-hero__benefits span::before, .toyota-facts h3::before { position: absolute; top: 0; left: 0; width: 24px; height: 24px; background: url('./assets/img/icon-check-orange.svg') center/contain no-repeat; content: ''; }
-.toyota-ad { display: flex; align-items: center; justify-content: center; gap: 24px; border-radius: 12px; background: #e9ecef; font-size: 14px; }
-.toyota-ad--top { width: 728px; height: 90px; margin: 100px auto !important; }
-.toyota-model-links { width: 1200px !important; }
-.toyota-model-links h2, .toyota-report-data h2, .toyota-tips > h2 { margin: 0 0 32px; text-align: center; font-size: 36px; font-weight: 500; }
-.toyota-model-links__grid { display: grid; grid-template-columns: repeat(3, 293px); justify-content: space-between; gap: 24px 0; }
-.toyota-model-links__grid a { display: flex; height: 45px; align-items: center; justify-content: center; border: 1px solid #bdbab7; border-radius: 12px; color: #333; text-decoration: none; }
-.toyota-seo { width: 860px; height: 267px; margin: 64px auto 0; }
-.toyota-seo button { display: none; }
-.toyota-models { margin-top: 100px; overflow: hidden; }
-.toyota-models .swiper-wrapper { display: flex; gap: 20px; width: max-content; }
-.toyota-models .swiper-slide { width: 380px; flex: 0 0 380px; }
-.toyota-models img { display: block; width: 380px; height: 240px; border-radius: 12px; }
-.toyota-facts { width: 1200px !important; margin-top: 100px !important; }
-.toyota-facts h2 { margin: 0 0 32px; font-size: 36px; font-weight: 500; }
-.toyota-facts > p { margin: 0 0 48px; }
-.toyota-facts__grid { display: grid; grid-template-columns: repeat(3, 324px); justify-content: space-between; gap: 40px 0; }
-.toyota-facts article { text-align: center; }
-.toyota-facts h3 { display: inline-block; margin: 0 0 8px; font-size: 22px; }
-.toyota-facts article p { margin: 0 auto; max-width: 180px; line-height: 1.3; }
-.toyota-report-data { width: 793px !important; margin-top: 100px !important; }
-.toyota-data-table > div { display: grid; grid-template-columns: 1fr 1fr; min-height: 45px; align-items: center; padding: 0 12px; gap: 20px; background: #f8f9fa; }
-.toyota-data-table > div:nth-child(odd) { background: #fff; }
-.toyota-data-table .head { background: #d6e8ff; }
-.toyota-tips { margin-top: 100px; overflow: hidden; }
-.toyota-tips__slider { width: 1200px; margin: 0 auto; overflow: visible; padding-bottom: 28px; }
-.toyota-tips__slider .swiper-wrapper { display: flex; gap: 20px; }
-.toyota-tips__slider .swiper-slide { display: flex; width: 387px; min-height: 234px; flex: 0 0 387px; gap: 16px; padding: 20px; border-radius: 12px; background: #f8f9fa; }
-.toyota-tips__slider img { width: 72px; height: 72px; }
-.toyota-tips__slider h3 { margin: 0 0 20px; font-size: 22px; }
-.toyota-tips__slider p { margin: 0; line-height: 1.3; }
-.toyota-tips__slider .swiper-pagination { bottom: 0; }
-.toyota-full-report { position: relative; width: 1200px !important; height: 554px; margin-top: 100px !important; padding: 60px 104px !important; border-radius: 12px; background: #fff7e6; }
-.toyota-full-report h2 { margin: 0 0 24px; font-size: 36px; font-weight: 500; }
-.toyota-full-report p, .toyota-full-report h3, .toyota-full-report > strong { font-size: 20px; line-height: 1.3; }
-.toyota-full-report h3 { margin: 16px 0; }
-.toyota-full-report ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; margin: 0; padding: 0; list-style: none; }
-.toyota-full-report li { position: relative; padding-left: 32px; font-size: 22px; }
-.toyota-full-report li::before { position: absolute; top: 3px; left: 0; width: 24px; height: 24px; background: url('./assets/img/icon-checkmark.svg') center/contain no-repeat; content: ''; }
-.toyota-full-report > a { position: absolute; bottom: 60px; left: 461px; width: 282px; height: 56px; font-size: 22px; }
-.toyota-full-report > img { position: absolute; bottom: 60px; left: 104px; width: 173px; height: 34px; }
-.toyota-ad--bottom { width: 970px; height: 90px; margin: 100px auto !important; }
+.toyota-vin-screen .primary-nav a {
+	color: #333;
+}
+.toyota-vin-page {
+	color: #333;
+}
+.toyota-hero {
+	position: relative;
+	height: 567px;
+	overflow: hidden;
+}
+.toyota-hero__media {
+	position: absolute;
+	inset: 0;
+}
+.toyota-hero__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.toyota-hero__content {
+	position: relative;
+	z-index: 1;
+	width: 794px;
+	margin: 0 auto;
+	padding-top: 126px;
+}
+.toyota-hero h1 {
+	margin: 0 0 32px;
+	font-size: 42px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+.toyota-hero__copy {
+	margin: 0 0 32px;
+	font-size: 24px;
+	line-height: 1.3;
+	font-weight: 500;
+}
+.toyota-hero__mobile-copy {
+	display: none;
+}
+.toyota-vin-form {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 56px;
+}
+.toyota-vin-form input {
+	height: 56px;
+	border: 1px solid #2c3e50;
+	border-radius: 12px;
+	font-size: 22px;
+}
+.toyota-vin-form input {
+	width: 360px;
+	padding: 10px 16px;
+}
+.toyota-vin-form input::placeholder {
+	color: #007bff;
+	opacity: 1;
+}
+.toyota-vin-form button {
+	height: 56px;
+	padding: 8px 16px;
+	font-size: 22px;
+}
+.toyota-hero__benefits {
+	display: flex;
+	gap: 40px;
+}
+.toyota-hero__benefits span,
+.toyota-facts h3 {
+	position: relative;
+	padding-left: 28px;
+}
+.toyota-hero__benefits span::before,
+.toyota-facts h3::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url("./assets/img/icon-check-orange.svg") center/contain no-repeat;
+	content: "";
+}
+.toyota-ad {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	border-radius: 12px;
+	background: #e9ecef;
+	font-size: 14px;
+}
+.toyota-ad--top {
+	width: 728px;
+	height: 90px;
+	margin: 100px auto !important;
+}
+.toyota-model-links {
+	width: 1200px !important;
+}
+.toyota-model-links h2,
+.toyota-report-data h2,
+.toyota-tips > h2 {
+	margin: 0 0 32px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
+}
+.toyota-model-links__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 334px);
+	justify-content: space-between;
+	gap: 24px 0;
+}
+.toyota-model-links__grid a {
+	display: flex;
+	height: 45px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #bdbab7;
+	border-radius: 12px;
+	color: #333;
+	text-decoration: none;
+}
+.toyota-seo {
+	width: 860px;
+	height: 267px;
+	margin: 64px auto 0;
+}
+.toyota-seo button {
+	display: none;
+}
+.toyota-models {
+	margin-top: 100px;
+	overflow: hidden;
+}
+.toyota-models .swiper-wrapper {
+	display: flex;
+	gap: 20px;
+	width: max-content;
+}
+.toyota-models .swiper-slide {
+	width: 380px;
+	flex: 0 0 380px;
+}
+.toyota-models img {
+	display: block;
+	width: 380px;
+	height: 240px;
+	border-radius: 12px;
+}
+.toyota-facts {
+	width: 1200px !important;
+	margin-top: 100px !important;
+}
+.toyota-facts h2 {
+	margin: 0 0 32px;
+	font-size: 36px;
+	font-weight: 500;
+}
+.toyota-facts > p {
+	margin: 0 0 48px;
+}
+.toyota-facts__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 324px);
+	justify-content: space-between;
+	gap: 40px 0;
+}
+.toyota-facts article {
+	text-align: center;
+}
+.toyota-facts h3 {
+	display: inline-block;
+	margin: 0 0 8px;
+	font-size: 22px;
+}
+.toyota-facts article p {
+	margin: 0 auto;
+	max-width: 180px;
+	line-height: 1.3;
+}
+.toyota-report-data {
+	width: 793px !important;
+	margin-top: 100px !important;
+}
+.toyota-data-table > div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 45px;
+	align-items: center;
+	padding: 0 12px;
+	gap: 20px;
+	background: #f8f9fa;
+}
+.toyota-data-table > div:nth-child(odd) {
+	background: #fff;
+}
+.toyota-data-table .head {
+	background: #d6e8ff;
+}
+.toyota-tips {
+	margin-top: 100px;
+	overflow: hidden;
+}
+.toyota-tips__slider {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: visible;
+	padding-bottom: 28px;
+}
+.toyota-tips__slider .swiper-wrapper {
+	display: flex;
+	gap: 20px;
+}
+.toyota-tips__slider .swiper-slide {
+	display: flex;
+	width: 387px;
+	min-height: 234px;
+	flex: 0 0 387px;
+	gap: 16px;
+	padding: 20px;
+	border-radius: 12px;
+	background: #f8f9fa;
+}
+.toyota-tips__slider img {
+	width: 72px;
+	height: 72px;
+}
+.toyota-tips__slider h3 {
+	margin: 0 0 20px;
+	font-size: 22px;
+}
+.toyota-tips__slider p {
+	margin: 0;
+	line-height: 1.3;
+}
+.toyota-tips__slider .swiper-pagination {
+	bottom: 0;
+}
+.toyota-full-report {
+	position: relative;
+	width: 1200px !important;
+	height: 554px;
+	margin-top: 100px !important;
+	padding: 60px 104px !important;
+	border-radius: 12px;
+	background: #fff7e6;
+}
+.toyota-full-report h2 {
+	margin: 0 0 24px;
+	font-size: 36px;
+	font-weight: 500;
+}
+.toyota-full-report p,
+.toyota-full-report h3,
+.toyota-full-report > strong {
+	font-size: 20px;
+	line-height: 1.3;
+}
+.toyota-full-report h3 {
+	margin: 16px 0;
+}
+.toyota-full-report ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px 48px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.toyota-full-report li {
+	position: relative;
+	padding-left: 32px;
+	font-size: 22px;
+}
+.toyota-full-report li::before {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url("./assets/img/icon-checkmark.svg") center/contain no-repeat;
+	content: "";
+}
+.toyota-full-report > a {
+	position: absolute;
+	bottom: 60px;
+	left: 461px;
+	width: 282px;
+	height: 56px;
+	font-size: 22px;
+}
+.toyota-full-report > img {
+	position: absolute;
+	bottom: 60px;
+	left: 104px;
+	width: 173px;
+	height: 34px;
+}
+.toyota-ad--bottom {
+	width: 970px;
+	height: 90px;
+	margin: 100px auto !important;
+}
 
-@media(max-width:767px){
-  .toyota-hero { height: 738px; }
-  .toyota-hero__media img { position: absolute; top: -74px; left: 50%; width: 375px; height: 812px; max-width: none; transform: translateX(-50%); }
-  .toyota-hero__content { width: 343px; padding-top: 20px; text-align: center; }
-  .toyota-hero h1 { width: 246px; margin: 0 auto 20px; font-size: 34px; }
-  .toyota-hero__mobile-copy { display: block; margin: 0 0 20px; font-size: 20px; line-height: 1.3; }
-  .toyota-hero__copy { margin-bottom: 20px; text-align: left; font-size: 16px; font-weight: 400; }
-  .toyota-hero__copy br { display: none; }
-  .toyota-vin-form { flex-direction: column; gap: 20px; margin: 0; }
-  .toyota-vin-form input, .toyota-vin-form button { width: 100%; font-size: 18px; }
-  .toyota-hero__benefits { position: absolute; top: 706px; flex-direction: column; gap: 6px; text-align: left; font-size: 14px; }
-  .toyota-ad--top { width: 320px; height: 100px; margin: 48px auto !important; }
-  .toyota-model-links { width: 343px !important; }
-  .toyota-model-links h2, .toyota-report-data h2, .toyota-tips > h2 { margin-bottom: 20px; font-size: 24px; }
-  .toyota-model-links__scroll { width: calc(100vw - 16px); overflow-x: auto; scroll-snap-type: x mandatory; }
-  .toyota-model-links__grid { grid-template-columns: repeat(3, 293px); width: 945px; justify-content: start; gap: 20px 16px; }
-  .toyota-model-links__grid a { scroll-snap-align: start; }
-  .toyota-seo { width: 343px; height: 382px; margin-top: 48px; }
-  .toyota-seo > .seo-block__content { height: auto; }
-  .toyota-seo button { display: block; padding: 0; border: 0; background: transparent; color: #007bff; }
-  .toyota-seo.is-expanded { height: auto; }
-  .toyota-seo.is-expanded > .seo-block__content { height: auto; }
-  .toyota-models { width: calc(100vw - 16px); margin: 48px 0 0 16px; }
-  .toyota-models .swiper-wrapper { gap: 0; }
-  .toyota-models .swiper-slide { width: 323px; flex-basis: 323px; }
-  .toyota-models img { width: 323px; height: 240px; object-fit: cover; }
-  .toyota-facts { width: 343px !important; margin-top: 48px !important; }
-  .toyota-facts h2 { margin-bottom: 20px; font-size: 24px; }
-  .toyota-facts > p { margin-bottom: 20px; }
-  .toyota-facts__grid { grid-template-columns: 1fr; gap: 16px; }
-  .toyota-facts__grid article:nth-child(1) { order: 1; }
-  .toyota-facts__grid article:nth-child(4) { order: 2; }
-  .toyota-facts__grid article:nth-child(2) { order: 3; }
-  .toyota-facts__grid article:nth-child(5) { order: 4; }
-  .toyota-facts__grid article:nth-child(3) { order: 5; }
-  .toyota-facts__grid article:nth-child(6) { order: 6; }
-  .toyota-facts article { text-align: left; }
-  .toyota-facts h3 { margin: 0; font-size: 18px; }
-  .toyota-facts article p { max-width: none; margin: 0; }
-  .toyota-report-data { width: 343px !important; margin-top: 48px !important; }
-  .toyota-data-table > div { grid-template-columns: 150px 1fr; min-height: 66px; align-items: start; padding: 12px; }
-  .toyota-tips { margin-top: 48px; }
-  .toyota-tips > h2 { width: 343px; margin-inline: auto; text-align: center; line-height: 1.3; white-space: normal; }
-  .toyota-tips__slider { width: calc(100vw - 16px); margin-left: 16px; overflow: hidden; }
-  .toyota-tips__slider .swiper-wrapper { gap: 0; }
-  .toyota-tips__slider .swiper-slide { display: flex; width: 323px; min-height: 484px; flex-basis: 323px; padding: 20px; }
-  .toyota-tips__slider img { flex: 0 0 72px; }
-  .toyota-full-report { width: 375px !important; height: 692px; margin-top: 48px !important; padding: 24px 16px 32px !important; border-radius: 0; }
-  .toyota-full-report h2 { margin: 0 15px 20px; text-align: center; font-size: 24px; }
-  .toyota-full-report p, .toyota-full-report h3, .toyota-full-report > strong { font-size: 16px; }
-  .toyota-full-report ul { grid-template-columns: 1fr; gap: 8px; }
-  .toyota-full-report li { font-size: 16px; }
-  .toyota-full-report > a { bottom: 154px; left: 16px; width: 343px; }
-  .toyota-full-report > img { bottom: 32px; left: 16px; }
-  .toyota-ad--bottom { width: 320px; height: 50px; margin: 48px auto !important; }
+@media (max-width: 767px) {
+	.toyota-hero {
+		height: 738px;
+	}
+	.toyota-hero__media img {
+		position: absolute;
+		top: -74px;
+		left: 50%;
+		width: 375px;
+		height: 812px;
+		max-width: none;
+		transform: translateX(-50%);
+	}
+	.toyota-hero__content {
+		width: 343px;
+		padding-top: 20px;
+		text-align: center;
+	}
+	.toyota-hero h1 {
+		width: 246px;
+		margin: 0 auto 20px;
+		font-size: 34px;
+	}
+	.toyota-hero__mobile-copy {
+		display: block;
+		margin: 0 0 20px;
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	.toyota-hero__copy {
+		margin-bottom: 20px;
+		text-align: left;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.toyota-hero__copy br {
+		display: none;
+	}
+	.toyota-vin-form {
+		flex-direction: column;
+		gap: 20px;
+		margin: 0;
+	}
+	.toyota-vin-form input,
+	.toyota-vin-form button {
+		width: 100%;
+		font-size: 18px;
+	}
+	.toyota-hero__benefits {
+		position: absolute;
+		top: 706px;
+		flex-direction: column;
+		gap: 6px;
+		text-align: left;
+		font-size: 14px;
+	}
+	.toyota-ad--top {
+		width: 320px;
+		height: 100px;
+		margin: 48px auto !important;
+	}
+	.toyota-model-links {
+		width: 343px !important;
+	}
+	.toyota-model-links h2,
+	.toyota-report-data h2,
+	.toyota-tips > h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	.toyota-model-links__scroll {
+		width: calc(100vw - 16px);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+	.toyota-model-links__grid {
+		grid-template-columns: repeat(3, 293px);
+		width: 945px;
+		justify-content: start;
+		gap: 20px 16px;
+	}
+	.toyota-model-links__grid a {
+		scroll-snap-align: start;
+	}
+	.toyota-seo {
+		width: 343px;
+		height: 382px;
+		margin-top: 48px;
+	}
+	.toyota-seo > .seo-block__content {
+		height: auto;
+	}
+	.toyota-seo button {
+		display: block;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: #007bff;
+	}
+	.toyota-seo.is-expanded {
+		height: auto;
+	}
+	.toyota-seo.is-expanded > .seo-block__content {
+		height: auto;
+	}
+	.toyota-models {
+		width: calc(100vw - 16px);
+		margin: 48px 0 0 16px;
+	}
+	.toyota-models .swiper-wrapper {
+		gap: 0;
+	}
+	.toyota-models .swiper-slide {
+		width: 323px;
+		flex-basis: 323px;
+	}
+	.toyota-models img {
+		width: 323px;
+		height: 240px;
+		object-fit: cover;
+	}
+	.toyota-facts {
+		width: 343px !important;
+		margin-top: 48px !important;
+	}
+	.toyota-facts h2 {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	.toyota-facts > p {
+		margin-bottom: 20px;
+	}
+	.toyota-facts__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.toyota-facts__grid article:nth-child(1) {
+		order: 1;
+	}
+	.toyota-facts__grid article:nth-child(4) {
+		order: 2;
+	}
+	.toyota-facts__grid article:nth-child(2) {
+		order: 3;
+	}
+	.toyota-facts__grid article:nth-child(5) {
+		order: 4;
+	}
+	.toyota-facts__grid article:nth-child(3) {
+		order: 5;
+	}
+	.toyota-facts__grid article:nth-child(6) {
+		order: 6;
+	}
+	.toyota-facts article {
+		text-align: left;
+	}
+	.toyota-facts h3 {
+		margin: 0;
+		font-size: 18px;
+	}
+	.toyota-facts article p {
+		max-width: none;
+		margin: 0;
+	}
+	.toyota-report-data {
+		width: 343px !important;
+		margin-top: 48px !important;
+	}
+	.toyota-data-table > div {
+		grid-template-columns: 150px 1fr;
+		min-height: 66px;
+		align-items: start;
+		padding: 12px;
+	}
+	.toyota-tips {
+		margin-top: 48px;
+	}
+	.toyota-tips > h2 {
+		width: 343px;
+		margin-inline: auto;
+		text-align: center;
+		line-height: 1.3;
+		white-space: normal;
+	}
+	.toyota-tips__slider {
+		width: calc(100vw - 16px);
+		margin-left: 16px;
+		overflow: hidden;
+	}
+	.toyota-tips__slider .swiper-wrapper {
+		gap: 0;
+	}
+	.toyota-tips__slider .swiper-slide {
+		display: flex;
+		width: 323px;
+		min-height: 484px;
+		flex-basis: 323px;
+		padding: 20px;
+	}
+	.toyota-tips__slider img {
+		flex: 0 0 72px;
+	}
+	.toyota-full-report {
+		width: 375px !important;
+		height: 692px;
+		margin-top: 48px !important;
+		padding: 24px 16px 32px !important;
+		border-radius: 0;
+	}
+	.toyota-full-report h2 {
+		margin: 0 15px 20px;
+		text-align: center;
+		font-size: 24px;
+	}
+	.toyota-full-report p,
+	.toyota-full-report h3,
+	.toyota-full-report > strong {
+		font-size: 16px;
+	}
+	.toyota-full-report ul {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+	.toyota-full-report li {
+		font-size: 16px;
+	}
+	.toyota-full-report > a {
+		bottom: 154px;
+		left: 16px;
+		width: 343px;
+	}
+	.toyota-full-report > img {
+		bottom: 32px;
+		left: 16px;
+	}
+	.toyota-ad--bottom {
+		width: 320px;
+		height: 50px;
+		margin: 48px auto !important;
+	}
 }

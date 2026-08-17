@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#188de7">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#188de7" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <title>Toyota VIN Check</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png">
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="toyota-vin-screen">
@@ -16,315 +16,317 @@
     <div class="scrolltop">
         <div class="muve-top"></div>
     </div>
+</body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
-                aria-expanded="false">
-                <span></span>
-            </button>
-            <a class="logo" href="#top" aria-label="VIN Check home">
-                <img src="./assets/img/vin-check-logo.svg" alt="VIN Check" />
-            </a>
-            <div class="header-menu" id="header-menu" aria-hidden="true">
-                <nav class="primary-nav" aria-label="Primary navigation">
-                    <a class="active" href="#check">Check VIN</a>
-                    <a href="#brands">Car Brands</a>
-                    <a href="#report">Sample Reports</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact Us</a>
-                </nav>
-                <div class="menu-contact">
-                    <b>Contact</b>
-                    <div class="menu-language language-switcher"></div>
-                    <a href="tel:18004884428">1-800-488-4428</a>
-                    <a href="mailto:support@yoursite.com">support@yoursite.com</a>
-                </div>
-            </div>
-            <div class="language-bar">
-                <div class="language-title">English</div>
-                <ul class="language-list">
-                    <li class="menu-item active">
-                        <a href="#">English</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Deutsch</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Poland</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Romania</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+</html>
 
-    <main id="top" class="toyota-vin-page">
-        <section class="toyota-hero" id="check">
-            <picture class="toyota-hero__media" aria-hidden="true">
-                <source media="(max-width: 767px)" srcset="./assets/img/toyota-hero-mobile.png">
-                <img src="./assets/img/toyota-hero-desktop.png" alt="">
-            </picture>
-            <div class="toyota-hero__content">
-                <h1>Check Toyota VIN in Seconds</h1>
-                <p class="toyota-hero__mobile-copy">Get instant access to accident, mileage and auction data</p>
-                <p class="toyota-hero__copy">Discover factory specifications, trim details, country of manufacture,
-                    <br>engine information, and other key data by Toyota VIN code
-                </p>
-                <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
-                <form class="vin-form" id="vinForm" novalidate>
-                    <div class="input-wrapper">
-                        <input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN"
-                            autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}"
-                            data-msg-required="Please enter your VIN code."
-                            data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)">
-                        <span class="error-message" id="vinError"></span>
-                        <small>Example: wBCM82c633A123456</small>
-                    </div>
-                    <button class="btn-primary" type="submit">Get Free VIN Report</button>
-                </form>
-                <div class="toyota-hero__benefits">
-                    <span>No Registration Required</span>
-                    <span>Instant Results</span>
-                    <span>Free Basic Report</span>
-                </div>
-            </div>
-        </section>
-        <section class="ad toyota-ad toyota-ad--top">
-            <span>Ad-slot-1</span>
-            <b class="desktop-only">728×90 desktop</b>
-            <b class="mobile-only">320×100 mobile</b>
-        </section>
-
-        <section class="toyota-model-links container">
-            <h2>Popular Toyota Models</h2>
-            <div class="toyota-model-links__scroll">
-                <div class="toyota-model-links__grid">
-                    <a href="#">Toyota RAV4</a>
-                    <a href="#">Toyota Corolla Cross</a>
-                    <a href="#">Toyota 4Runner</a>
-                    <a href="#">Toyota Camry</a>
-                    <a href="#">Toyota Highlander / Grand Highlander</a>
-                    <a href="#">Toyota Prius / Prius Plug-in</a>
-                    <a href="#">Toyota Corolla / Corolla Hybrid</a>
-                    <a href="#">Toyota Land Cruiser / Prado</a>
-                    <a href="#">Toyota bZ4X</a>
-                </div>
-            </div>
-            <div class="toyota-seo seo-block">
-                <h3 class="seo-block__title">SEO-текст для блока_H3</h3>
-                <div class="seo-block__content">
-                    <p>Toyota Motor Corporation is one of the world’s most trusted automotive brands, known for
-                        reliability, fuel efficiency, and long-term value. From practical sedans to rugged SUVs and
-                        advanced hybrids, Toyota offers vehicles for every type of driver.</p>
-                    <p>Among the most popular models are the versatile Toyota RAV4, the comfortable Toyota Camry, and
-                        the iconic Toyota Corolla, including the efficient Toyota Corolla Hybrid and the modern Toyota
-                        Corolla Cross.</p>
-                    <p>For families and larger needs, Toyota offers the spacious Toyota Highlander and Toyota Grand
-                        Highlander, while off-road enthusiasts rely on legends like the Toyota Land Cruiser, Toyota
-                        Prado, and Toyota 4Runner.</p>
-                    <p>In the hybrid and eco-friendly segment, the Toyota Prius and Toyota Prius Plug-in remain
-                        pioneers, while the all-electric Toyota bZ4X represents Toyota’s move toward zero-emission
-                        mobility. The Toyota Sienna also stands out as a hybrid-only family vehicle.</p>
-                </div>
-                <button type="button">Read more</button>
-            </div>
-        </section>
-
-        <section class="toyota-models swiper" aria-label="Popular Toyota models">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./assets/img/toyota-model-1.png" alt="Toyota RAV4">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./assets/img/toyota-model-2.png" alt="Toyota Camry Hybrid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./assets/img/toyota-model-3.png" alt="Toyota Corolla">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./assets/img/toyota-model-4.png" alt="Toyota Corolla Cross">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./assets/img/toyota-model-5.png" alt="Toyota Highlander">
-                </div>
-            </div>
-        </section>
-
-        <section class="toyota-facts container">
-            <h2>Toyota in Numbers and Facts</h2>
-            <p>Why millions of drivers worldwide choose Toyota</p>
-            <div class="toyota-facts__grid">
-                <article>
-                    <h3>150+ million vehicles</h3>
-                    <p>produced throughout history</p>
-                </article>
-                <article>
-                    <h3>№1 in reliability worldwide</h3>
-                    <p>according to J.D. Power and Consumer Reports</p>
-                </article>
-                <article>
-                    <h3>70% of Toyota owners</h3>
-                    <p>buy this brand again</p>
-                </article>
-                <article>
-                    <h3>25+ years</h3>
-                    <p>average lifespan of a Toyota</p>
-                </article>
-                <article>
-                    <h3>№1 in the crossover</h3>
-                    <p>and hybrid segment in Europe</p>
-                </article>
-                <article>
-                    <h3>4.85 average owner</h3>
-                    <p>rating for Toyota (out of 5)</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="toyota-report-data container">
-            <h2>What You’ll Get in Your Toyota VIN Report</h2>
-            <div class="toyota-data-table">
-                <div class="head">
-                    <strong>Vehicle Specifications</strong>
-                    <strong>Factory &amp; Technical Data</strong>
-                </div>
-                <div>
-                    <span>Model year &amp; series</span>
-                    <span>Manufacturing plant &amp; country (Japan, USA, Turkey, etc.)</span>
-                </div>
-                <div>
-                    <span>Body style &amp; trim level</span>
-                    <span>Engine type &amp; power (including hybrid)</span>
-                </div>
-                <div>
-                    <span>Exterior / interior color</span>
-                    <span>Transmission &amp; drivetrain (FWD / AWD / 4WD)</span>
-                </div>
-                <div>
-                    <span>Factory installed options</span>
-                    <span>Technical parameters &amp; recalls</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="toyota-tips">
-            <h2>Useful Tips for Toyota Owners and Buyers</h2>
-            <div class="toyota-tips__slider swiper">
-                <div class="swiper-wrapper">
-                    <article class="swiper-slide">
-                        <img src="./assets/img/icon-tip-vin.svg" alt="">
-                        <div>
-                            <h3>Always Check the VIN</h3>
-                            <p>Toyota is one of the most popular brands on the used car market. A VIN check helps you
-                                avoid rolled-back mileage, hidden accidents, and reconstructed vehicles.</p>
-                        </div>
-                    </article>
-                    <article class="swiper-slide">
-                        <img src="./assets/img/icon-tip-country.svg" alt="">
-                        <div>
-                            <h3>Country of Assembly Matters</h3>
-                            <p>Japan usually offers the best quality and equipment. Vehicles from the USA, Turkey, and
-                                Canada are also good, but differ in features and materials.</p>
-                        </div>
-                    </article>
-                    <article class="swiper-slide">
-                        <img src="./assets/img/icon-tip-hybrid.svg" alt="">
-                        <div>
-                            <h3>Pay Special Attention to Hybrids</h3>
-                            <p>Toyota hybrids are very reliable, but require high-voltage battery diagnostics when
-                                buying a used car.</p>
-                        </div>
-                    </article>
-                    <article class="swiper-slide">
-                        <img src="./assets/img/icon-tip-model.svg" alt="">
-                        <div>
-                            <h3>Common Issues by Model</h3>
-                            <p>Knowing model-specific weak points helps during inspection.</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <section class="toyota-full-report container">
-            <h2 class="desktop-only">Why Check a Toyota VIN?</h2>
-            <h2 class="mobile-only">Why Check a BMW X5 VIN?</h2>
-            <p>Every vehicle has a story — and not all of it is visible at first glance.
-                <br>Before committing to a purchase, review the records that truly matter and protect yourself from
-                costly surprises.
-            </p>
-            <h3>We recommend checking:</h3>
-            <ul>
-                <li>Registration history overview</li>
-                <li>Auction exposure</li>
-                <li>Accident indicators</li>
-                <li>Theft screening</li>
-                <li>Mileage records</li>
-                <li>Full Vehicle specifications</li>
-            </ul>
-            <strong>to ensure complete transparency before you make your decision.</strong>
-            <a class="btn-primary" href="#check">Check full report</a>
-            <img src="./assets/img/carfax-logo.svg" alt="CARFAX">
-        </section>
-        <section class="ad toyota-ad toyota-ad--bottom">
-            <span>Ad-slot 2-footer</span>
-            <b>desktop: 970×90</b>
-        </section>
-    </main>
-    <script src="./assets/js/vendor/swiper-bundle.min.js"></script>
-    <footer id="contact">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a class="logo footer-logo" href="#top">
-                    <img src="./assets/img/vin-check-logo-footer.svg" alt="VIN Check" />
-                </a>
-                <p>Free VIN Check service.
-                    <br>Get instant access to vehicle history, auctions, mileage and more.
-                </p>
-            </div>
-            <div class="footer-column footer-navigation">
-                <h3>Navigation</h3>
-                <a href="#check">Check VIN</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <button class="nav-opener js-nav-opener" type="button" aria-label="Open menu" aria-controls="header-menu"
+            aria-expanded="false">
+            <span></span>
+        </button>
+        <a class="logo" href="#top" aria-label="VIN Check home">
+            <img src="./assets/img/vin-check-logo.svg" alt="VIN Check" />
+        </a>
+        <div class="header-menu" id="header-menu" aria-hidden="true">
+            <nav class="primary-nav" aria-label="Primary navigation">
+                <a class="active" href="#check">Check VIN</a>
                 <a href="#brands">Car Brands</a>
                 <a href="#report">Sample Reports</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact Us</a>
-            </div>
-            <div class="footer-column footer-brands">
-                <h3>Popular Brands</h3>
-                <a>BMW VIN Check</a>
-                <a>Audi VIN Check</a>
-                <a>Toyota VIN Check</a>
-                <a>Mercedes VIN Check</a>
-                <a>Ford VIN Check</a>
-            </div>
-            <div class="footer-column footer-legal">
-                <h3>Legal</h3>
-                <a>Privacy Policy</a>
-                <a>Terms of Use</a>
-                <a>Disclaimer</a>
-                <a>Affiliate Disclosure</a>
-                <a>Cookie Policy</a>
-            </div>
-            <div class="footer-column footer-contact">
-                <h3>Contact</h3>
-                <a>1-800-488-4428</a>
-                <a>Email: support@yoursite.com</a>
-                <div class="footer-language language-switcher"></div>
+            </nav>
+            <div class="menu-contact">
+                <b>Contact</b>
+                <div class="menu-language language-switcher"></div>
+                <a href="tel:18004884428">1-800-488-4428</a>
+                <a href="mailto:support@yoursite.com">support@yoursite.com</a>
             </div>
         </div>
-        <div class="container footer-meta">
-            <div class="copyright">© 2026 VIN Check service. All rights reserved.</div>
-            <p class="footer-disclaimer">This website provides vehicle information for informational purposes only. Some
-                links on this site are affiliate links, and we may earn a commission at no additional cost to you.</p>
+        <div class="language-bar">
+            <div class="language-title">English</div>
+            <ul class="language-list">
+                <li class="menu-item active">
+                    <a href="#">English</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Deutsch</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Poland</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Romania</a>
+                </li>
+            </ul>
         </div>
-    </footer>
-    <div class="toast" role="status" aria-live="polite"></div>
-    <script async src="./assets/js/custom.js"></script>
+    </div>
+</header>
+
+<main id="top" class="toyota-vin-page">
+    <section class="toyota-hero" id="check">
+        <picture class="toyota-hero__media" aria-hidden="true">
+            <source media="(max-width: 767px)" srcset="./assets/img/toyota-hero-mobile.png">
+            <img src="./assets/img/toyota-hero-desktop.png" alt="">
+        </picture>
+        <div class="toyota-hero__content">
+            <h1>Check Toyota VIN in Seconds</h1>
+            <p class="toyota-hero__mobile-copy">Get instant access to accident, mileage and auction data</p>
+            <p class="toyota-hero__copy">Discover factory specifications, trim details, country of manufacture,
+                <br>engine information, and other key data by Toyota VIN code
+            </p>
+            <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label>
+            <form class="vin-form" id="vinForm" novalidate>
+                <div class="input-wrapper">
+                    <input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN" autocomplete="off"
+                        required pattern="[A-HJ-NPR-Z0-9]{17}" data-msg-required="Please enter your VIN code."
+                        data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)">
+                    <span class="error-message" id="vinError"></span>
+                    <small>Example: wBCM82c633A123456</small>
+                </div>
+                <button class="btn-primary" type="submit">Get Free VIN Report</button>
+            </form>
+            <div class="toyota-hero__benefits">
+                <span>No Registration Required</span>
+                <span>Instant Results</span>
+                <span>Free Basic Report</span>
+            </div>
+        </div>
+    </section>
+    <section class="ad toyota-ad toyota-ad--top">
+        <span>Ad-slot-1</span>
+        <b class="desktop-only">728×90 desktop</b>
+        <b class="mobile-only">320×100 mobile</b>
+    </section>
+
+    <section class="toyota-model-links container">
+        <h2>Popular Toyota Models</h2>
+        <div class="toyota-model-links__scroll">
+            <div class="toyota-model-links__grid">
+                <a href="#">Toyota RAV4</a>
+                <a href="#">Toyota Corolla Cross</a>
+                <a href="#">Toyota 4Runner</a>
+                <a href="#">Toyota Camry</a>
+                <a href="#">Toyota Highlander / Grand Highlander</a>
+                <a href="#">Toyota Prius / Prius Plug-in</a>
+                <a href="#">Toyota Corolla / Corolla Hybrid</a>
+                <a href="#">Toyota Land Cruiser / Prado</a>
+                <a href="#">Toyota bZ4X</a>
+            </div>
+        </div>
+        <div class="toyota-seo seo-block">
+            <h3 class="seo-block__title">SEO-текст для блока_H3</h3>
+            <div class="seo-block__content">
+                <p>Toyota Motor Corporation is one of the world’s most trusted automotive brands, known for reliability,
+                    fuel efficiency, and long-term value. From practical sedans to rugged SUVs and advanced hybrids,
+                    Toyota offers vehicles for every type of driver.</p>
+                <p>Among the most popular models are the versatile Toyota RAV4, the comfortable Toyota Camry, and the
+                    iconic Toyota Corolla, including the efficient Toyota Corolla Hybrid and the modern Toyota Corolla
+                    Cross.</p>
+                <p>For families and larger needs, Toyota offers the spacious Toyota Highlander and Toyota Grand
+                    Highlander, while off-road enthusiasts rely on legends like the Toyota Land Cruiser, Toyota Prado,
+                    and Toyota 4Runner.</p>
+                <p>In the hybrid and eco-friendly segment, the Toyota Prius and Toyota Prius Plug-in remain pioneers,
+                    while the all-electric Toyota bZ4X represents Toyota’s move toward zero-emission mobility. The
+                    Toyota Sienna also stands out as a hybrid-only family vehicle.</p>
+            </div>
+            <button type="button">Read more</button>
+        </div>
+    </section>
+
+    <section class="toyota-models swiper" aria-label="Popular Toyota models">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./assets/img/toyota-model-1.png" alt="Toyota RAV4">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/img/toyota-model-2.png" alt="Toyota Camry Hybrid">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/img/toyota-model-3.png" alt="Toyota Corolla">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/img/toyota-model-4.png" alt="Toyota Corolla Cross">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/img/toyota-model-5.png" alt="Toyota Highlander">
+            </div>
+        </div>
+    </section>
+
+    <section class="toyota-facts container">
+        <h2>Toyota in Numbers and Facts</h2>
+        <p>Why millions of drivers worldwide choose Toyota</p>
+        <div class="toyota-facts__grid">
+            <article>
+                <h3>150+ million vehicles</h3>
+                <p>produced throughout history</p>
+            </article>
+            <article>
+                <h3>№1 in reliability worldwide</h3>
+                <p>according to J.D. Power and Consumer Reports</p>
+            </article>
+            <article>
+                <h3>70% of Toyota owners</h3>
+                <p>buy this brand again</p>
+            </article>
+            <article>
+                <h3>25+ years</h3>
+                <p>average lifespan of a Toyota</p>
+            </article>
+            <article>
+                <h3>№1 in the crossover</h3>
+                <p>and hybrid segment in Europe</p>
+            </article>
+            <article>
+                <h3>4.85 average owner</h3>
+                <p>rating for Toyota (out of 5)</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="toyota-report-data container">
+        <h2>What You’ll Get in Your Toyota VIN Report</h2>
+        <div class="toyota-data-table">
+            <div class="head">
+                <strong>Vehicle Specifications</strong>
+                <strong>Factory &amp; Technical Data</strong>
+            </div>
+            <div>
+                <span>Model year &amp; series</span>
+                <span>Manufacturing plant &amp; country (Japan, USA, Turkey, etc.)</span>
+            </div>
+            <div>
+                <span>Body style &amp; trim level</span>
+                <span>Engine type &amp; power (including hybrid)</span>
+            </div>
+            <div>
+                <span>Exterior / interior color</span>
+                <span>Transmission &amp; drivetrain (FWD / AWD / 4WD)</span>
+            </div>
+            <div>
+                <span>Factory installed options</span>
+                <span>Technical parameters &amp; recalls</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="toyota-tips">
+        <h2>Useful Tips for Toyota Owners and Buyers</h2>
+        <div class="toyota-tips__slider swiper">
+            <div class="swiper-wrapper">
+                <article class="swiper-slide">
+                    <img src="./assets/img/icon-tip-vin.svg" alt="">
+                    <div>
+                        <h3>Always Check the VIN</h3>
+                        <p>Toyota is one of the most popular brands on the used car market. A VIN check helps you avoid
+                            rolled-back mileage, hidden accidents, and reconstructed vehicles.</p>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="./assets/img/icon-tip-country.svg" alt="">
+                    <div>
+                        <h3>Country of Assembly Matters</h3>
+                        <p>Japan usually offers the best quality and equipment. Vehicles from the USA, Turkey, and
+                            Canada are also good, but differ in features and materials.</p>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="./assets/img/icon-tip-hybrid.svg" alt="">
+                    <div>
+                        <h3>Pay Special Attention to Hybrids</h3>
+                        <p>Toyota hybrids are very reliable, but require high-voltage battery diagnostics when buying a
+                            used car.</p>
+                    </div>
+                </article>
+                <article class="swiper-slide">
+                    <img src="./assets/img/icon-tip-model.svg" alt="">
+                    <div>
+                        <h3>Common Issues by Model</h3>
+                        <p>Knowing model-specific weak points helps during inspection.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="toyota-full-report container">
+        <h2 class="desktop-only">Why Check a Toyota VIN?</h2>
+        <h2 class="mobile-only">Why Check a BMW X5 VIN?</h2>
+        <p>Every vehicle has a story — and not all of it is visible at first glance.
+            <br>Before committing to a purchase, review the records that truly matter and protect yourself from costly
+            surprises.
+        </p>
+        <h3>We recommend checking:</h3>
+        <ul>
+            <li>Registration history overview</li>
+            <li>Auction exposure</li>
+            <li>Accident indicators</li>
+            <li>Theft screening</li>
+            <li>Mileage records</li>
+            <li>Full Vehicle specifications</li>
+        </ul>
+        <strong>to ensure complete transparency before you make your decision.</strong>
+        <a class="btn-primary" href="#check">Check full report</a>
+        <img src="./assets/img/carfax-logo.svg" alt="CARFAX">
+    </section>
+    <section class="ad toyota-ad toyota-ad--bottom">
+        <span>Ad-slot 2-footer</span>
+        <b>desktop: 970×90</b>
+    </section>
+</main>
+<script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+<footer id="contact">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <a class="logo footer-logo" href="#top">
+                <img src="./assets/img/vin-check-logo-footer.svg" alt="VIN Check" />
+            </a>
+            <p>Free VIN Check service.
+                <br>Get instant access to vehicle history, auctions, mileage and more.
+            </p>
+        </div>
+        <div class="footer-column footer-navigation">
+            <h3>Navigation</h3>
+            <a href="#check">Check VIN</a>
+            <a href="#brands">Car Brands</a>
+            <a href="#report">Sample Reports</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="footer-column footer-brands">
+            <h3>Popular Brands</h3>
+            <a>BMW VIN Check</a>
+            <a>Audi VIN Check</a>
+            <a>Toyota VIN Check</a>
+            <a>Mercedes VIN Check</a>
+            <a>Ford VIN Check</a>
+        </div>
+        <div class="footer-column footer-legal">
+            <h3>Legal</h3>
+            <a>Privacy Policy</a>
+            <a>Terms of Use</a>
+            <a>Disclaimer</a>
+            <a>Affiliate Disclosure</a>
+            <a>Cookie Policy</a>
+        </div>
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+            <a>1-800-488-4428</a>
+            <a>Email: support@yoursite.com</a>
+            <div class="footer-language language-switcher"></div>
+        </div>
+    </div>
+    <div class="container footer-meta">
+        <div class="copyright">© 2026 VIN Check service. All rights reserved.</div>
+        <p class="footer-disclaimer">This website provides vehicle information for informational purposes only. Some
+            links on this site are affiliate links, and we may earn a commission at no additional cost to you.</p>
+    </div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script async src="./assets/js/custom.js"></script>
 </body>
 
 </html>
