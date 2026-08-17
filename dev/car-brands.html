@@ -2,11 +2,12 @@
 @@include('templates/header.html')
 <main id="top" class="car-brands-page">
     <section class="brands-hero" id="check">
+        <picture class="brands-hero__media" aria-hidden="true"><source media="(max-width: 767px)" srcset="./assets/img/car-brands-hero-mobile.png"><img src="./assets/img/car-brands-hero-desktop.png" alt=""></picture>
         <div class="brands-hero__content">
             <h1>Free VIN Check by Car Brand</h1>
             <p class="brands-hero__mobile-copy">Get instant access to accident, mileage and auction data</p>
             <p class="brands-hero__copy">Choose your car brand and instantly access vehicle specifications,<br>VIN details, and essential data in seconds.</p>
-            <form class="brands-vin-form"><input type="text" placeholder="Enter VIN Number" aria-label="Enter VIN Number"><button type="submit">Get Free VIN Report</button></form>
+            <label class="vin-label" for="vin">Enter your VIN to check vehicle history instantly</label><form class="vin-form" id="vinForm" novalidate><div class="input-wrapper"><input id="vin" name="vin" maxlength="17" placeholder="17 characters of your VIN" autocomplete="off" required pattern="[A-HJ-NPR-Z0-9]{17}" data-msg-required="Please enter your VIN code." data-msg-pattern="The VIN code must consist of 17 characters (without I, O, Q)"><span class="error-message" id="vinError"></span><small>Example: wBCM82c633A123456</small></div><button class="btn-primary" type="submit">Get Free VIN Report</button></form>
             <div class="brands-hero__benefits"><span>No Registration Required</span><span>Instant Results</span><span>Free Basic Report</span></div>
         </div>
     </section>
@@ -68,7 +69,7 @@
         </div>
     </section>
 
-    <section class="brands-seo container"><h2>SEO-текст для блока_H3</h2><div class="brands-seo__text"><p>Vehicle identification number (VIN) decoding allows buyers to verify important information before purchasing a used vehicle. Our VIN check by car brand helps you access structured factory data, identify inconsistencies, and reduce the risk of hidden problems. Whether you are checking a BMW, Toyota, Ford, or Mercedes-Benz, our system processes manufacturer-specific VIN structures for accurate decoding results.</p><p>Vehicle identification number (VIN) decoding allows buyers to verify important information before purchasing a used vehicle. Our VIN check by car brand helps you access structured factory data, identify inconsistencies, and reduce the risk of hidden problems. Whether you are checking a BMW, Toyota, Ford, or Mercedes-Benz, our system processes manufacturer-specific VIN structures for accurate decoding results.</p></div><button type="button">Read more</button></section>
+    <section class="brands-seo seo-block container"><h3 class="seo-block__title">SEO-текст для блока_H3</h3><div class="brands-seo__text seo-block__content"><p>Vehicle identification number (VIN) decoding allows buyers to verify important information before purchasing a used vehicle. Our VIN check by car brand helps you access structured factory data, identify inconsistencies, and reduce the risk of hidden problems. Whether you are checking a BMW, Toyota, Ford, or Mercedes-Benz, our system processes manufacturer-specific VIN structures for accurate decoding results.</p><p>Vehicle identification number (VIN) decoding allows buyers to verify important information before purchasing a used vehicle. Our VIN check by car brand helps you access structured factory data, identify inconsistencies, and reduce the risk of hidden problems. Whether you are checking a BMW, Toyota, Ford, or Mercedes-Benz, our system processes manufacturer-specific VIN structures for accurate decoding results.</p></div><button type="button">Read more</button></section>
     <section class="ad brands-ad brands-ad--bottom"><span>Ad-slot 2-footer</span><b>desktop: 970×90</b></section>
 </main>
 @@include('templates/footer.html')

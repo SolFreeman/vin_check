@@ -409,16 +409,12 @@
     width: auto;
     min-width: 226px;
     padding: 8px 16px;
-    color: #fff;
-    background: #ff8c00;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background-color .2s ease;
+	white-space: nowrap;
 }
 
 .loading-error__controls button:hover,
 .loading-error__controls button:focus-visible {
-    background: #eb8100;
+	background: #eb8100;
 }
 
 .loading-error__links {

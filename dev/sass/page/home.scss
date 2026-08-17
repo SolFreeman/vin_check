@@ -57,6 +57,7 @@ body {
     object-fit: cover;
     object-position: 50% 50%;
     height: 100%;
+    width: 100%;
 }
 
 .hero-inner {
@@ -728,8 +729,6 @@ body {
 .vin-form button {
     height: 56px;
     padding: 0 16px;
-    border: 1px solid #2c3e50;
-    border-radius: 12px;
     font-size: 22px;
     box-shadow: none
 }
@@ -1462,24 +1461,6 @@ body {
     max-height: 220px;
     margin-top: 42px;
     padding-top: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-color: #b8d8fa #f4f7fa;
-    scrollbar-width: thin;
-}
-
-.seo.container::-webkit-scrollbar {
-    width: 6px;
-}
-
-.seo.container::-webkit-scrollbar-track {
-    background: #f4f7fa;
-    border-radius: 999px;
-}
-
-.seo.container::-webkit-scrollbar-thumb {
-    background: #b8d8fa;
-    border-radius: 999px;
 }
 
 .feature-grid .feature-icon {
